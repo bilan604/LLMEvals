@@ -12,40 +12,38 @@ def get_env(file_path=".env"):
                 env[lst[0].strip()] = lst[1].strip()
     return env
 
-def load_env():
-    env = get_env()
-    OPENAI_API_KEY = env["OPENAI_API_KEY"]
-    openai.api_key = OPENAI_API_KEY
+
+def save_response(model, evaluation, prompt_idx,  prompt, response):
+    obj = {
+        "model": model,
+        "evaluation": evaluation,  # the problem set
+        "prompt_id": prompt_idx,
+        "prompt": prompt ,
+        "response": response
+    }
+    with open("responses.txt", "a") as f:
+        f.write(json.dumps(obj)+"\n")
     return
 
-def load_evaluations(n=10):
-    evaluations = {}
 
-    cwd = "C:/Users/Bill/projects/llm-evals/evals/data"
-    os.chdir(cwd)
+def load_responses():
+    """
+    Loads Vis
+    """
+    dd = {}
+    with open("responses.txt", "r") as f:
+        for line in f.readlines():
+            line = line.strip()
+            if not line: continue
+            resp = json.loads(line)
+            k = (resp["model"], resp["evaluation"], resp["prompt_id"])
+            dd[k] = True
+    return dd
 
-    folders = []
-    for folder in os.listdir():
-        folders.append(folder)
-
-    for folder in folders:
-        #################
-        if len(evaluations) == n:
-            break
-
-        path = "C:/Users/Bill/projects/llm-evals/evals/data/" + folder
-        os.chdir(path)
-        for file in os.listdir():
-            if not os.path.isfile(file): continue
-            try:
-                with open(file, "r") as f:
-                    lines = f.readlines()
-                    lines = [json.loads(line) for line in lines]
-                    evaluations[folder] = lines
-                    break
-            except:
-                print("samples.jsonl missing for", folder)
-
-    os.chdir(cwd)
-
-    return evaluations
+def group_mtx_by_col(mtx, col):
+    dd = {}
+    for i in range(len(mtx)):
+        if mtx[i][col] not in dd:
+            dd[mtx[i][col]] = []
+        dd[mtx[i][col]].append(mtx[i])
+    return dd

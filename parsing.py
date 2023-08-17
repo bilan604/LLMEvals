@@ -59,25 +59,6 @@ def get_properties(tag: str):
             property_values[property_name] = property_value
     return property_values
 
-
-def get_xpath_by_properties(element_type, properties):
-    """
-    Takes a dictionary of property name, property values from the opening tag
-    of an html element and returns a xpath.
-    """
-    xpath_identifiers = []
-
-    if "id" in properties:
-        element_id = properties["id"]
-        return f"//{element_type}[@id='{element_id}']"
-
-    for property_name, property_value in properties.items():
-        xpath_identifiers.append(f"@{property_name}='{property_value}'")
-    
-    xpath_identifier = " and ".join(xpath_identifiers)
-    xpath = f"//@{element_type}[{xpath_identifier}]"
-    return xpath
-
 def get_xpath_by_element(element):
     element_type = get_element_type(element)
     props = get_properties(element)
@@ -119,13 +100,6 @@ def get_opening_tag(element: str):
         return None
     return element[:element.find(">")+1]
 
-def get_xpath_by_properties(element_type, properties):
-    # element_type: the type of html element <[element_type] ...>
-    # properties: dict[str, str]
-    xpath_identifiers = [f"@{property_name}='{property_value}'" for property_name, property_value in properties.items()]
-    xpath_identifier = " and ".join(xpath_identifiers)
-    xpath = f"//{element_type}[{xpath_identifier}]"
-    return xpath
 
 def get_xpath_by_element(element):
     # generates a chrome selenium xpath
@@ -315,7 +289,12 @@ def get_element(src, element_type, label_rule, properties_rule):
                 if properties_rule(properties):
                     return element
     return ""
-            
+
+def get_xpath(src, element_type, label_rule, properties_rule):
+    element = get_element(src, element_type, label_rule, properties_rule)
+    xpath = get_xpath_by_element(element)
+    return xpath
+
 def get_elements_by_src(src, element_type="", parameters={}):
     if parameters and not element_type:
         print("get_elements_by_src() Input error? Check <-----------")
@@ -350,3 +329,26 @@ def get_elements_by_src(src, element_type="", parameters={}):
         return double_validation
     return elements
 
+
+def parse_input(input):
+    """
+    Converts an OpenAI registry evaluation input to a generalized llm prompt
+    In case theres more than just a system prompt
+    """
+    system_cont = ""
+    user_cont = ""
+    for pe in input:
+        if pe["role"] == "system":
+            system_cont = pe["content"]
+        elif pe["role"] == "user":
+            user_cont = pe["content"]
+    
+    prompt = \
+    """\
+{system_cont}
+
+{user_cont}"""
+
+    prompt = re.sub("{system_cont}", system_cont, prompt)
+    prompt = re.sub("{user_cont}", user_cont, prompt)        
+    return prompt

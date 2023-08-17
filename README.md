@@ -1,6 +1,21 @@
 # LLMEvals  
 
-This README will be replaced with the output of a Markdown file once I have a few more of the evaluations completed. I will be working on this project inside a Jupyter Notebook, so the markdown will be brought over from the Notebook to this README.
+## Directory Description:
+
+language_models.py contains a wrapper that will incorporate various llms.
+responses.json is used to store the responses so that all information is not discarded during an eval if the api connection breaks
+
+## Notes about using the LLMs in evals  
+
+1. OpenAI has a token limit which resets every 60 seconds, so pausing during the testing is hard coded in the prompter
+
+2. Bard will stop responding after a while, and the browser cookies have to be cleared.
+
+
+
+
+
+
 
 
 
