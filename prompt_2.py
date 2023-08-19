@@ -1,8 +1,12 @@
 import openai
 from bardapi import Bard
+from load import get_env
 
 
-bard = None  #Bard()
+env = get_env()
+token = env["BARD_API_KEY"]
+print("token", token)
+bard = Bard(token=token)
 
 
 def prompt_gpt_3_5(input_content: str):

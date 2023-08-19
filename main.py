@@ -72,12 +72,10 @@ def run_test(model, evaluation, prompt, test_idx):
     # prompt is the string prompt
     # test_idx is index of the prompt from evaluation folder
     print("AT RUN TEST")
-    print(f"{model=}\n")
-    print(f"{test_idx=}\n")
-    print(f"{evaluation=}\n")
+    
     try:
         response = do_prompt(model, prompt)
-        print(f"run_test():{response=}\n")
+        print(f"run_test():\n{response=}\n")
         save_response(model, evaluation, str(test_idx), prompt, response)
         return
     except Exception as e:
@@ -122,18 +120,17 @@ def main(models_todo: list[str], evals_todo: list[str], VIS):
                 ########################################################
                 # get the grouped data
                 eval_data = evals[eval][i]
-                run_test(model, eval, eval_data[2], eval_data[-1])
+                run_test(model, eval, eval_data[2], eval_data[3])
             
         
-
+#2452
 if __name__ == "__main__":
     # 4.) Running this script does a list of evals for a list of models
     # Default empty lists passed in for models_to_do or empty_evals_to_do means doing all of them
     models_to_do = [
-        'gpt-3.5-turbo'
+        'bard'
     ]
     evals_to_do = [
-        "python_list_comprehension"
     ]
     VIS = load_responses()
     main(models_to_do, evals_to_do, VIS)
