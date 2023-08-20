@@ -6,29 +6,27 @@ from load import *
 from prompt_2 import prompt as do_prompt
 
 
-# Globals Variables
-poe_models = [ 
-    "Claude-2-100k",
-    "Claude-instant",
-    "GPT-4-32k",
-    "Google-PaLM",
-    "Llama-2-70b",
-    "Llama-2-13b",
-    "Llama-2-7b"
+poe_models = []
+
+# Models to Run
+models = [
+        "llama-1-13b",
+        "llama-2-13b",
+        "llama-2-70b-chat",
+        'gpt-4',
+        'bard'  # Needs a new cookie every time
 ]
 
-models = [
-        'gpt-4',
-        'gpt-3.5-turbo',
-        'bard',
-        # Poe Models
-        "Claude-2-100k",
-        "Claude-instant",
-        "GPT-4-32k",
-        "Google-PaLM",
-        "Llama-2-70b",
-        "Llama-2-13b",
-        "Llama-2-7b"
+# Models that have been run for sample (visual list)
+completed_models = [
+    'gpt-3.5-turbo'
+]
+
+models_to_implement = [
+    "Google-PaLM",
+    "Claude-2-100k",
+    "Claude-instant",
+    "vicuna-1-33b"
 ]
 
 ############################
@@ -128,7 +126,7 @@ if __name__ == "__main__":
     # 4.) Running this script does a list of evals for a list of models
     # Default empty lists passed in for models_to_do or empty_evals_to_do means doing all of them
     models_to_do = [
-        'bard'
+        'llama-1-13b'
     ]
     evals_to_do = [
     ]

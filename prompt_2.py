@@ -93,23 +93,6 @@ def get_llama_2_7b_output(client, prompt: str):
     return response
 
 
-def get_llama_2_7b_output(client, prompt: str):
-    output = client.run(
-        "replicate/llama-2-7b:acdbe5a4987a29261ba7d7d4195ad4fa6b62ce27b034f989fcb9ab0421408a7c",
-        input={"prompt": prompt}
-    )
-
-    response_chunks = []
-    for item in output:
-        response_chunks.append(item)
-
-    response = " ".join(response_chunks)
-    response = response.replace("  ", " ").strip()
-    print("----------------> response:")
-    print(response)
-    return response
-
-
 def get_llama_2_70b_chat_output(client, prompt: str):
     output = client.run(
         "replicate/llama-2-70b-chat:58d078176e02c219e11eb4da5a02a7830a283b14cf8f94537af893ccff5ee781",
