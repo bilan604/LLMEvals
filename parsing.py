@@ -352,3 +352,21 @@ def parse_input(input):
     prompt = re.sub("{system_cont}", system_cont, prompt)
     prompt = re.sub("{user_cont}", user_cont, prompt)        
     return prompt
+
+def handle_aleph_alpha_response(s):
+    s = s.strip()
+    lst = s.split("\n")
+    lst = [li.strip() for li in lst if li.strip()]
+    dd = {}
+    for item in lst:
+        if item not in dd:
+            dd[item] = 0
+        dd[item] += 1
+
+    idx = 1
+    for i in range(1,len(lst)):
+        if dd[lst[i]] > 1:
+            idx = i
+            break
+    lst = lst[:idx]
+    return "\n".join(lst[:idx])

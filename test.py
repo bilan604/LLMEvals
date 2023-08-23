@@ -1,108 +1,29 @@
-import replicate
+import os
+#os.environ["CUDA_VISIBLE_DEVICES"]="1,2" # if you need to specify GPUs
+import time
+from transformers import AutoTokenizer, AutoModelForCausalLM, TextStreamer
+import transformers
+import torch
 
-# Notes on vicuna_13 and llama-2-13b
+model_id = "tiiuae/falcon-40b-instruct"
 
-# Note: This is not 1.5?
-def get_vicuna_13b_output(client, prompt: str):
-    output = client.run(
-        "replicate/vicuna-13b:6282abe6a492de4145d7bb601023762212f9ddbbe78278bd6771c8b3b2f2a13b",
-        input={"prompt": prompt}
-    )
+tokenizer = AutoTokenizer.from_pretrained(model_id)
+streamer = TextStreamer(tokenizer)
 
-    response_chunks = []
-    for item in output:
-        # https://replicate.com/replicate/vicuna-13b/versions/6282abe6a492de4145d7bb601023762212f9ddbbe78278bd6771c8b3b2f2a13b/api#output-schema
-        response_chunks.append(item)
+model = AutoModelForCausalLM.from_pretrained(
+    model_id,
+    # --- Choosing between 4, 8, and 16 bit --- #
+    # 8bit: ~50GB GPU memory, fastest
+    # 4bit: ~25GB GPU memory, slowest 
+    # 16bit: ~100GB GPU memory, slow
+    load_in_8bit=True, # torch_dtype=torch.bfloat16 or load_in_4bit=True
+    trust_remote_code=True,
+    device_map="auto",
+)
 
-    response = " ".join(response_chunks)
-    response = response.replace("  ", " ").strip()
-    print("----------------> response:")
-    print(response)
-    return response
-
-def get_llama_13b_lora_output(client, prompt: str):
-    output = client.run(
-        "replicate/llama-13b-lora:4baede730d6bc13396e6dec0df5172bff658c014da9552bc17decfd6453d368c",
-        input={"prompt": prompt}
-    )
-
-    response_chunks = []
-    for item in output:
-        # https://replicate.com/replicate/vicuna-13b/versions/6282abe6a492de4145d7bb601023762212f9ddbbe78278bd6771c8b3b2f2a13b/api#output-schema
-        response_chunks.append(item)
-
-    response = " ".join(response_chunks)
-    response = response.replace("  ", " ").strip()
-    print("----------------> response:")
-    print(response)
-    return response
-
-
-def get_llama_2_7b_output(client, prompt: str):
-    output = client.run(
-        "replicate/llama-2-7b:acdbe5a4987a29261ba7d7d4195ad4fa6b62ce27b034f989fcb9ab0421408a7c",
-        input={"prompt": prompt}
-    )
-
-    response_chunks = []
-    for item in output:
-        response_chunks.append(item)
-
-    response = " ".join(response_chunks)
-    response = response.replace("  ", " ").strip()
-    print("----------------> response:")
-    print(response)
-    return response
-
-
-def get_llama_2_7b_output(client, prompt: str):
-    output = client.run(
-        "replicate/llama-2-7b:acdbe5a4987a29261ba7d7d4195ad4fa6b62ce27b034f989fcb9ab0421408a7c",
-        input={"prompt": prompt}
-    )
-
-    response_chunks = []
-    for item in output:
-        response_chunks.append(item)
-
-    response = " ".join(response_chunks)
-    response = response.replace("  ", " ").strip()
-    print("----------------> response:")
-    print(response)
-    return response
-
-
-def get_llama_2_70b_chat_output(client, prompt: str):
-    output = client.run(
-        "replicate/llama-2-70b-chat:58d078176e02c219e11eb4da5a02a7830a283b14cf8f94537af893ccff5ee781",
-        input={"prompt": prompt}
-    )
-
-    response_chunks = []
-    for item in output:
-        response_chunks.append(item)
-
-    response = " ".join(response_chunks)
-    response = response.replace("  ", " ").strip()
-    print("----------------> response:")
-    print(response)
-    return response
-
-# Note: This is chat
-def get_llama_2_13b_chat_output(client, prompt: str):
-    output = client.run(
-        "a16z-infra//llama-2-13b-chat:2a7f981751ec7fdf87b5b91ad4db53683a98082e9ff7bfd12c8cd5ea85980a52",
-        input={"prompt": prompt}
-    )
-
-    response_chunks = []
-    for item in output:
-        response_chunks.append(item)
-
-    response = " ".join(response_chunks)
-    response = response.replace("  ", " ").strip()
-    print("----------------> response:")
-    print(response)
-    return response
-
-
+pipeline = transformers.pipeline(
+    "text-generation",
+    model=model,
+    tokenizer=tokenizer,
+)
+print(f"{pipeline=}\n")

@@ -1,19 +1,27 @@
 import openai
+import cohere
 import replicate
 from bardapi import Bard
 from load import get_env
+from parsing import *
+from aleph_alpha_client import Client, CompletionRequest, Prompt
 
 
 env = get_env()
-token = env["BARD_API_KEY"].strip()
+
+
+
+client = replicate.Client(api_token=env["REPLICATE_API_KEY"].strip())
+client_ALEPH_ALPHA = Client(token=env["ALEPH_ALPHA_API_KEY"].strip())
+co = cohere.Client(env["COHERE_API_KEY"].strip())
+
 bard = None
 try:
-    bard = Bard(token=token)
+    bard = Bard(token=env["BARD_API_KEY"].strip())
 except Exception as e:
     print("Bard Error:", e)
+    print("Get new cookie")
 
-
-client = replicate.Client(api_token='r8_9S4jrLb3J7Y6lnlole7ww2L7ezeaMU62X8vMT')
 
 
 def prompt_gpt_3_5(input_content: str):
@@ -40,7 +48,6 @@ def prompt_gpt_4(input_content: str):
         ).choices[0].message.content.strip()
     return response
 
-# Note: This is not 1.5?
 def get_vicuna_13b_output(client, prompt: str):
     output = client.run(
         "replicate/vicuna-13b:6282abe6a492de4145d7bb601023762212f9ddbbe78278bd6771c8b3b2f2a13b",
@@ -52,7 +59,7 @@ def get_vicuna_13b_output(client, prompt: str):
         # https://replicate.com/replicate/vicuna-13b/versions/6282abe6a492de4145d7bb601023762212f9ddbbe78278bd6771c8b3b2f2a13b/api#output-schema
         response_chunks.append(item)
 
-    response = " ".join(response_chunks)
+    response = "".join(response_chunks)
     response = response.replace("  ", " ").strip()
     print("----------------> response:")
     print(response)
@@ -69,7 +76,7 @@ def get_llama_13b_lora_output(client, prompt: str):
         # https://replicate.com/replicate/vicuna-13b/versions/6282abe6a492de4145d7bb601023762212f9ddbbe78278bd6771c8b3b2f2a13b/api#output-schema
         response_chunks.append(item)
 
-    response = " ".join(response_chunks)
+    response = "".join(response_chunks)
     response = response.replace("  ", " ").strip()
     print("----------------> response:")
     print(response)
@@ -86,7 +93,7 @@ def get_llama_2_7b_output(client, prompt: str):
     for item in output:
         response_chunks.append(item)
 
-    response = " ".join(response_chunks)
+    response = "".join(response_chunks)
     response = response.replace("  ", " ").strip()
     print("----------------> response:")
     print(response)
@@ -103,7 +110,7 @@ def get_llama_2_70b_chat_output(client, prompt: str):
     for item in output:
         response_chunks.append(item)
 
-    response = " ".join(response_chunks)
+    response = "".join(response_chunks)
     response = response.replace("  ", " ").strip()
     print("----------------> response:")
     print(response)
@@ -120,7 +127,7 @@ def get_llama_2_13b_chat_output(client, prompt: str):
     for item in output:
         response_chunks.append(item)
 
-    response = " ".join(response_chunks)
+    response = "".join(response_chunks)
     response = response.replace("  ", " ").strip()
     print("----------------> response:")
     print(response)
@@ -134,8 +141,7 @@ def prompt_bard(prompt):
 
 def prompt_vicuna_1_5_13b(prompt):
     # Note: 1.5
-    global client
-    return get_vicuna_13b_output(client, prompt)
+    pass
 
 def prompt_llama_1_13b(prompt):
     global client
@@ -149,10 +155,21 @@ def prompt_vicuna_1_33b(prompt):
     pass
 
 def prompt_luminous_supreme_control(prompt):
-    pass
+    global client_ALEPH_ALPHA
+    request = CompletionRequest(
+        prompt=Prompt.from_text(prompt),
+        maximum_tokens=256,
+    )
+    response = client_ALEPH_ALPHA.complete(request, model="luminous-base")
+    response = response.completions[0].completion
+    response = handle_aleph_alpha_response(response)
+    return response
 
-def prompt_cohere_chat(prompt):
-    pass
+def prompt_cohere_chat(cohere_prompt):
+    response = co.generate(
+        prompt=cohere_prompt,
+    )
+    return response[0].text
 
 def prompt_falcon_40b(prompt):
     pass

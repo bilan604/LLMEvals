@@ -10,23 +10,39 @@ poe_models = []
 
 # Models to Run
 models = [
-        "llama-1-13b",
-        "llama-2-13b",
-        "llama-2-70b-chat",
-        'gpt-4',
-        'bard'  # Needs a new cookie every time
+    "gpt-3.5-turbo",
+    "gpt-4",
+    "llama-1-13b",
+    "llama-2-13b",
+    "llama-2-70b-chat",
+    "vicuna-1-13b",
+    "vicuna-1.5-13b",
+    "vicuna-1-33b",  
+    "claude-2",
+    "claude-instant",
+    "bard",
+    "palm-2",
+    "luminous-supreme-control",
+    "cohere-chat",
+    "falcon-40b",
+    "mpt-30b", 
+    "inflection-1"  
 ]
-
 # Models that have been run for sample (visual list)
 completed_models = [
     'gpt-3.5-turbo'
 ]
 
 models_to_implement = [
-    "Google-PaLM",
-    "Claude-2-100k",
-    "Claude-instant",
-    "vicuna-1-33b"
+    "falcon-40b",  # hugging face:
+    "mpt-30b",
+    "inflection-1", # not on hugging face
+    "vicuna-1.5-13b",  # https://huggingface.co/lmsys/vicuna-13b-v1.5
+    "vicuna-1-33b",  # ###### 1.3 : https://huggingface.co/TheBloke/Vicuna-33B-1-3-SuperHOT-8K-fp16
+    "palm-2",  
+    "falcon-40b",  # https://huggingface.co/tiiuae/falcon-40b
+    "mpt-30b",  # hugging face: https://huggingface.co/mosaicml/mpt-30b
+    "inflection-1"
 ]
 
 ############################
@@ -118,6 +134,12 @@ def main(models_todo: list[str], evals_todo: list[str], VIS):
                 ########################################################
                 # get the grouped data
                 eval_data = evals[eval][i]
+
+                vis_key = (model, eval, str(eval_data[3]))
+                if vis_key in VIS:
+                    print("skipping vis:", vis_key)
+                    continue
+
                 run_test(model, eval, eval_data[2], eval_data[3])
             
         
@@ -125,11 +147,15 @@ def main(models_todo: list[str], evals_todo: list[str], VIS):
 if __name__ == "__main__":
     # 4.) Running this script does a list of evals for a list of models
     # Default empty lists passed in for models_to_do or empty_evals_to_do means doing all of them
+
+    # In order of urgency: 'llama-2-70b-chat', 'bard', 'palm-2', 'gpt-4', 'luminous-supreme-control', ...., 'llama-1-13b'
     models_to_do = [
-        'llama-1-13b'
+        'gpt-4'
     ]
+
     evals_to_do = [
     ]
+
     VIS = load_responses()
     main(models_to_do, evals_to_do, VIS)
 
