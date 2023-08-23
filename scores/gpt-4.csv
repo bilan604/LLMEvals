@@ -1,0 +1,7 @@
+,evaluation,score
+0,2d_movement,0.9857142857142858
+1,3d_globe_movement,1.0
+2,3d_object_manipulation,1.0
+3,aba_mrpc_true_false,0.905
+4,abstract2title,1.0
+5,accounting_audit,0.4

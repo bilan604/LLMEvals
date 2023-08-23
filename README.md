@@ -2,8 +2,7 @@
 
 ## Directory Description:
 
-language_models.py contains a wrapper that will incorporate various llms.
-responses.json is used to store the responses so that all information is not discarded during an eval if the api connection breaks
+A sample of eval test suites were created, sampling a maximum of 10 questions from each eval question set. The score for each response is inverse of the fraction of mismatch between the LLM's response and the ideal answer for the eval problem.  
 
 ## Notes about using the LLMs in evals  
 

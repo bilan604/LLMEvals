@@ -100,7 +100,7 @@ def generate_outcome(model_name="gpt-3.5-turbo"):
     answer_key = get_answer_key(evals)
 
     responses = load_response_objects()
-    gpt_3_5_responses = get_responses_by(responses, "model", model_name)
+    model_responses = get_responses_by(responses, "model", model_name)
 
     outcome = {
         'model': [],
@@ -115,7 +115,9 @@ def generate_outcome(model_name="gpt-3.5-turbo"):
         'score': []
     }
 
-    for response in gpt_3_5_responses:    
+    total_score = 0
+    total_scores = 0
+    for response in model_responses:    
         key = (response["evaluation"], response["prompt_id"])
         if key not in answer_key:
             print("missing key", key)
@@ -132,7 +134,8 @@ def generate_outcome(model_name="gpt-3.5-turbo"):
         
         levenshtein_distance = minDistance(response["response"].strip(), answer.strip())
         score = 1 - (exact_match / max(len(response['response']), len(answer)))
-
+        total_scores += 1
+        total_score += score
         outcome['model'].append(response['model'])
         outcome['evaluation'].append(response['evaluation'])
         outcome['prompt_id'].append(response['prompt_id'])
@@ -157,3 +160,30 @@ def generate_outcome(model_name="gpt-3.5-turbo"):
     df_2 = sum_score_by_evaluation(df)
 
     df_2.to_csv(f"scores/{model_name}.csv")
+
+    df_3 = pd.read_csv("results.csv")
+    data_3 = {"model": [], "score": []}
+    updated_model = False
+    for model, score in zip(list(df_3["model"]), list(df_3["score"])):
+        if model == model_name:
+            data_3["model"].append(model_name)
+            data_3["score"].append(str(total_score))
+            updated_model = True
+        else:
+            data_3["model"].append(model)
+            data_3["score"].append(score)
+
+    if not updated_model:
+        data_3["model"].append(model_name)
+        data_3["score"].append(str(total_score/total_scores))
+    
+    df_3_updated = pd.DataFrame(data_3)
+    print("df_3_updated")
+    print(df_3_updated)
+    df_3_updated.to_csv("results.csv")
+
+
+"""
+generate_outcome('gpt-3.5-turbo')
+generate_outcome('gpt-4')
+"""
