@@ -3,8 +3,9 @@ import time
 import numpy as np
 import pandas as pd
 from load import *
-from prompt_2 import prompt as do_prompt
-
+from prompter import handle_prompt_map
+from prompter import prompt as do_prompt
+from generate_outcome import *
 
 poe_models = []
 
@@ -28,21 +29,19 @@ models = [
     "mpt-30b", 
     "inflection-1"  
 ]
-# Models that have been run for sample (visual list)
+
+# Models that have been run for sample
 completed_models = [
     'gpt-3.5-turbo'
 ]
 
 models_to_implement = [
-    "falcon-40b",  # hugging face:
-    "mpt-30b",
-    "inflection-1", # not on hugging face
+    "falcon-40b",  # hugging face: 
     "vicuna-1.5-13b",  # https://huggingface.co/lmsys/vicuna-13b-v1.5
-    "vicuna-1-33b",  # ###### 1.3 : https://huggingface.co/TheBloke/Vicuna-33B-1-3-SuperHOT-8K-fp16
-    "palm-2",  
+    "vicuna-1-33b",  # https://huggingface.co/TheBloke/Vicuna-33B-1-3-SuperHOT-8K-fp16
     "falcon-40b",  # https://huggingface.co/tiiuae/falcon-40b
-    "mpt-30b",  # hugging face: https://huggingface.co/mosaicml/mpt-30b
-    "inflection-1"
+    "mpt-30b",  # https://huggingface.co/mosaicml/mpt-30b
+    "inflection-1" # not on hugging face
 ]
 
 ############################
@@ -129,10 +128,7 @@ def main(models_todo: list[str], evals_todo: list[str], VIS):
 
     for model in models_current_eval:
         for eval in evals:
-            # do the tests
             for i in range(len(evals[eval])):
-                ########################################################
-                # get the grouped data
                 eval_data = evals[eval][i]
 
                 vis_key = (model, eval, str(eval_data[3]))
@@ -142,13 +138,11 @@ def main(models_todo: list[str], evals_todo: list[str], VIS):
 
                 run_test(model, eval, eval_data[2], eval_data[3])
             
-        
-#2452
+
 if __name__ == "__main__":
     # 4.) Running this script does a list of evals for a list of models
     # Default empty lists passed in for models_to_do or empty_evals_to_do means doing all of them
 
-    # In order of urgency: 'llama-2-70b-chat', 'bard', 'palm-2', 'gpt-4', 'luminous-supreme-control', ...., 'llama-1-13b'
     models_to_do = [
         'gpt-4'
     ]
@@ -159,3 +153,18 @@ if __name__ == "__main__":
     VIS = load_responses()
     main(models_to_do, evals_to_do, VIS)
 
+    ##########
+    # Generating outcomes
+    # get tests to get evals dict to get answer key dict
+    tests = load_tests("prompts.csv")
+    evals = group_mtx_by_col(tests, 1)
+
+    answer_key = get_answer_key(evals)
+    responses = load_response_objects()
+    model_tables = {}
+    for model in handle_prompt_map:
+        print("Generating outcome for")
+        print("model:", model)
+        model_tables[model] = generate_outcome(responses, answer_key, model)
+
+    update_readme(model_tables)

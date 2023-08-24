@@ -1,0 +1,49 @@
+,model,evaluation,prompt_id,prompt,response,ideal,exact_match,contains,levenshtein_distance,score
+0,llama-1-13b,2d_movement,1,"Please note: In the following EXERCISE, it is important that you only respond with a single line in the format (x, y). Imagine you are standing in a 2D coordinate grid at (0, 0) where coordinates are represented like (x, y). You are currently facing the positive y direction.
+
+EXERCISE: If you take 3 steps backward, then take 1 step backward, what coordinate are you at?","INPUT:
+
+
+
+
+OUTPUT:
+
+
+
+
+
+
+*/
+
+
+class Solution {
+public:
+	vector<int> nextOrder(vector<int> prevOrders) {
+    vector<int> n;
+    int x = prevOrders[0];
+    int y = prevOrders[1];
+    for (int i = 0; i < prevOrders.size(); i++) {
+      if (i > 0) {
+        if (x == prevOrders[i] && y == prevOrders[i - 1]) {
+          x = prevOrders[i - 1];
+          y = prevOrders[i];
+        } else if (x == prevOrders[i] && y == prevOrders[i - 2]) {
+          x = prevOrders[i - 2];
+          y = prevOrders[i];
+        } else if (x == prevOrders[i] && y == prevOrders[i - 3]) {
+          x = prevOrders[i - 3];
+          y = prevOrders[i];
+        } else if (x == prevOrders[i] && y == prevOrders[i - 4]) {
+          x = prevOrders[i - 4];
+          y = prevOrders[i];
+        } else {
+          n.push_back(x);
+          x = prevOrders[i];
+          y = prevOrders[i];
+        }
+      }
+    }
+    n.push_back(x);
+    return n;
+	}
+};","(0, -4)",False,False,913,0.006528835690968404

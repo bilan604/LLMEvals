@@ -1,3 +1,6 @@
+
+import time
+import random
 import json
 from parsing import *
 import pandas as pd
@@ -31,6 +34,14 @@ def get_answer_key(evals):
             dd[(e, str(ed[3]))] = ed[-1]
     return dd
 
+def calc_score(resp, ideal):
+    if max(len(resp), len(ideal)) == 0:
+        print("Error")
+        return 0
+    mismatch = minDistance(resp, ideal)
+    error_rate = mismatch / max(len(resp), len(ideal))
+    score = 1 - error_rate
+    return score
 def minDistance(word1: str, word2: str) -> int:
     word1 = "-" + word1
     word2 = "-" + word2
@@ -56,8 +67,6 @@ def minDistance(word1: str, word2: str) -> int:
     
     return dp[m-1][n-1]
 
-import time
-import random
 
 def transpose_to_mtx(data: dict):
     cols = list(data.keys())
@@ -94,12 +103,8 @@ def plot_grouped_df(df_2):
     dd = dict(sorted(dd.items(), key=lambda x: x[1]))
     plt.plot(list(range(0, len(dd))), list(dd.values()))
 
-def generate_outcome(model_name="gpt-3.5-turbo"):
-    tests = load_tests("prompts.csv")
-    evals = group_mtx_by_col(tests, 1)
-    answer_key = get_answer_key(evals)
 
-    responses = load_response_objects()
+def generate_outcome(responses, answer_key, model_name):
     model_responses = get_responses_by(responses, "model", model_name)
 
     outcome = {
@@ -116,7 +121,7 @@ def generate_outcome(model_name="gpt-3.5-turbo"):
     }
 
     total_score = 0
-    total_scores = 0
+    total_questions = 0
     for response in model_responses:    
         key = (response["evaluation"], response["prompt_id"])
         if key not in answer_key:
@@ -126,16 +131,17 @@ def generate_outcome(model_name="gpt-3.5-turbo"):
         answer = answer_key[key]
         exact_match = False
         contains = False
-        levenshtein_distance = 0  # 1-(levenschtein(a,b)/max(len(a), len(b)))
+        levenshtein_distance = minDistance(response["response"].strip(), answer.strip())
         if response["response"].strip() == answer.strip():
             exact_match = True
         if answer in response["response"]:
             contains = True
         
-        levenshtein_distance = minDistance(response["response"].strip(), answer.strip())
-        score = 1 - (exact_match / max(len(response['response']), len(answer)))
-        total_scores += 1
+        score = calc_score(response["response"].strip(), answer.strip())
+        
         total_score += score
+        # count of questions
+        total_questions += 1
         outcome['model'].append(response['model'])
         outcome['evaluation'].append(response['evaluation'])
         outcome['prompt_id'].append(response['prompt_id'])
@@ -158,32 +164,36 @@ def generate_outcome(model_name="gpt-3.5-turbo"):
     df.to_csv(f"outcomes/{model_name}.csv")
 
     df_2 = sum_score_by_evaluation(df)
-
     df_2.to_csv(f"scores/{model_name}.csv")
 
     df_3 = pd.read_csv("results.csv")
-    data_3 = {"model": [], "score": []}
+    data_3 = {"model": [], "score": [], "total_score": [], "total_questions": []}
     updated_model = False
-    for model, score in zip(list(df_3["model"]), list(df_3["score"])):
+    for model, score, ts, tq in zip(list(df_3["model"]), list(df_3["score"]), list(df_3["total_score"]), list(df_3["total_questions"])):
+
+        final_score = -1
+        if total_questions != 0:
+            final_score = total_score/total_questions
+
         if model == model_name:
             data_3["model"].append(model_name)
-            data_3["score"].append(str(total_score))
+            data_3["score"].append(str(final_score))
+            data_3["total_score"].append(ts)
+            data_3["total_questions"].append(tq)
             updated_model = True
         else:
             data_3["model"].append(model)
             data_3["score"].append(score)
+            data_3["total_score"].append(ts)
+            data_3["total_questions"].append(tq)
 
     if not updated_model:
         data_3["model"].append(model_name)
-        data_3["score"].append(str(total_score/total_scores))
+        data_3["score"].append(str(final_score))
+        data_3["total_score"].append(str(total_score))
+        data_3["total_questions"].append(str(total_questions))
     
     df_3_updated = pd.DataFrame(data_3)
-    print("df_3_updated")
-    print(df_3_updated)
     df_3_updated.to_csv("results.csv")
 
-
-"""
-generate_outcome('gpt-3.5-turbo')
-generate_outcome('gpt-4')
-"""
+    return df_2

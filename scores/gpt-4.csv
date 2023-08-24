@@ -1,7 +1,10 @@
 ,evaluation,score
-0,2d_movement,0.9857142857142858
-1,3d_globe_movement,1.0
-2,3d_object_manipulation,1.0
-3,aba_mrpc_true_false,0.905
-4,abstract2title,1.0
-5,accounting_audit,0.4
+0,2d_movement,0.694047619047619
+1,3d_globe_movement,0.02802965403383332
+2,3d_object_manipulation,0.06938083004204651
+3,aba_mrpc_true_false,0.4255203495136362
+4,abstract2title,0.3120886535885604
+5,accounting_audit,0.6666666666666666
+6,actors-sequence,0.48825110817620143
+7,adultery-state-laws,0.014495058286480266
+8,afrikaans-lexicon,1.0

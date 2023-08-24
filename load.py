@@ -47,3 +47,7 @@ def group_mtx_by_col(mtx, col):
             dd[mtx[i][col]] = []
         dd[mtx[i][col]].append(mtx[i])
     return dd
+
+def sort_dataframe(dataframe, column_name):
+  sorted_dataframe = dataframe.sort_values(by=column_name, ascending=False)
+  return sorted_dataframe
