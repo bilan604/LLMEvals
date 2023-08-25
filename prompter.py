@@ -225,6 +225,6 @@ handle_prompt_map = {
 
 
 def prompt(model, prompt):
-    resp = handle_prompt_map[model](prompt)
+    resp = handle_prompt_map[model](prompt.strip())
     return resp
 

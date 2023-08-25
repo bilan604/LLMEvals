@@ -79,6 +79,8 @@ def load_tests(filepath):
 tests = load_tests("prompts.csv")
 
 
+
+
 # function for running tests
 def run_test(model, evaluation, prompt, test_idx):
     # evaluation is the name of the folder
@@ -97,12 +99,20 @@ def run_test(model, evaluation, prompt, test_idx):
         if isinstance(e, openai.error.RateLimitError):
             print("Sleeping for 60 seconds")
             time.sleep(60)
-            response = prompt(model, prompt)
+            response = do_prompt(model, prompt)
             print(f"run_test():{response=}\n")
             save_response(model, evaluation, str(test_idx), prompt, response)
             
         return
 
+def get_relevance():
+    rel = {}
+    with open("relevance.txt", "r") as f:
+        for line in f.readlines():
+            if not ("," in line): continue
+            k,v = line.strip().split(",")
+            rel[k.strip()] = v.strip()
+    return rel
 
 def main(models_todo: list[str], evals_todo: list[str], VIS):
     """
@@ -113,7 +123,7 @@ def main(models_todo: list[str], evals_todo: list[str], VIS):
     openai.api_key = OPENAI_API_KEY
 
     evals = group_mtx_by_col(tests, 1)
-    
+    relevance = get_relevance()
     if not models_todo:
         global models
         models_current_eval = models
@@ -136,15 +146,16 @@ def main(models_todo: list[str], evals_todo: list[str], VIS):
                     print("skipping vis:", vis_key)
                     continue
 
+                if int(relevance[eval]) < 6:
+                    continue
                 run_test(model, eval, eval_data[2], eval_data[3])
             
 
 if __name__ == "__main__":
     # 4.) Running this script does a list of evals for a list of models
     # Default empty lists passed in for models_to_do or empty_evals_to_do means doing all of them
-
+    """
     models_to_do = [
-        'gpt-4'
     ]
 
     evals_to_do = [
@@ -152,9 +163,9 @@ if __name__ == "__main__":
 
     VIS = load_responses()
     main(models_to_do, evals_to_do, VIS)
-
+    """
     ##########
-    # Generating outcomes
+    # 5.) Generating outcomes
     # get tests to get evals dict to get answer key dict
     tests = load_tests("prompts.csv")
     evals = group_mtx_by_col(tests, 1)
@@ -166,5 +177,8 @@ if __name__ == "__main__":
         print("Generating outcome for")
         print("model:", model)
         model_tables[model] = generate_outcome(responses, answer_key, model)
-
+    
     update_readme(model_tables)
+
+    # 6.) To increase the sample in the future, run the sample evals script
+    # and concatenate it with the existing prompts

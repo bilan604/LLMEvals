@@ -52,7 +52,6 @@ def handle_aleph_alpha_response(s):
     lst = lst[:idx]
     return "\n".join(lst[:idx])
 
-
 def make_table(data):
     df = pd.DataFrame(data)
     table = "<table>\n"    
@@ -92,7 +91,7 @@ def update_readme(model_dataframes):
         results_tables_by_model_by_eval += content
 
 
-    #readme = re.sub("{results_tables_by_model_by_eval}", results_tables_by_model_by_eval, readme)
+    readme = re.sub("{results_tables_by_model_by_eval}", results_tables_by_model_by_eval, readme)
 
     print("---------")
     print(readme)

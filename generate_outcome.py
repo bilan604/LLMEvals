@@ -125,7 +125,7 @@ def generate_outcome(responses, answer_key, model_name):
     for response in model_responses:    
         key = (response["evaluation"], response["prompt_id"])
         if key not in answer_key:
-            print("missing key", key)
+            print("Extra Eval: Eval Not in Sample", key)
             continue
 
         answer = answer_key[key]

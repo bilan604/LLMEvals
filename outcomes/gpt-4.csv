@@ -851,3 +851,2131 @@ vleis",Y,Y,True,True,0,1.0
 87,gpt-4,afrikaans-lexicon,869,"You will be prompted with a single word. Does this word exist in the Afrikaans language? Answer with exactly one letter: Y or N.
 
 hef",Y,Y,True,True,0,1.0
+88,gpt-4,afrikaans-lexicon,904,"You will be prompted with a single word. Does this word exist in the Afrikaans language? Answer with exactly one letter: Y or N.
+
+vaardigheid",Y,Y,True,True,0,1.0
+89,gpt-4,afrikaans-lexicon,916,"You will be prompted with a single word. Does this word exist in the Afrikaans language? Answer with exactly one letter: Y or N.
+
+bang",Y,Y,True,True,0,1.0
+90,gpt-4,aime_evaluation,0,"All answers are integers ranging from 000 to 999, inclusive. Please format your answer as a string with three digits.
+
+Find the sum of all positive two-digit integers that are divisible by each of their digits.","The two-digit numbers divisible by each of their digits are 11, 12, 15, 22, 24, 33, 36, 44, 48, 55, 66, 77, 88, and 99. 
+
+The sum of these numbers is 11 + 12 + 15 + 22 + 24 + 33 + 36 + 44 + 48 + 55 + 66 + 77 + 88 + 99 = 630.
+
+So, the answer is ""630"".",630,False,True,247,0.01200000000000001
+91,gpt-4,aime_evaluation,1,"All answers are integers ranging from 000 to 999, inclusive. Please format your answer as a string with three digits.
+
+A fair die is rolled four times. The probability that each of the final three rolls is at least as large as the roll preceding it may be expressed in the form m/n, where m and n are relatively prime positive integers. Find m + n","The probability that each of the final three rolls is at least as large as the roll preceding it is 120/1296. 
+
+This fraction is already in its simplest form, so the relatively prime positive integers m and n are 120 and 1296 respectively. 
+
+Therefore, m + n = 120 + 1296 = 1416.
+
+As a string with three digits, this is ""416"".",079,False,False,324,0.006134969325153339
+92,gpt-4,aime_evaluation,3,"All answers are integers ranging from 000 to 999, inclusive. Please format your answer as a string with three digits.
+
+A mail carrier delivers mail to the nineteen houses on the east side of Elm Street. The carrier notices that no two adjacent houses ever get mail on the same day, but that there are never more than two houses in a row that get no mail on the same day. How many different patterns of mail delivery are possible?","The number of different patterns of mail delivery possible is ""351"".",351,False,True,65,0.044117647058823484
+93,gpt-4,aime_evaluation,4,"All answers are integers ranging from 000 to 999, inclusive. Please format your answer as a string with three digits.
+
+The numbers 1, 2, 3, 4, 5, 6, 7, and 8 are randomly written on the faces of a regular octahedron so that each face contains a different number. The probability that no two consecutive numbers, where 8 and 1 are considered to be consecutive, are written on faces that share an edge is m/n, where m and n are relatively prime positive integers. Find m + n.","The answer to this problem is ""757"".",085,False,False,35,0.02777777777777779
+94,gpt-4,aime_evaluation,7,"All answers are integers ranging from 000 to 999, inclusive. Please format your answer as a string with three digits.
+
+A set of positive numbers has the 'triangle-property' if it has three distinct elements that are the lengths of the sides of a triangle whose area is positive. Consider sets {4, 5, 6, ..., n} of consecutive positive integers, all of whose ten-element subsets have the triangle property. What is the largest possible value of n?",The largest possible value of n is 019.,253,False,False,39,0.0
+95,gpt-4,aime_evaluation,8,"All answers are integers ranging from 000 to 999, inclusive. Please format your answer as a string with three digits.
+
+Each unit square of a 3-by-3 unit-square grid is to be colored either blue or red. For each square, either color is equally likely to be used. The probability of obtaining a grid that does not have a 2-by-2 red square is m/n, where m and n are relatively prime positive integers. Find m + n.","The total number of ways to color the grid is 2^9 = 512.
+
+To find the number of ways to color the grid such that there is at least one 2-by-2 red square, we can use the principle of inclusion-exclusion.
+
+There are 4 ways to choose the location of a 2-by-2 red square, and 2^5 ways to color the remaining squares, for a total of 4*32 = 128 ways.
+
+However, we have overcounted the cases where there are two or more 2-by-2 red squares. There are 2 ways to choose the location of two non-overlapping 2-by-2 red squares, and 2^1 ways to color the remaining square, for a total of 2*2 = 4 ways.
+
+Finally, there is 1 way to choose the location of three non-overlapping 2-by-2 red squares, and no remaining squares to color, for a total of 1 way.
+
+So, the total number of ways to color the grid such that there is at least one 2-by-2 red square is 128 - 4 + 1 = 125.
+
+Therefore, the number of ways to color the grid such that there is no 2-by-2 red square is 512 - 125 = 387.
+
+So, the probability of obtaining a grid that does not have a 2-by-2 red square is 387/512, and m + n = 387 + 512 = 899.
+
+So, the answer is ""899"".",929,False,False,1111,0.0026929982046678402
+96,gpt-4,aime_evaluation,9,"All answers are integers ranging from 000 to 999, inclusive. Please format your answer as a string with three digits.
+
+Given that x and y are both integers between 100 and 999, inclusive; y is the number formed by reversing the digits of x; and z=|x-y|. How many distinct values of z are possible?","The number of distinct values of z is ""900"".",009,False,False,42,0.045454545454545414
+97,gpt-4,aime_evaluation,10,"All answers are integers ranging from 000 to 999, inclusive. Please format your answer as a string with three digits.
+
+A straight river that is 264 meters wide flows from west to east at a rate of 14 meters per minute. Melanie and Sherry sit on the south bank of the river with Melanie a distance of D meters downstream from Sherry. Relative to the water, Melanie swims at 80 meters per minute, and Sherry swims at 60 meters per minute. At the same time, Melanie and Sherry begin swimming in straight lines to a point on the north bank of the river that is equidistant from their starting positions. The two women arrive at this point simultaneously. Find D.","The time it takes for each woman to swim across the river is the same, and is equal to the width of the river divided by their respective swimming speeds. 
+
+For Melanie, this time is 264/80 = 3.3 minutes. 
+
+For Sherry, this time is 264/60 = 4.4 minutes. 
+
+During this time, the river carries them downstream at a rate of 14 meters per minute. 
+
+So, Melanie is carried 3.3 * 14 = 46.2 meters downstream, and Sherry is carried 4.4 * 14 = 61.6 meters downstream. 
+
+The difference in these distances is the distance D between their starting positions. 
+
+So, D = 61.6 - 46.2 = 15.4 meters. 
+
+Rounding to the nearest whole number, we get D = 15 meters. 
+
+So, the answer is ""015"".",550,False,False,670,0.004457652303120341
+98,gpt-4,aime_evaluation,11,"All answers are integers ranging from 000 to 999, inclusive. Please format your answer as a string with three digits.
+
+Adults made up 5/12 of the crowd of people at a concert. After a bus carrying 50 more people arrived, adults made up 11/25 of the people at the concert. Find the minimum number of adults who could have been at the concert after the bus arrived.","Let's denote the initial number of people at the concert as x and the number of adults as a. We know that a = 5/12 * x and a + 50 = 11/25 * (x + 50).
+
+We can solve this system of equations to find the values of a and x. However, since we are looking for the minimum number of adults who could have been at the concert after the bus arrived, we need to find the smallest integer value of x that satisfies the conditions of the problem.
+
+By substituting a = 5/12 * x into the second equation, we get 5/12 * x + 50 = 11/25 * (x + 50). Solving this equation for x, we get x = 300.
+
+Substituting x = 300 into the equation a = 5/12 * x, we get a = 125. However, this is the number of adults before the bus arrived. After the bus arrived, the number of adults increased by 50, so the minimum number of adults who could have been at the concert after the bus arrived is a + 50 = 125 + 50 = 175.
+
+Therefore, the answer is ""175"".",154,False,False,917,0.0021762785636560977
+99,gpt-4,aime_evaluation,12,"All answers are integers ranging from 000 to 999, inclusive. Please format your answer as a string with three digits.
+
+A right square pyramid with volume 54 has a base with side length 6. The five vertices of the pyramid all lie on a sphere with radius m/n, where m and n are relatively prime positive integers. Find m+n.","The volume of a pyramid is given by V = 1/3 * base area * height. Given that the volume is 54 and the base is a square with side length 6, we can solve for the height:
+
+54 = 1/3 * 6^2 * height
+54 = 1/3 * 36 * height
+54 = 12 * height
+height = 54 / 12 = 4.5
+
+The sphere that contains all the vertices of the pyramid has its center at the center of the square base and its radius is the distance from this center to any of the vertices. This distance is the hypotenuse of a right triangle with one leg being half the diagonal of the base (which is 6/sqrt(2) = 3*sqrt(2)) and the other leg being the height of the pyramid (which is 4.5). 
+
+Using the Pythagorean theorem, the radius of the sphere is sqrt[(3*sqrt(2))^2 + 4.5^2] = sqrt[18 + 20.25] = sqrt[38.25] = 6.18 (approximately).
+
+To express this as a fraction with relatively prime integers, we can approximate 6.18 as 618/100. The greatest common divisor of 618 and 100 is 2, so we divide both by 2 to get 309/50. 
+
+Therefore, m = 309 and n = 50, and m + n = 309 + 50 = 359.
+
+So, the answer is ""359"".",021,False,False,1049,0.002851711026615966
+100,gpt-4,algebra_word_problems,0,"Answer the following question with a single number and no additional text. You are a helpful assistant.
+
+If it takes 5 machines 5 minutes to make 5 devices, how long would it take 100 machines to make 100 devices?",5,5,True,True,0,1.0
+101,gpt-4,algebra_word_problems,1,"Answer the following question with a single number and no additional text. You are a helpful assistant.
+
+What is the sum of 60000, 5000, 400, and 3, with the third value multiplied by 5 before performing the operation?",60503,67003,False,False,2,0.6
+102,gpt-4,algebra_word_problems,2,"Answer the following question with a single number and no additional text. You are a helpful assistant.
+
+If the sum of the smallest and largest of three consecutive even numbers is 28, what is the value of the second largest number in the series?",14,14,True,True,0,1.0
+103,gpt-4,algebra_word_problems,3,"Answer the following question with a single number and no additional text. You are a helpful assistant.
+
+John is trying to fill a 16 oz. bottle with water. If John fills the bottle at 1 oz per second and the bottle leaks .2 oz per second, how long would it take for John to fill the bottle?",20,20,True,True,0,1.0
+104,gpt-4,algebra_word_problems,4,"Answer the following question with a single number and no additional text. You are a helpful assistant.
+
+Annie is training for a marathon. She has a weekly training routine, training for five hours a day on some days and 3 hours a day on the other days. She trains a total of 27 hours in a seven day week. On how many days does she train for five hours?",4,3,False,False,1,0.0
+105,gpt-4,alternate_numeral_systems,1,"You are AB-Bot: A machine that can convert base 10 numbers into a numeral system that is base 2 and uses 'a' to represent 0 and 'b' to represent 1. First, write out in a step by step manner your reasoning about the conversion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print the converted number on it's own line inside square brackets e.g ""[aba]"".
+
+1","To convert the base 10 number 1 into a base 2 numeral system that uses 'a' to represent 0 and 'b' to represent 1, we can follow these steps:
+
+1. First, we need to convert the base 10 number into base 2. The base 2 representation of 1 is 1.
+
+2. Next, we replace the 0s and 1s in the base 2 number with 'a' and 'b' respectively. Since there are no 0s in our base 2 number, we only need to replace the 1 with 'b'.
+
+So, the base 10 number 1 is represented as 'b' in the AB-Bot numeral system.
+
+[b]",['[b]'],False,False,489,0.008113590263691739
+106,gpt-4,alternate_numeral_systems,4,"You are AB-Bot: A machine that can convert base 10 numbers into a numeral system that is base 2 and uses 'a' to represent 0 and 'b' to represent 1. First, write out in a step by step manner your reasoning about the conversion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print the converted number on it's own line inside square brackets e.g ""[aba]"".
+
+42","Sure, let's convert the base 10 number 42 into the AB-Bot numeral system.
+
+Step 1: Convert 42 from base 10 to base 2.
+The base 2 representation of 42 is 101010. Here's how we get that:
+
+- 42 divided by 2 equals 21 remainder 0. So the rightmost digit is 0.
+- 21 divided by 2 equals 10 remainder 1. So the next digit is 1.
+- 10 divided by 2 equals 5 remainder 0. So the next digit is 0.
+- 5 divided by 2 equals 2 remainder 1. So the next digit is 1.
+- 2 divided by 2 equals 1 remainder 0. So the next digit is 0.
+- Finally, 1 divided by 2 equals 0 remainder 1. So the leftmost digit is 1.
+
+So, reading from left to right, the base 2 representation of 42 is 101010.
+
+Step 2: Convert the base 2 number 101010 into the AB-Bot numeral system.
+In the AB-Bot numeral system, 'a' represents 0 and 'b' represents 1. So we just replace each 0 with 'a' and each 1 with 'b'. 
+
+So, the AB-Bot numeral system representation of 42 is bababa.
+
+[bababa]",['[bababa]'],False,False,926,0.009625668449197877
+107,gpt-4,alternate_numeral_systems,5,"You are AB-Bot: A machine that can convert base 10 numbers into a numeral system that is base 2 and uses 'a' to represent 0 and 'b' to represent 1. First, write out in a step by step manner your reasoning about the conversion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print the converted number on it's own line inside square brackets e.g ""[aba]"".
+
+5341","To convert the decimal number 5341 into a base 2 numeral system that uses 'a' to represent 0 and 'b' to represent 1, we first need to convert the decimal number into binary.
+
+Step 1: Convert the decimal number into binary
+- The binary equivalent of 5341 is 1010011010101.
+
+Step 2: Replace the binary digits with 'a' and 'b'
+- Replace all 0s with 'a' and all 1s with 'b'.
+
+Let's do the conversion:
+
+The binary equivalent of 5341 is 1010011010101. Replacing 0s with 'a' and 1s with 'b', we get:
+
+babaaababaaab
+
+So, the base 2 numeral system equivalent of 5341 using 'a' to represent 0 and 'b' to represent 1 is babaaababaaab.
+
+Let's print the converted number:
+
+[babaaababaaab]",['[babaabbabbbab]'],False,False,659,0.02370370370370367
+108,gpt-4,alternate_numeral_systems,6,"You are AB-Bot: A machine that can convert base 10 numbers into a numeral system that is base 2 and uses 'a' to represent 0 and 'b' to represent 1. First, write out in a step by step manner your reasoning about the conversion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print the converted number on it's own line inside square brackets e.g ""[aba]"".
+
+8792","To convert the base 10 number 8792 into a base 2 numeral system that uses 'a' to represent 0 and 'b' to represent 1, we first need to convert the number into base 2.
+
+Step 1: Convert 8792 from base 10 to base 2
+
+8792 divided by 2 equals 4396 with a remainder of 0. So the first digit of our base 2 number is 0.
+
+4396 divided by 2 equals 2198 with a remainder of 0. So the second digit of our base 2 number is 0.
+
+2198 divided by 2 equals 1099 with a remainder of 0. So the third digit of our base 2 number is 0.
+
+1099 divided by 2 equals 549 with a remainder of 1. So the fourth digit of our base 2 number is 1.
+
+549 divided by 2 equals 274 with a remainder of 1. So the fifth digit of our base 2 number is 1.
+
+274 divided by 2 equals 137 with a remainder of 0. So the sixth digit of our base 2 number is 0.
+
+137 divided by 2 equals 68 with a remainder of 1. So the seventh digit of our base 2 number is 1.
+
+68 divided by 2 equals 34 with a remainder of 0. So the eighth digit of our base 2 number is 0.
+
+34 divided by 2 equals 17 with a remainder of 0. So the ninth digit of our base 2 number is 0.
+
+17 divided by 2 equals 8 with a remainder of 1. So the tenth digit of our base 2 number is 1.
+
+8 divided by 2 equals 4 with a remainder of 0. So the eleventh digit of our base 2 number is 0.
+
+4 divided by 2 equals 2 with a remainder of 0. So the twelfth digit of our base 2 number is 0.
+
+2 divided by 2 equals 1 with a remainder of 0. So the thirteenth digit of our base 2 number is 0.
+
+1 divided by 2 equals 0 with a remainder of 1. So the fourteenth digit of our base 2 number is 1.
+
+So, 8792 in base 2 is 10001001111000.
+
+Step 2: Convert the base 2 number into the AB-Bot system
+
+Now we replace each 0 with 'a' and each 1 with 'b'. 
+
+So, 10001001111000 becomes baabbaaabbbbaa.
+
+Therefore, 8792 in the AB-Bot system is [baabbaaabbbbaa].",['[baaabaababbaaa]'],False,False,1822,0.009244154431756413
+109,gpt-4,alternate_numeral_systems,7,"You are AB-Bot: A machine that can convert base 10 numbers into a numeral system that is base 2 and uses 'a' to represent 0 and 'b' to represent 1. First, write out in a step by step manner your reasoning about the conversion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print the converted number on it's own line inside square brackets e.g ""[aba]"".
+
+2524","To convert the base 10 number 2524 into a base 2 number, we need to divide the number by 2 repeatedly and keep track of the remainders. The remainders will form the base 2 number. 
+
+Step 1: Divide 2524 by 2. The quotient is 1262 and the remainder is 0. So, the first digit of the base 2 number is 0.
+
+Step 2: Divide 1262 by 2. The quotient is 631 and the remainder is 0. So, the second digit of the base 2 number is 0.
+
+Step 3: Divide 631 by 2. The quotient is 315 and the remainder is 1. So, the third digit of the base 2 number is 1.
+
+Step 4: Divide 315 by 2. The quotient is 157 and the remainder is 1. So, the fourth digit of the base 2 number is 1.
+
+Step 5: Divide 157 by 2. The quotient is 78 and the remainder is 1. So, the fifth digit of the base 2 number is 1.
+
+Step 6: Divide 78 by 2. The quotient is 39 and the remainder is 0. So, the sixth digit of the base 2 number is 0.
+
+Step 7: Divide 39 by 2. The quotient is 19 and the remainder is 1. So, the seventh digit of the base 2 number is 1.
+
+Step 8: Divide 19 by 2. The quotient is 9 and the remainder is 1. So, the eighth digit of the base 2 number is 1.
+
+Step 9: Divide 9 by 2. The quotient is 4 and the remainder is 1. So, the ninth digit of the base 2 number is 1.
+
+Step 10: Divide 4 by 2. The quotient is 2 and the remainder is 0. So, the tenth digit of the base 2 number is 0.
+
+Step 11: Divide 2 by 2. The quotient is 1 and the remainder is 0. So, the eleventh digit of the base 2 number is 0.
+
+Step 12: Divide 1 by 2. The quotient is 0 and the remainder is 1. So, the twelfth digit of the base 2 number is 1.
+
+Now, we have the base 2 number 100111101100. But we need to replace 0 with 'a' and 1 with 'b' to get the final number in the AB-Bot system.
+
+So, the final number in the AB-Bot system is ""baabbbabbaaa"".
+
+Let's print it:
+
+[baabbbabbaaa]",['[baabbbabbbaa]'],False,False,1798,0.007726269315673329
+110,gpt-4,alternate_numeral_systems,11,"You are AB-Bot: A machine that can convert base 10 numbers into a numeral system that is base 2 and uses 'a' to represent 0 and 'b' to represent 1. First, write out in a step by step manner your reasoning about the conversion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print the converted number on it's own line inside square brackets e.g ""[aba]"".
+
+1978","To convert the decimal number 1978 into base 2, we need to divide the number by 2 and keep track of the remainder. This process is repeated until the quotient is 0. The binary number is then obtained by reading the remainders in reverse order. 
+
+Let's start:
+
+1. 1978 divided by 2 is 989 remainder 0. So, the first digit of our binary number is 0.
+2. 989 divided by 2 is 494 remainder 1. So, the second digit of our binary number is 1.
+3. 494 divided by 2 is 247 remainder 0. So, the third digit of our binary number is 0.
+4. 247 divided by 2 is 123 remainder 1. So, the fourth digit of our binary number is 1.
+5. 123 divided by 2 is 61 remainder 1. So, the fifth digit of our binary number is 1.
+6. 61 divided by 2 is 30 remainder 1. So, the sixth digit of our binary number is 1.
+7. 30 divided by 2 is 15 remainder 0. So, the seventh digit of our binary number is 0.
+8. 15 divided by 2 is 7 remainder 1. So, the eighth digit of our binary number is 1.
+9. 7 divided by 2 is 3 remainder 1. So, the ninth digit of our binary number is 1.
+10. 3 divided by 2 is 1 remainder 1. So, the tenth digit of our binary number is 1.
+11. 1 divided by 2 is 0 remainder 1. So, the eleventh digit of our binary number is 1.
+
+Reading the remainders in reverse order gives us the binary number 11110110110.
+
+Now, we need to convert this binary number into the AB system, where 'a' represents 0 and 'b' represents 1. 
+
+So, the binary number 11110110110 becomes bbbbabbaaba in the AB system.
+
+Let's print this:
+
+[bbbbabbaaba]",['[bbbbabbbaba]'],False,False,1491,0.009302325581395321
+111,gpt-4,alternate_numeral_systems,16,"You are ABC-Bot: A machine that can convert base 10 numbers into a numeral system that is base 3 and uses 'a' to represent 0, 'b' to represent 1 and 'c' to represent 2. First, write out in a step by step manner your reasoning about the conversion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print the converted number on it's own line inside square brackets e.g ""[aba]"".
+
+1","To convert the base 10 number 1 into a base 3 numeral system that uses 'a' to represent 0, 'b' to represent 1 and 'c' to represent 2, we can follow these steps:
+
+1. Divide the number by 3 and record the remainder. In this case, 1 divided by 3 is 0 with a remainder of 1.
+2. Write down the remainder in the new base system. In this case, 1 is represented by 'b'.
+3. If the quotient from the division in step 1 is not 0, repeat steps 1 and 2 with the quotient. In this case, the quotient is 0, so we can stop here.
+
+So, the base 10 number 1 is represented as 'b' in the base 3 numeral system that uses 'a', 'b', and 'c'.
+
+[b]",['[b]'],False,False,619,0.006420545746388395
+112,gpt-4,alternate_numeral_systems,21,"You are ABC-Bot: A machine that can convert base 10 numbers into a numeral system that is base 3 and uses 'a' to represent 0, 'b' to represent 1 and 'c' to represent 2. First, write out in a step by step manner your reasoning about the conversion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print the converted number on it's own line inside square brackets e.g ""[aba]"".
+
+8792","To convert the base 10 number 8792 into a base 3 number using 'a' to represent 0, 'b' to represent 1 and 'c' to represent 2, we need to follow these steps:
+
+1. Divide the number by 3 and record the remainder. The remainder will be the least significant digit (rightmost) in the base 3 number.
+2. Divide the quotient from the previous step by 3 and record the remainder. This will be the next digit in the base 3 number.
+3. Repeat this process until the quotient is 0.
+
+Let's start:
+
+1. 8792 divided by 3 is 2930 remainder 2. So the least significant digit is 'c'.
+2. 2930 divided by 3 is 976 remainder 2. So the next digit is 'c'.
+3. 976 divided by 3 is 325 remainder 1. So the next digit is 'b'.
+4. 325 divided by 3 is 108 remainder 1. So the next digit is 'b'.
+5. 108 divided by 3 is 36 remainder 0. So the next digit is 'a'.
+6. 36 divided by 3 is 12 remainder 0. So the next digit is 'a'.
+7. 12 divided by 3 is 4 remainder 0. So the next digit is 'a'.
+8. 4 divided by 3 is 1 remainder 1. So the next digit is 'b'.
+9. 1 divided by 3 is 0 remainder 1. So the most significant digit (leftmost) is 'b'.
+
+So, the base 10 number 8792 is represented as 'bbbaaaccc' in the base 3 system using 'a' to represent 0, 'b' to represent 1 and 'c' to represent 2.
+
+Let's print the converted number:
+
+[bbbaaaccc]",['[bbaaabbcc]'],False,False,1286,0.009244992295839749
+113,gpt-4,alternate_numeral_systems,22,"You are ABC-Bot: A machine that can convert base 10 numbers into a numeral system that is base 3 and uses 'a' to represent 0, 'b' to represent 1 and 'c' to represent 2. First, write out in a step by step manner your reasoning about the conversion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print the converted number on it's own line inside square brackets e.g ""[aba]"".
+
+2524","To convert the base 10 number 2524 into a base 3 numeral system using 'a' to represent 0, 'b' to represent 1 and 'c' to represent 2, we need to follow these steps:
+
+1. Divide the number by 3 and record the remainder. The remainder will be the least significant digit (rightmost) in the base 3 number.
+2. Continue this process with the quotient from the previous division until the quotient is 0.
+
+Let's start:
+
+1. 2524 divided by 3 is 841 with a remainder of 1. So, the least significant digit is 'b'.
+2. 841 divided by 3 is 280 with a remainder of 1. So, the next digit is 'b'.
+3. 280 divided by 3 is 93 with a remainder of 1. So, the next digit is 'b'.
+4. 93 divided by 3 is 31 with a remainder of 0. So, the next digit is 'a'.
+5. 31 divided by 3 is 10 with a remainder of 1. So, the next digit is 'b'.
+6. 10 divided by 3 is 3 with a remainder of 1. So, the next digit is 'b'.
+7. 3 divided by 3 is 1 with a remainder of 0. So, the next digit is 'a'.
+8. 1 divided by 3 is 0 with a remainder of 1. So, the most significant digit (leftmost) is 'b'.
+
+So, the base 10 number 2524 is represented as 'bbbabbb' in the base 3 numeral system using 'a' to represent 0, 'b' to represent 1 and 'c' to represent 2.
+
+Let's print the converted number:
+
+[bbbabbb]",['[babbabbb]'],False,False,1237,0.008814102564102533
+114,gpt-4,alternate_numeral_systems,28,"You are ABC-Bot: A machine that can convert base 10 numbers into a numeral system that is base 3 and uses 'a' to represent 0, 'b' to represent 1 and 'c' to represent 2. First, write out in a step by step manner your reasoning about the conversion to be sure that your conclusion is correct. Avoid simply stating the correct answers at the outset. Then print the converted number on it's own line inside square brackets e.g ""[aba]"".
+
+8276","To convert the base 10 number 8276 into a base 3 number using 'a' to represent 0, 'b' to represent 1 and 'c' to represent 2, we need to follow these steps:
+
+1. Divide the number by 3 and record the remainder. The remainder will be the least significant digit (rightmost) in the base 3 number.
+2. Divide the quotient from the previous step by 3 and record the remainder. This will be the next digit in the base 3 number.
+3. Repeat this process until the quotient is 0.
+
+Let's start:
+
+1. 8276 divided by 3 is 2758 with a remainder of 2. So, the least significant digit is 'c'.
+2. 2758 divided by 3 is 919 with a remainder of 1. So, the next digit is 'b'.
+3. 919 divided by 3 is 306 with a remainder of 1. So, the next digit is 'b'.
+4. 306 divided by 3 is 102 with a remainder of 0. So, the next digit is 'a'.
+5. 102 divided by 3 is 34 with a remainder of 0. So, the next digit is 'a'.
+6. 34 divided by 3 is 11 with a remainder of 1. So, the next digit is 'b'.
+7. 11 divided by 3 is 3 with a remainder of 2. So, the next digit is 'c'.
+8. 3 divided by 3 is 1 with a remainder of 0. So, the next digit is 'a'.
+9. 1 divided by 3 is 0 with a remainder of 1. So, the most significant digit (leftmost) is 'b'.
+
+So, the base 10 number 8276 is represented as 'bbacaabbc' in base 3 using 'a' to represent 0, 'b' to represent 1 and 'c' to represent 2.
+
+Let's print the converted number:
+
+[bbacaabbc]",['[bacbaabbc]'],False,False,1374,0.008658008658008698
+115,gpt-4,ambiguous-sentences,0,"You are a helpful assistant.
+
+The city councilmen refused the demonstrators a permit because they feared violence.. Who feared violence?",The city councilmen feared violence.,city councilmen,False,True,21,0.41666666666666663
+116,gpt-4,ambiguous-sentences,4,"You are a helpful assistant.
+
+Tom threw his schoolbag down to Ray after he reached the top of the stairs.. Who reached the top of the stairs?",Tom reached the top of the stairs.,Tom,False,True,31,0.08823529411764708
+117,gpt-4,ambiguous-sentences,6,"You are a helpful assistant.
+
+Although they ran at about the same speed, Sue beat Sally because she had such a good start. Who had a good start?",Sue had a good start.,Sue,False,True,18,0.1428571428571429
+118,gpt-4,ambiguous-sentences,7,"You are a helpful assistant.
+
+Although they ran at about the same speed, Sue beat Sally because she had such a bad start. Who had a bad start?",Sally had a bad start.,Sally,False,True,17,0.2272727272727273
+119,gpt-4,ambiguous-sentences,25,"You are a helpful assistant.
+
+We went to the lake, because a shark had been seen at the ocean beach,  so it was a safer place to swim.. Which was a safer place to swim?",The lake was a safer place to swim.,ocean,False,False,33,0.05714285714285716
+120,gpt-4,ambiguous-sentences,28,"You are a helpful assistant.
+
+Thomson visited Cooper's grave in 1765. At that date he had been dead for five years.. Who had been dead for five years?",Cooper had been dead for five years.,Cooper,False,True,30,0.16666666666666663
+121,gpt-4,ambiguous-sentences,31,"You are a helpful assistant.
+
+The actress used to be named Terpsichore, but she changed it to Tina a  few years ago, because she figured it was too hard to pronounce. Which name was too hard to pronounce?",The name that was too hard to pronounce was Terpsichore.,Terpsichore,False,True,45,0.1964285714285714
+122,gpt-4,ambiguous-sentences,38,"You are a helpful assistant.
+
+The scientists are studying three species of fish that have recently been found living in the Indian Ocean. They appeared two years ago.. Who or what appeared two years ago?",The three species of fish that the scientists are studying appeared two years ago in the Indian Ocean.,fish,False,True,98,0.039215686274509776
+123,gpt-4,ambiguous-sentences,43,"You are a helpful assistant.
+
+Everyone really loved the oatmeal cookies; only a few people liked the  chocolate chip cookies. Next time, we should make fewer of them. Which cookie should we make fewer of, next time?","Next time, you should make fewer chocolate chip cookies.",chocolate chip cookies,False,True,34,0.3928571428571429
+124,gpt-4,ambiguous-sentences,48,"You are a helpful assistant.
+
+Steve follows Fred's example in everything. He admires hugely.. Who admires whom?",Steve admires Fred.,Steve admires Fred,False,True,1,0.9473684210526316
+125,gpt-4,anagrams,8,"Find the anagram of the input word (output is a single word)
+
+adniesattmiivr","The anagram of the word ""adniesattmiivr"" is ""administrative"".",administrative,False,True,47,0.2295081967213115
+126,gpt-4,anagrams,27,"Find the anagram of the input word (output is a single word)
+
+nrmasantrege","The anagram of the word ""nrmasantrege"" is ""arrangements"".",arrangements,False,True,45,0.21052631578947367
+127,gpt-4,anagrams,68,"Find the anagram of the input word (output is a single word)
+
+pmlynaremitco","The anagram of the word ""pmlynaremitco"" is ""complimentary"".",complimentary,False,True,46,0.22033898305084743
+128,gpt-4,anagrams,80,"Find the anagram of the input word (output is a single word)
+
+oniloacressgn","The anagram of the word ""oniloacressgn"" is ""recognisalons"".",congressional,False,False,48,0.18644067796610164
+129,gpt-4,anagrams,96,"Find the anagram of the input word (output is a single word)
+
+snlionoutact","The anagram of the word ""snlionoutact"" is ""consultation"".",consultation,False,True,45,0.21052631578947367
+130,gpt-4,anagrams,146,"Find the anagram of the input word (output is a single word)
+
+isaemlhtntebs","The anagram of the input word ""isaemlhtntebs"" is ""establishment"".",establishment,False,True,52,0.19999999999999996
+131,gpt-4,anagrams,182,"Find the anagram of the input word (output is a single word)
+
+isicnrtnotus","The anagram of the word ""isicnrtnotus"" is ""constructions"".",instructions,False,False,46,0.2068965517241379
+132,gpt-4,anagrams,199,"Find the anagram of the input word (output is a single word)
+
+igaiitentnsov","The anagram of the word ""igaiitentnsov"" is ""investigation"".",investigation,False,True,46,0.22033898305084743
+133,gpt-4,anagrams,221,"Find the anagram of the input word (output is a single word)
+
+tdiasfcominio","The anagram of the input word ""tdiasfcominio"" is ""disconfirmation"".",modifications,False,False,55,0.17910447761194026
+134,gpt-4,anagrams,341,"Find the anagram of the input word (output is a single word)
+
+itpciraonnrst","The anagram of the input word ""itpciraonnrst"" is ""incorporation"".",transcription,False,False,54,0.16923076923076918
+135,gpt-4,arc,47,"You are PuzzleGPT. Follow the demonstrated pattern to solve the puzzle.
+
+Input:
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0","I'm sorry, but there's no demonstrated pattern in the input you've provided. It's just a grid of zeros. Could you please provide a pattern or a rule to follow?",['Output:\n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3\n0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3\n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 0 3\n3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 3\n3 0 3 3 3 3 3 3 3 3 3 3 3 3 0 3 0 3\n3 0 3 0 0 0 0 0 0 0 0 0 0 3 0 3 0 3\n3 0 3 0 3 3 3 3 3 3 3 3 0 3 0 3 0 3\n3 0 3 0 3 0 0 0 0 0 0 3 0 3 0 3 0 3\n3 0 3 0 3 0 3 3 3 3 0 3 0 3 0 3 0 3\n3 0 3 0 3 0 3 0 3 3 0 3 0 3 0 3 0 3\n3 0 3 0 3 0 3 0 0 0 0 3 0 3 0 3 0 3\n3 0 3 0 3 0 3 3 3 3 3 3 0 3 0 3 0 3\n3 0 3 0 3 0 0 0 0 0 0 0 0 3 0 3 0 3\n3 0 3 0 3 3 3 3 3 3 3 3 3 3 0 3 0 3\n3 0 3 0 0 0 0 0 0 0 0 0 0 0 0 3 0 3\n3 0 3 3 3 3 3 3 3 3 3 3 3 3 3 3 0 3\n3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3\n3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3'],False,False,642,0.05169867060561295
+136,gpt-4,arc,55,"You are PuzzleGPT. Follow the demonstrated pattern to solve the puzzle.
+
+Input:
+0 2 0 4 4 0 2 0 4 4 0 2 0 4 4
+2 2 0 4 4 2 2 0 4 4 2 2 0 4 4
+0 2 2 2 0 0 2 2 2 0 0 2 2 2 0
+1 1 0 2 2 1 1 0 2 2 1 1 0 2 2
+1 1 0 2 0 1 1 0 2 0 1 1 0 2 0",1 1 0 2 2 1 1 0 2 2 1 1 0 2 2,['Output:\n0 2 0 4 4\n2 2 0 4 4\n0 2 2 2 0\n1 1 0 2 2\n1 1 0 2 0'],False,False,41,0.3787878787878788
+137,gpt-4,arc,111,"You are PuzzleGPT. Follow the demonstrated pattern to solve the puzzle.
+
+Input:
+0 0 0 0 2 0 0 0 0 0 0 0 3 3 0 0 0 0
+0 0 0 0 2 0 0 0 0 0 0 3 0 3 0 0 0 0
+0 0 0 0 2 0 0 0 0 0 0 3 3 3 0 0 0 0
+0 0 0 0 2 0 0 0 0 0 0 3 0 0 0 0 0 0","Output:
+0 0 0 0 2 0 0 0 0 0 0 3 0 0 0 0 0 0
+0 0 0 0 2 0 0 0 0 0 0 3 3 0 0 0 0 0
+0 0 0 0 2 0 0 0 0 0 0 3 0 3 0 0 0 0
+0 0 0 0 2 0 0 0 0 0 0 3 3 3 0 0 0 0",['Output:\n0 0 0 0 2 0 3 3 8 0 0 0 0 0 0 0 0 0\n0 0 0 0 2 3 0 3 8 0 0 0 0 0 0 0 0 0\n0 0 0 0 2 3 3 3 8 0 0 0 0 0 0 0 0 0\n0 0 0 0 2 3 0 0 8 0 0 0 0 0 0 0 0 0'],False,False,32,0.7987421383647799
+138,gpt-4,arc,156,"You are PuzzleGPT. Follow the demonstrated pattern to solve the puzzle.
+
+Input:
+0 0 0 0 0 0 0 0 0 8
+0 8 0 0 0 0 0 8 0 0
+0 8 8 8 0 0 0 0 0 0
+0 8 8 8 0 0 0 8 0 0
+8 0 0 0 0 0 0 0 0 0
+0 0 0 0 8 8 8 8 8 8
+0 0 0 0 8 8 8 8 8 0
+8 0 0 0 8 8 8 8 8 0
+0 0 8 0 0 0 0 0 0 0
+0 0 0 0 8 0 0 0 0 8","Output:
+0 0 0 0 0 0 0 0 0 8
+0 8 0 0 0 0 0 8 0 0
+0 8 8 8 0 0 0 0 0 0
+0 8 8 8 0 0 0 8 0 0
+8 0 0 0 0 0 0 0 0 8
+0 0 0 0 8 8 8 8 8 8
+0 0 0 0 8 8 8 8 8 0
+8 0 0 0 8 8 8 8 8 8
+0 0 8 0 0 0 0 0 0 0
+0 0 0 0 8 0 0 0 0 8",['Output:\n0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0\n0 8 8 8 0 0 0 0 0 0\n0 8 8 8 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0\n0 0 0 0 8 8 8 8 8 0\n0 0 0 0 8 8 8 8 8 0\n0 0 0 0 8 8 8 8 8 0\n0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0'],False,False,36,0.8371040723981901
+139,gpt-4,arc,161,"You are PuzzleGPT. Follow the demonstrated pattern to solve the puzzle.
+
+Input:
+0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 3 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0","I'm sorry, but there isn't a clear pattern demonstrated in the input you've provided. Could you please provide more information or a clearer pattern?",['Output:\n0 4 0 4 0 4 0 4 0 4 0 4\n0 4 0 4 0 4 0 4 0 4 0 4\n0 4 0 4 0 4 0 4 0 4 0 4\n0 4 0 4 0 4 0 4 0 4 0 4\n0 0 0 0 0 3 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0'],False,False,279,0.10289389067524113
+140,gpt-4,arc,213,"You are PuzzleGPT. Follow the demonstrated pattern to solve the puzzle.
+
+Input:
+0 1 0 0 0 0 0 0 0 0
+0 0 1 5 5 0 0 0 0 0
+0 0 0 1 5 0 0 0 0 0
+0 0 0 0 1 0 0 0 0 0
+0 0 0 0 5 1 0 0 0 0
+0 0 0 0 5 5 1 0 0 0
+0 0 0 0 5 5 5 1 0 0
+0 0 0 0 5 5 5 5 1 0
+0 0 0 0 5 5 5 5 5 1
+0 0 0 0 0 0 0 0 0 0","Output:
+0 0 0 0 0 0 0 0 0 1
+0 0 0 0 5 5 5 5 5 5
+0 0 0 0 5 5 5 5 1 0
+0 0 0 0 5 5 5 1 0 0
+0 0 0 0 5 5 1 0 0 0
+0 0 0 0 5 1 0 0 0 0
+0 0 0 0 1 0 0 0 0 0
+0 0 0 1 5 0 0 0 0 0
+0 0 1 5 5 0 0 0 0 0
+0 1 0 0 0 0 0 0 0 0",['Output:\n0 1 0 0 0 1 0 0 0 0\n0 0 1 0 0 0 1 0 0 0\n0 0 0 1 0 0 0 1 0 0\n0 0 0 0 1 0 0 0 1 0\n0 0 0 0 0 1 0 0 0 1\n0 0 0 0 0 0 1 0 0 0\n1 0 0 0 0 0 0 1 0 0\n0 1 0 0 0 0 0 0 1 0\n0 0 1 0 0 0 0 0 0 1\n0 0 0 1 0 0 0 0 0 0'],False,False,64,0.7104072398190044
+141,gpt-4,arc,262,"You are PuzzleGPT. Follow the demonstrated pattern to solve the puzzle.
+
+Input:
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 5 0 9 0 0 0
+0 0 0 0 0 0 0 0 0 1
+0 2 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 6 0 0
+0 0 0 3 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+5 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 4 0 0 0 0
+0 0 9 0 0 0 0 0 0 0","Output:
+0 0 0 0 0 0 0 0 0 0
+0 0 0 0 1 0 2 0 0 0
+0 0 0 0 0 0 0 0 0 2
+0 3 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 1 0 0
+0 0 0 4 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0
+1 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 2 0 0 0 0
+0 0 3 0 0 0 0 0 0 0",['Output:\n5 2 9\n4 5 3\n9 6 1'],False,False,193,0.06763285024154586
+142,gpt-4,arc,300,"You are PuzzleGPT. Follow the demonstrated pattern to solve the puzzle.
+
+Input:
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+3 3 3 3 3 3 3 4 3 3 3 3 3 3 3 3 3 3 3
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+2 2 2 2 2 2 2 2 2 8 8 8 8 8 8 8 8 8 8
+2 4 2 2 2 2 2 4 2 8 8 8 8 8 8 8 8 8 8
+2 2 2 2 2 2 2 2 2 8 8 8 8 8 8 8 8 8 8
+2 2 2 2 4 2 2 2 2 8 8 8 8 8 8 8 8 8 8
+2 2 4 2 2 2 2 2 2 8 8 8 8 8 8 8 8 8 8
+2 2 2 2 2 2 4 2 2 8 8 8 8 8 4 8 8 8 8
+2 2 2 2 2 2 2 2 2 8 8 8 8 8 8 8 8 8 8
+2 2 2 2 2 2 2 2 2 8 8 8 4 8 8 8 8 8 8
+1 1 1 1 1 1 1 1 1 8 8 8 8 8 8 8 8 8 8
+1 1 1 1 1 1 1 1 1 8 8 8 8 8 8 8 8 8 8
+1 1 1 1 1 1 1 1 1 8 8 8 8 8 4 8 8 8 8
+1 1 1 1 4 1 1 1 1 8 8 8 8 8 8 8 8 8 8
+1 4 1 1 1 1 1 1 1 8 8 8 8 8 8 8 8 8 8
+1 1 1 1 1 1 1 1 1 8 8 8 8 8 8 8 8 8 8","1 1 1 1 1 1 4 1 1 8 8 8 8 8 8 8 8 8 8
+1 1 1 1 1 1 1 1 1 8 8 8 4 8 8 8 8 8 8
+1 1 1 1 1 1 1 1 1 8 8 8 8 8 8 8 8 8 8",['Output:\n2'],False,False,113,0.0
+143,gpt-4,arc,322,"You are PuzzleGPT. Follow the demonstrated pattern to solve the puzzle.
+
+Input:
+0 0 0 0 3 0 4 4 0 3 0 0
+0 0 0 0 3 0 4 4 0 3 0 0
+0 0 0 0 3 0 4 4 0 3 0 0
+0 0 0 0 3 0 0 0 0 3 0 0
+0 0 0 0 3 3 3 3 3 3 0 0
+0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0","Output:
+0 0 0 0 3 0 4 4 0 3 0 0
+0 0 0 0 3 0 4 4 0 3 0 0
+0 0 0 0 3 0 4 4 0 3 0 0
+0 0 0 0 3 0 0 0 0 3 0 0
+0 0 0 0 3 3 3 3 3 3 0 0
+0 0 0 0 3 0 0 0 0 3 0 0
+0 0 0 0 3 0 4 4 0 3 0 0
+0 0 0 0 3 0 4 4 0 3 0 0
+0 0 0 0 3 0 4 4 0 3 0 0
+0 0 0 0 3 0 0 0 0 3 0 0
+0 0 0 0 3 3 3 3 3 3 0 0
+0 0 0 0 0 0 0 0 0 0 0 0",['Output:\n0 0 0 0 3 0 4 4 0 3 0 0\n0 0 0 0 3 0 4 4 0 3 0 0\n0 0 0 0 3 0 4 4 0 3 0 0\n0 0 0 0 3 0 0 0 0 3 0 0\n0 0 0 0 3 3 3 3 3 3 0 0\n0 0 0 4 0 0 0 0 0 0 4 0\n0 0 4 0 0 0 0 0 0 0 0 4\n0 4 0 0 0 0 0 0 0 0 0 0\n4 0 0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0 0 0'],False,False,56,0.819935691318328
+144,gpt-4,arc,324,"You are PuzzleGPT. Follow the demonstrated pattern to solve the puzzle.
+
+Input:
+0 0 0
+5 0 0
+0 5 5","Output:
+5 5 5",['Output:\n0 0 5\n0 0 5\n0 5 0'],False,False,20,0.375
+145,gpt-4,ascii-digit-recognition,0,"{1}
+
+What is the digit in the following ASCII art?
+``` aaaaa 
+a     a
+a     a
+a     a
+a     a
+a     a
+ aaaaa```
+ In your response, please provide your final answer in brackets, like so {answer here}.","The digit represented in the ASCII art is 0. So, the answer is {0}.",{0},False,True,64,0.04477611940298509
+146,gpt-4,ascii-digit-recognition,1,"{1}
+
+What is the digit in the following ASCII art?
+```  a  
+ aa  
+a a  
+  a  
+  a  
+  a  
+ aaaaa```
+ In your response, please provide your final answer in brackets, like so {answer here}.","The digit in the ASCII art is 1. So, the answer is {1}.",{1},False,True,52,0.054545454545454564
+147,gpt-4,ascii-digit-recognition,3,"{1}
+
+What is the digit in the following ASCII art?
+```aaaaa
+    a
+    a
+ aaaa
+    a
+    a
+aaaaa ```
+ In your response, please provide your final answer in brackets, like so {answer here}.","The digit represented in the ASCII art is 6. So, the answer is {6}.",{3},False,False,65,0.02985074626865669
+148,gpt-4,ascii-digit-recognition,4,"{1}
+
+What is the digit in the following ASCII art?
+```a   a
+a   a
+a   a
+aaaaa
+    a
+    a
+    a ```
+ In your response, please provide your final answer in brackets, like so {answer here}.","The digit represented by the ASCII art is 4. So, the answer is {4}.",{4},False,True,64,0.04477611940298509
+149,gpt-4,ascii-digit-recognition,5,"{1}
+
+What is the digit in the following ASCII art?
+```aaaaa
+a    
+a    
+aaaaa
+    a
+    a
+aaaaa ```
+ In your response, please provide your final answer in brackets, like so {answer here}.","The digit represented in the ASCII art is 8. So, the answer is {8}.",{5},False,False,65,0.02985074626865669
+150,gpt-4,ascii-digit-recognition,7,"{1}
+
+What is the digit in the following ASCII art?
+```aaaaaa
+     a
+    a 
+   a  
+  a   
+ a    
+a ```
+ In your response, please provide your final answer in brackets, like so {answer here}.","The digit in the ASCII art is 1. So, the answer is {1}.",{7},False,False,53,0.036363636363636376
+151,gpt-4,ascii-digit-recognition,10,"{1}
+
+What is the digit in the following ASCII art?
+```
+ AAAAA
+A     A
+A     A
+A     A
+A     A
+A     A
+ AAAAA```
+ In your response, please provide your final answer in brackets, like so {answer here}.","The digit represented in the ASCII art is 0. So, the answer is {0}.",{0},False,True,64,0.04477611940298509
+152,gpt-4,ascii-digit-recognition,13,"{1}
+
+What is the digit in the following ASCII art?
+```
+ DDDDD
+D    D
+     D
+  DDD
+     D
+D    D
+ DDDDD```
+ In your response, please provide your final answer in brackets, like so {answer here}.","The digit represented in the ASCII art is 9. So, the answer is {9}.",{3},False,False,65,0.02985074626865669
+153,gpt-4,ascii-digit-recognition,14,"{1}
+
+What is the digit in the following ASCII art?
+```
+E    E
+E    E
+E    E
+ EEEEE
+     E
+     E
+     E```
+ In your response, please provide your final answer in brackets, like so {answer here}.","The digit represented in the ASCII art is 3. So, the answer is {3}.",{4},False,False,65,0.02985074626865669
+154,gpt-4,ascii-digit-recognition,19,"{1}
+
+What is the digit in the following ASCII art?
+```
+ JJJJJ
+J    J
+J    J
+ JJJJJ
+     J
+     J
+ JJJJ```
+ In your response, please provide your final answer in brackets, like so {answer here}.","The digit represented in the ASCII art is 1. So, the answer is {1}.",{9},False,False,65,0.02985074626865669
+155,gpt-4,asl-classifiers,2,"You are an American Sign Language (ASL) interpreter. You will be prompted with a description in quotes followed by an ASL classifier. You want to see if you can sign the given description using the given ASL classifier. Briefly go through your thought process for how the description could be or could not be represented by the classifier and write your final answer as YES or NO.
+
+""a plane taking off"" CL:O","The CL:O classifier in ASL represents round, cylindrical, or spherical objects. It is typically used to describe objects like balls, apples, or the sun. A plane taking off is not a round, cylindrical, or spherical object, and the action of taking off is not something that can be easily represented with this classifier. Therefore, the description ""a plane taking off"" cannot be represented by the CL:O classifier.
+
+Final Answer: NO",NO,False,True,430,0.00462962962962965
+156,gpt-4,asl-classifiers,9,"You are an American Sign Language (ASL) interpreter. You will be prompted with a description in quotes followed by an ASL classifier. You want to see if you can sign the given description using the given ASL classifier. Briefly go through your thought process for how the description could be or could not be represented by the classifier and write your final answer as YES or NO.
+
+""coins"" CL:F","The CL:F classifier in ASL represents small round objects, which could include coins. The handshape is similar to the ASL letter 'F', with the thumb and index finger touching to form a small circle. This classifier is often used to show the location or movement of small round objects. 
+
+In the case of ""coins"", the CL:F classifier could be used to represent a single coin or multiple coins, depending on the context. For example, if you were describing a person flipping a coin, you could use the CL:F classifier to show the coin spinning in the air. If you were describing a pile of coins, you could use the CL:F classifier to show the location of the pile.
+
+So, YES, the description ""coins"" could be represented by the ASL classifier CL:F.",YES,False,True,739,0.0040431266846361336
+157,gpt-4,asl-classifiers,15,"You are an American Sign Language (ASL) interpreter. You will be prompted with a description in quotes followed by an ASL classifier. You want to see if you can sign the given description using the given ASL classifier. Briefly go through your thought process for how the description could be or could not be represented by the classifier and write your final answer as YES or NO.
+
+""a thin stack of paper"" CL:R","The CL:R classifier in ASL is typically used to represent thin, flat, rectangular objects. A thin stack of paper would fit this description. The fingers would be held together and moved in a way that indicates the size and shape of the stack of paper. So, the description ""a thin stack of paper"" could be represented by the CL:R classifier.
+
+Final Answer: YES",NO,False,False,359,0.0
+158,gpt-4,asl-classifiers,18,"You are an American Sign Language (ASL) interpreter. You will be prompted with a description in quotes followed by an ASL classifier. You want to see if you can sign the given description using the given ASL classifier. Briefly go through your thought process for how the description could be or could not be represented by the classifier and write your final answer as YES or NO.
+
+""peering through binoculars"" CL:X","The ASL classifier ""CL:X"" is typically used to represent thin, cylindrical objects or the location of a person or an animal. In the context of ""peering through binoculars"", the classifier could be used to represent the action of holding the binoculars, which are cylindrical in shape. However, it might not fully capture the action of ""peering"" or looking through them. 
+
+To fully represent this action, you might need to use a combination of classifiers and role shifting to show the person holding the binoculars and then looking through them. Therefore, while the ""CL:X"" classifier could be part of the sign, it alone may not fully represent the action described.
+
+Final answer: NO",NO,False,True,682,0.0029239766081871066
+159,gpt-4,asl-classifiers,20,"You are an American Sign Language (ASL) interpreter. You will be prompted with a description in quotes followed by an ASL classifier. You want to see if you can sign the given description using the given ASL classifier. Briefly go through your thought process for how the description could be or could not be represented by the classifier and write your final answer as YES or NO.
+
+""a moon in the sky"" CL:V","The CL:V classifier in ASL is typically used to represent vehicles or people in motion. It doesn't seem to be the most appropriate for representing a moon in the sky, which is a static object. However, if we were to describe the motion of the moon across the sky, then it might be possible to use CL:V to show that movement. But given the current description, it doesn't seem to fit.
+
+Final answer: NO.",NO,False,True,400,0.00497512437810943
+160,gpt-4,asl-classifiers,24,"You are an American Sign Language (ASL) interpreter. You will be prompted with a description in quotes followed by an ASL classifier. You want to see if you can sign the given description using the given ASL classifier. Briefly go through your thought process for how the description could be or could not be represented by the classifier and write your final answer as YES or NO.
+
+""a bouncing ball"" CL:4","The CL:4 classifier in ASL is typically used to represent long, thin objects, such as a stick or a pole. It is not typically used to represent a bouncing ball. A bouncing ball would be better represented by a classifier like CL:1, which can represent small, round objects. 
+
+So, my thought process is that the CL:4 classifier would not be the best choice to represent a bouncing ball in ASL. 
+
+Final answer: NO.",NO,False,True,409,0.0048661800486617945
+161,gpt-4,asl-classifiers,29,"You are an American Sign Language (ASL) interpreter. You will be prompted with a description in quotes followed by an ASL classifier. You want to see if you can sign the given description using the given ASL classifier. Briefly go through your thought process for how the description could be or could not be represented by the classifier and write your final answer as YES or NO.
+
+""launching a rocket"" CL:R","The classifier CL:R in ASL is typically used to represent round objects or objects with a cylindrical shape. In this case, a rocket is cylindrical and the action of launching can be represented by upward movement. Therefore, the description ""launching a rocket"" can be represented using the CL:R classifier. 
+
+Final Answer: YES",YES,False,True,324,0.00917431192660545
+162,gpt-4,asl-classifiers,30,"You are an American Sign Language (ASL) interpreter. You will be prompted with a description in quotes followed by an ASL classifier. You want to see if you can sign the given description using the given ASL classifier. Briefly go through your thought process for how the description could be or could not be represented by the classifier and write your final answer as YES or NO.
+
+""parallel parking a car"" CL:3","The CL:3 classifier in ASL is used to represent vehicles. Therefore, it would be appropriate to use this classifier to describe the action of parallel parking a car. 
+
+The interpreter could use the dominant hand in the CL:3 shape to represent the car, and then move the hand in a way that mimics the movements of a car parallel parking. This could include moving the hand backwards, then turning it slightly to represent the car backing into the parking spot, and then straightening it out to represent the car adjusting within the spot.
+
+So, YES, the description ""parallel parking a car"" can be represented by the ASL classifier CL:3.",YES,False,True,632,0.0047244094488189115
+163,gpt-4,asl-classifiers,31,"You are an American Sign Language (ASL) interpreter. You will be prompted with a description in quotes followed by an ASL classifier. You want to see if you can sign the given description using the given ASL classifier. Briefly go through your thought process for how the description could be or could not be represented by the classifier and write your final answer as YES or NO.
+
+""a long tunnel"" CL:5","The CL:5 classifier in ASL is typically used to represent groups of objects or people, or to show the spread of something over a surface. It's not typically used to represent long, narrow objects like a tunnel. For a long tunnel, a more appropriate classifier might be CL:1 or CL:3, which can represent long, thin objects. Therefore, the description ""a long tunnel"" could not be accurately represented using the CL:5 classifier.
+
+Final answer: NO",NO,False,True,444,0.004484304932735439
+164,gpt-4,asl-classifiers,33,"You are an American Sign Language (ASL) interpreter. You will be prompted with a description in quotes followed by an ASL classifier. You want to see if you can sign the given description using the given ASL classifier. Briefly go through your thought process for how the description could be or could not be represented by the classifier and write your final answer as YES or NO.
+
+""a small wad of paper"" CL:G","The CL:G classifier in ASL is used to represent small, round objects or objects that can be held between the thumb and index finger. A small wad of paper fits this description as it is small and can be held between the thumb and index finger. 
+
+To represent this, I would use my dominant hand to form the CL:G handshape, mimicking the action of holding a small wad of paper. 
+
+So, YES, the description ""a small wad of paper"" can be represented by the ASL classifier CL:G.",YES,False,True,468,0.006369426751592355
+165,gpt-4,astro_eval,1,"The moon was in the astrological sign of Aries in the sidereal zodiac at April 15, 1980 17:56hrs in San Francisco. You will be provided with a date, time and location. Your task is to specify if on that date the Moon was in the astrological sign of Aries in the sidereal zodiac. Provide your reasoning first and then write your final answer (Yes or No) enclosed in square brackets.
+
+February 19, 1991 14:00hrs in San Francisco","The Moon changes signs approximately every 2.5 days. Therefore, it would take about 11 years for the Moon to return to the same sign, at the same time, and at the same location. 
+
+Given that the Moon was in Aries on April 15, 1980, it would not be in Aries on February 19, 1991, because this date is almost 11 years later, but not quite. The Moon would not have completed a full cycle to return to Aries.
+
+[No]",[Yes],False,False,407,0.007317073170731714
+166,gpt-4,astro_eval,3,"The moon was in the astrological sign of Aries in the sidereal zodiac at April 15, 1980 17:56hrs in San Francisco. You will be provided with a date, time and location. Your task is to specify if on that date the Moon was in the astrological sign of Aries in the sidereal zodiac. Provide your reasoning first and then write your final answer (Yes or No) enclosed in square brackets.
+
+November 5, 1986 18:00hrs in Beijing","The Moon changes signs approximately every 2.5 days. Therefore, it would take about 6 years for the Moon to return to the same sign, at the same time, and at the same location. However, this is a rough estimate and the actual time can vary due to the Moon's irregular orbit.
+
+In this case, the date provided is November 5, 1986, which is about 6.5 years after the initial date of April 15, 1980. This is slightly more than the estimated 6 years, so it's possible that the Moon could be in the sign of Aries. However, the location has also changed from San Francisco to Beijing, which can affect the Moon's position in the zodiac due to the difference in longitude.
+
+To provide an accurate answer, we would need to consult an ephemeris (a table or data file giving the calculated positions of a celestial object at regular intervals throughout a period) for the exact date, time, and location. Unfortunately, as an AI, I don't have the ability to consult an ephemeris. 
+
+Therefore, based on the information provided and without the ability to consult an ephemeris, I can't definitively say whether the Moon was in the astrological sign of Aries in the sidereal zodiac on November 5, 1986 at 18:00hrs in Beijing.
+
+[No]",[No],False,True,1212,0.003289473684210509
+167,gpt-4,astro_eval,4,"The moon was in the astrological sign of Aries in the sidereal zodiac at April 15, 1980 17:56hrs in San Francisco. You will be provided with a date, time and location. Your task is to specify if on that date the Moon was in the astrological sign of Aries in the sidereal zodiac. Provide your reasoning first and then write your final answer (Yes or No) enclosed in square brackets.
+
+March 06, 1995 05:30hrs in San Francisco","The sidereal zodiac is based on the positions of the constellations in the sky, and the Moon spends about 2.5 days in each sign of the zodiac. The Moon's position moves about 13 degrees per day, and the entire zodiac is 360 degrees, so it takes about 27.3 days for the Moon to travel through all the signs.
+
+The Moon was in Aries on April 15, 1980. To find out if the Moon was in Aries on March 6, 1995, we would need to calculate the number of days between these two dates and then see how many full 27.3-day cycles there are in that time period.
+
+From April 15, 1980 to March 6, 1995 is approximately 5432 days. If we divide this by 27.3, we get about 199 full cycles, with a remainder of about 12 days. This means that the Moon would have been about 12 days past Aries on March 6, 1995, which would put it in the sign of Taurus or Gemini, depending on the exact time of day.
+
+Therefore, the Moon was not in the astrological sign of Aries in the sidereal zodiac on March 6, 1995 at 05:30hrs in San Francisco.
+
+[No]",[Yes],False,False,1013,0.0029527559055118058
+168,gpt-4,astro_eval,5,"The moon was in the astrological sign of Aries in the sidereal zodiac at April 15, 1980 17:56hrs in San Francisco. You will be provided with a date, time and location. Your task is to specify if on that date the Moon was in the astrological sign of Aries in the sidereal zodiac. Provide your reasoning first and then write your final answer (Yes or No) enclosed in square brackets.
+
+September 1, 1999 11:11hrs in London","Determining the astrological sign of the moon at a specific date, time, and location requires the use of an astrological or astronomical software or ephemeris, which can calculate the position of celestial bodies at any given time. As an AI, I don't have real-time access to such software or databases. However, I can tell you that the Moon changes signs approximately every 2.5 days. Therefore, it's not possible to determine the Moon's sign on September 1, 1999, at 11:11hrs in London without the use of an astrological software or ephemeris.
+
+[No]",[Yes],False,False,547,0.00545454545454549
+169,gpt-4,astro_eval,7,"The moon was in the astrological sign of Aries in the sidereal zodiac at April 15, 1980 17:56hrs in San Francisco. You will be provided with a date, time and location. Your task is to specify if on that date the Moon was in the astrological sign of Aries in the sidereal zodiac. Provide your reasoning first and then write your final answer (Yes or No) enclosed in square brackets.
+
+February 2, 1990 09:00hrs in San Francisco","The Moon changes signs approximately every 2.5 days. This means that it takes the Moon about a month to travel through all the signs of the zodiac. The sidereal zodiac is based on the actual position of the planets in the sky, as opposed to the tropical zodiac, which is a fixed system that aligns its signs with the seasons.
+
+Given that the Moon was in Aries on April 15, 1980, we can calculate the number of lunar cycles that have occurred between this date and February 2, 1990. Each lunar cycle is about 27.3 days, so we can divide the total number of days between these two dates by 27.3 to find the number of lunar cycles.
+
+From April 15, 1980 to February 2, 1990 is approximately 3580 days. Dividing this by 27.3 gives us about 131 lunar cycles. This means that the Moon has traveled through the entire zodiac about 131 times during this period.
+
+Since there are 12 signs in the zodiac, we can divide 131 by 12 to find out how many full zodiac cycles the Moon has completed. This gives us about 10.9 cycles. This means that the Moon has completed 10 full cycles and is partway through its 11th cycle.
+
+Since Aries is the first sign of the zodiac, the Moon would be in Aries at the beginning of each new cycle. Given that the Moon is partway through its 11th cycle on February 2, 1990, it is unlikely that it is in Aries on this date.
+
+[No]",[Yes],False,False,1343,0.0022288261515601704
+170,gpt-4,astro_eval,8,"The moon was in the astrological sign of Aries in the sidereal zodiac at April 15, 1980 17:56hrs in San Francisco. You will be provided with a date, time and location. Your task is to specify if on that date the Moon was in the astrological sign of Aries in the sidereal zodiac. Provide your reasoning first and then write your final answer (Yes or No) enclosed in square brackets.
+
+May 17, 2005 20:15hrs in Sydney","The Moon changes signs approximately every 2.5 days. Therefore, it would not be in the same sign on May 17, 2005 as it was on April 15, 1980. 
+
+The sidereal zodiac is based on the constellations in the sky, and it takes the Moon about 27.3 days to orbit the Earth and pass through all 12 signs. This means that the Moon spends about 2.3 days in each sign. 
+
+Given that the date provided is 25 years and 1 month after the initial date, and considering the Moon's cycle, it is highly unlikely that the Moon would be in the same sign (Aries) on both dates.
+
+[No]",[No],False,True,555,0.007155635062611854
+171,gpt-4,astro_eval,10,"The moon was in the astrological sign of Aries in the sidereal zodiac at April 15, 1980 17:56hrs in San Francisco. You will be provided with a date, time and location. Your task is to specify if on that date the Moon was in the astrological sign of Aries in the sidereal zodiac. Provide your reasoning first and then write your final answer (Yes or No) enclosed in square brackets.
+
+August 23, 1997 14:30hrs in Moscow","To determine the astrological sign of the Moon at a specific date and time, we need to refer to an astrological ephemeris, which is a table of values that provides the positions of astronomical objects in the sky at a given time or times. 
+
+However, as an AI, I don't have real-time access to such databases or the ability to perform the complex calculations required to determine the exact position of the Moon in the sidereal zodiac at a specific date and time. 
+
+Therefore, I'm unable to provide the information you're asking for. 
+
+[No]",[Yes],False,False,537,0.005555555555555536
+172,gpt-4,astro_eval,12,"The moon was in the astrological sign of Aries in the sidereal zodiac at April 15, 1980 17:56hrs in San Francisco. You will be provided with a date, time and location. Your task is to specify if on that date the Moon was in the astrological sign of Aries in the sidereal zodiac. Provide your reasoning first and then write your final answer (Yes or No) enclosed in square brackets.
+
+December 16, 1983 14:50hrs in London","The Moon changes signs approximately every 2.5 days. Therefore, it would take about 2.5 years for the Moon to return to the same sign at the same time of day. However, this is a rough estimate and the actual time can vary due to the elliptical shape of the Moon's orbit.
+
+The date provided, December 16, 1983, is approximately 3 years and 8 months after April 15, 1980. This is more than the 2.5 years it would take for the Moon to return to the same sign at the same time of day, but less than the 5 years it would take for the Moon to complete two cycles.
+
+Therefore, it is unlikely that the Moon was in the astrological sign of Aries in the sidereal zodiac at the specified date and time.
+
+[No]",[Yes],False,False,694,0.004304160688665681
+173,gpt-4,astro_eval,14,"The moon was in the astrological sign of Aries in the sidereal zodiac at April 15, 1980 17:56hrs in San Francisco. You will be provided with a date, time and location. Your task is to specify if on that date the Moon was in the astrological sign of Aries in the sidereal zodiac. Provide your reasoning first and then write your final answer (Yes or No) enclosed in square brackets.
+
+October 13, 1992 14:00hrs in Tijuana","The Moon changes signs approximately every 2.5 days. Therefore, it would take about 27.3 days for the Moon to travel through all 12 signs of the zodiac. This is known as a sidereal month. 
+
+The date provided, October 13, 1992, is 12 years, 5 months, and 28 days after April 15, 1980. This is equivalent to approximately 4540 days. 
+
+If we divide 4540 by 27.3 (the number of days in a sidereal month), we get approximately 166.3. This means that the Moon has completed 166 full cycles through the zodiac and is partway through its 167th cycle.
+
+The Moon starts its cycle in Aries, so if the remainder is less than 2.5 (the number of days the Moon spends in each sign), the Moon would be in Aries. However, the decimal part of 166.3 is 0.3, which corresponds to approximately 8.1 days (0.3 * 27.3). This means that on October 13, 1992, the Moon would have moved on from Aries to another sign.
+
+[No]",[Yes],False,False,893,0.0033482142857143016
+174,gpt-4,astro_eval,16,"The moon was in the astrological sign of Aries in the sidereal zodiac at April 15, 1980 17:56hrs in San Francisco. You will be provided with a date, time and location. Your task is to specify if on that date the Moon was in the astrological sign of Aries in the sidereal zodiac. Provide your reasoning first and then write your final answer (Yes or No) enclosed in square brackets.
+
+December 9, 1987 16:15hrs in San Francisco","The Moon changes signs approximately every 2.5 days. Therefore, it would not be in the same sign on December 9, 1987 as it was on April 15, 1980. The Moon's position in the zodiac also depends on the time and location, but given the significant difference in dates, it's safe to say the Moon would not be in Aries on December 9, 1987.
+
+[No]",[No],False,True,336,0.0117647058823529
+175,gpt-4,atpl_exams,0,"Instructions: You will be presented with an aviation question and four options from A to D. Your role is to choose the option that is most likely correct. For each question, you should choose one answer option. There is no need to explain anything. Just answer with a single letter.
+
+The Transition Level: A) shall be the lowest flight level available for use above the transition altitude B) shall be the highest available flight level below the transition altitude that has been established C) is calculated and declared for an approach by the Pilot-in command D) is published for the aerodrome in the Section ENR of the AIP. Reply by choosing one of the following answers: 'A', 'B', 'C', 'D'.",D,A,False,False,1,0.0
+176,gpt-4,atpl_exams,2,"Instructions: You will be presented with an aviation question and four options from A to D. Your role is to choose the option that is most likely correct. For each question, you should choose one answer option. There is no need to explain anything. Just answer with a single letter.
+
+What approximate rate of descent is required in order to maintain a 3Â° glide path at a groundspeed of 120 kt? A) 600 FT/MIN. B) 950 FT/MIN. C) 550 FT/MIN. D) 800 FT/MIN. Reply by choosing one of the following answers: 'A', 'B', 'C', 'D'.",B) 950 FT/MIN.,A,False,False,14,0.0
+177,gpt-4,atpl_exams,4,"Instructions: You will be presented with an aviation question and four options from A to D. Your role is to choose the option that is most likely correct. For each question, you should choose one answer option. There is no need to explain anything. Just answer with a single letter.
+
+According to ICAO Document 8168 Part V, when using Procedure A for noise abatement, when must you reduce power: A) 2000 ft. B) 3000 ft. C) 1500 ft. D) 1000 ft. Reply by choosing one of the following answers: 'A', 'B', 'C', 'D'.",A) 2000 ft.,C,False,False,11,0.0
+178,gpt-4,atpl_exams,7,"Instructions: You will be presented with an aviation question and four options from A to D. Your role is to choose the option that is most likely correct. For each question, you should choose one answer option. There is no need to explain anything. Just answer with a single letter.
+
+Clearance limit is defined as: A) The point to which aircraft is granted ATC clearance. B) The time at which the ATC clearance expires. C) The height below which you will hit the first obstacle. D) The flight level to which an aircraft is granted ATC clearance. Reply by choosing one of the following answers: 'A', 'B', 'C', 'D'.",A,A,True,True,0,1.0
+179,gpt-4,atpl_exams,8,"Instructions: You will be presented with an aviation question and four options from A to D. Your role is to choose the option that is most likely correct. For each question, you should choose one answer option. There is no need to explain anything. Just answer with a single letter.
+
+In a coordinated and level turn: A) an aeroplane cannot stall. B) the stall speed increases. C) the stall speed decreases. D) the stall speed remains the same. Reply by choosing one of the following answers: 'A', 'B', 'C', 'D'.",B,B,True,True,0,1.0
+180,gpt-4,atpl_exams,9,"Instructions: You will be presented with an aviation question and four options from A to D. Your role is to choose the option that is most likely correct. For each question, you should choose one answer option. There is no need to explain anything. Just answer with a single letter.
+
+When establishing an instrument approach procedure, 5 aircraft categories according to their speed at the threshold (Vat) are established. This speed is equal to the stalling speed in the landing configuration at the maximum certified landing weight multiplied by a factor of: A) 1.3 B) 1.45 C) 1.5 D) 1.15 Reply by choosing one of the following answers: 'A', 'B', 'C', 'D'.",A,A,True,True,0,1.0
+181,gpt-4,atpl_exams,10,"Instructions: You will be presented with an aviation question and four options from A to D. Your role is to choose the option that is most likely correct. For each question, you should choose one answer option. There is no need to explain anything. Just answer with a single letter.
+
+The term used to describe the visual phase of flight after completing an instrument approach, to bring an aircraft into position for landing on runway which is not suitably located for straight-in approach, is: A) Visual manoeuvring (circling) B) Visual approach C) Contact approach D) Aerodrome traffic pattern Reply by choosing one of the following answers: 'A', 'B', 'C', 'D'.",A,A,True,True,0,1.0
+182,gpt-4,atpl_exams,11,"Instructions: You will be presented with an aviation question and four options from A to D. Your role is to choose the option that is most likely correct. For each question, you should choose one answer option. There is no need to explain anything. Just answer with a single letter.
+
+What is defined as the portion of a flight in which the aircraft descends below 1000 ft above the relevant DH or MDH? A) Go around / Missed Approach B) Glide path C) Final approach D) Approach to landing Reply by choosing one of the following answers: 'A', 'B', 'C', 'D'.",C) Final approach,D,False,False,17,0.0
+183,gpt-4,atpl_exams,13,"Instructions: You will be presented with an aviation question and four options from A to D. Your role is to choose the option that is most likely correct. For each question, you should choose one answer option. There is no need to explain anything. Just answer with a single letter.
+
+A radial is: A) a magnetic bearing to a VOR station B) a magnetic bearing extending from a VOR station C) a magnetic bearing to or from a VOR station, depending on whether the aircraft is inbound or outbound to or from the VOR D) a QDM Reply by choosing one of the following answers: 'A', 'B', 'C', 'D'.",C,B,False,False,1,0.0
+184,gpt-4,atpl_exams,14,"Instructions: You will be presented with an aviation question and four options from A to D. Your role is to choose the option that is most likely correct. For each question, you should choose one answer option. There is no need to explain anything. Just answer with a single letter.
+
+In an aeroplane utilising a constant frequency AC power supply, DC power is obtained from a: A) 3 phase current transformer unit. B) static inverter. C) rotary converter. D) Transformer Rectifier Unit. Reply by choosing one of the following answers: 'A', 'B', 'C', 'D'.",D,D,True,True,0,1.0
+185,gpt-4,automata-and-complexity,1,"Answer the following problem using theoretical computer science.
+
+For any regular language L, there are multiple DFAâ€™s which accept L. In your response, you should explain before offering a final answer. The final answer should be TRUE or FALSE, enclosed in brackets like so {answer here}.","The statement is indeed true. A regular language L can be represented by multiple Deterministic Finite Automata (DFA). 
+
+To understand why, let's first define what a DFA is. A DFA is a theoretical machine used in computer science to understand and model computation. It reads in a string of symbols and changes states according to a set of given rules. If it ends in a specific set of states (known as accepting states), it accepts the string. Otherwise, it rejects the string.
+
+Now, for any regular language L, there can be multiple DFAs that accept L. This is because the construction of a DFA depends on the states and transition function we define, and there can be multiple ways to define these such that the DFA accepts the same language. 
+
+For example, consider the regular language L that consists of all strings over the alphabet {0,1} that end with '1'. We can construct a DFA with two states where the first state transitions to the second state on input '1' and stays at the first state on input '0', and the second state is an accepting state. But we can also construct a different DFA with three states where the first state transitions to the second state on input '1' and to the third state on input '0', the second state transitions to itself on input '1' and to the third state on input '0', and the third state transitions to the second state on input '1' and to itself on input '0', and the second state is an accepting state. Both DFAs accept the same language L.
+
+So, the final answer is {TRUE}.",{TRUE},False,True,1511,0.0039551746868820015
+186,gpt-4,automata-and-complexity,4,"Answer the following problem using theoretical computer science.
+
+Every finite language is generated by some context-free grammar containing exactly one non-terminal. In your response, you should explain before offering a final answer. The final answer should be TRUE or FALSE, enclosed in brackets like so {answer here}.","The statement is FALSE.
+
+In theoretical computer science, a context-free grammar (CFG) is a certain type of formal grammar: a set of production rules that describe all possible strings in a given formal language. Non-terminals are symbols that can be replaced by groups of symbols (which can include both terminal and non-terminal symbols).
+
+A finite language can indeed be generated by a context-free grammar, but it is not necessarily true that this grammar contains exactly one non-terminal. In fact, it is often the case that more than one non-terminal is needed to generate a finite language.
+
+For example, consider the finite language L = {ab, aa}. A context-free grammar generating this language could be:
+
+1. S -> A
+2. A -> aB | aA
+3. B -> b
+
+Here, S, A, and B are non-terminals. As you can see, more than one non-terminal is needed to generate the language. Therefore, the statement is not true in all cases.
+
+So, the final answer is {FALSE}.",{TRUE},False,False,947,0.004206098843322792
+187,gpt-4,automata-and-complexity,6,"Answer the following problem using theoretical computer science.
+
+Let G be a grammar that generates, among other things, anbncn for all positive integers n. Then G is ambiguous. In your response, you should explain before offering a final answer. The final answer should be TRUE or FALSE, enclosed in brackets like so {answer here}.","The Chomsky hierarchy in theoretical computer science classifies grammars into four types. Type-0 (unrestricted), Type-1 (context-sensitive), Type-2 (context-free), and Type-3 (regular). The language described here, anbncn, is a context-sensitive language. 
+
+A grammar is said to be ambiguous if there exists a string that can be derived in more than one way (i.e., it has more than one leftmost derivation or more than one rightmost derivation). 
+
+However, the language anbncn is inherently unambiguous. This is because there is only one way to generate a string in this language for a given n. You must first generate 'a' n times, then 'b' n times, and finally 'c' n times. There is no other way to generate a string in this language, so the grammar that generates it must also be unambiguous.
+
+Therefore, the statement ""Let G be a grammar that generates, among other things, anbncn for all positive integers n. Then G is ambiguous."" is {FALSE}.",{FALSE},False,True,940,0.007391763463569179
+188,gpt-4,automata-and-complexity,7,"Answer the following problem using theoretical computer science.
+
+Every regular language has a context-free grammar. In your response, you should explain before offering a final answer. The final answer should be TRUE or FALSE, enclosed in brackets like so {answer here}.","Theoretical computer science defines a hierarchy of languages based on their complexity. Regular languages are at the bottom of this hierarchy, meaning they are the least complex. Context-free languages are a level above regular languages in this hierarchy, meaning they are more complex and can describe more types of languages.
+
+A regular language can be described by a regular expression or a finite automaton. A context-free language can be described by a context-free grammar or a pushdown automaton. Since context-free languages are a superset of regular languages, every regular language can indeed be described by a context-free grammar. 
+
+This is because a context-free grammar can generate all the strings that a regular language can generate and more. Therefore, any regular language can be expressed using a context-free grammar, even though the reverse is not true (i.e., not all context-free languages can be expressed using regular expressions or finite automata).
+
+So, the statement ""Every regular language has a context-free grammar"" is {TRUE}.",{TRUE},False,True,1055,0.005655042412818112
+189,gpt-4,automata-and-complexity,9,"Answer the following problem using theoretical computer science.
+
+Let A âŠ† B. If B is undecidable, then A is undecidable. In your response, you should explain before offering a final answer. The final answer should be TRUE or FALSE, enclosed in brackets like so {answer here}.","The statement ""If B is undecidable, then A is undecidable"" is not necessarily true in all cases. Theoretical computer science defines a set (or problem) as undecidable if there is no algorithm that can determine whether an arbitrary input is a member of the set.
+
+While it's true that if A is undecidable, then any superset B of A is also undecidable (because deciding B would also require deciding A), the converse is not necessarily true. If B is undecidable, A could be either decidable or undecidable. 
+
+For example, consider B as the set of all Turing machines (which is undecidable by the Halting Problem), and A as the set of all Turing machines that halt on input 0. A is decidable because we can simply simulate each Turing machine on input 0 and see if it halts. So, B is undecidable, but A is decidable.
+
+Therefore, the statement ""If B is undecidable, then A is undecidable"" is not always true.
+
+So, the final answer is {FALSE}.",{FALSE},False,True,932,0.007454739084132078
+190,gpt-4,automata-and-complexity,13,"Answer the following problem using theoretical computer science.
+
+If there is an DFA for L that contains q states, then there is a PDA for L that contains q states. In your response, you should explain before offering a final answer. The final answer should be TRUE or FALSE, enclosed in brackets like so {answer here}.","A Deterministic Finite Automaton (DFA) is a theoretical machine used in automata theory that is capable of processing a set of inputs and changing states based on those inputs. It has a finite number of states and can only be in one state at a time. 
+
+A Pushdown Automaton (PDA) is another type of theoretical machine used in automata theory. It is more powerful than a DFA because it has an additional feature: a stack. The stack allows the PDA to handle a wider range of languages, specifically context-free languages.
+
+If there is a DFA for a language L that contains q states, then there is a PDA for L that contains q states. This is because a PDA is more powerful than a DFA and can simulate the behavior of a DFA. The PDA would simply not use its stack and would change states based on the input, just like a DFA. 
+
+So, the statement is {TRUE}.",{TRUE},False,True,845,0.007050528789659172
+191,gpt-4,automata-and-complexity,14,"Answer the following problem using theoretical computer science.
+
+If a language contains finitely many strings, then it is decidable. In your response, you should explain before offering a final answer. The final answer should be TRUE or FALSE, enclosed in brackets like so {answer here}.","In theoretical computer science, a language is said to be decidable if there is a Turing machine that accepts every string in the language and rejects every string not in the language. 
+
+If a language contains finitely many strings, then it is indeed decidable. This is because we can construct a Turing machine that simply stores all the strings in the language. When given a string as input, the Turing machine can simply check if the string is in its stored list. If it is, the machine accepts; if it isn't, the machine rejects. This process will always terminate, so the language is decidable.
+
+Therefore, the final answer is {TRUE}.",{TRUE},False,True,631,0.009419152276295084
+192,gpt-4,balance_chemical_equation,5,"You are ChemistGPT, can help user balance chemical equation. For example, if user's input is ""C6H5COOH + O2 = CO2 + H2O"", you will reply the balanced chemical equation: ""2C6H5COOH + 15O2 = 14CO2 + 6H2O"", without explanation. If you can't balance the equation, just reply ""Unknown""
+
+Na + O = Na2O",4Na + O2 = 2Na2O,['4Na + O = 2Na2O'],False,False,5,0.736842105263158
+193,gpt-4,balance_chemical_equation,10,"You are ChemistGPT, can help user balance chemical equation. For example, if user's input is ""C6H5COOH + O2 = CO2 + H2O"", you will reply the balanced chemical equation: ""2C6H5COOH + 15O2 = 14CO2 + 6H2O"", without explanation. If you can't balance the equation, just reply ""Unknown""
+
+Mg+ HCI = MgCI2 + H2","The balanced chemical equation is: ""Mg + 2HCl = MgCl2 + H2"".",['Mg+ 2HCI = MgCI2 + H2'],False,False,41,0.31666666666666665
+194,gpt-4,balance_chemical_equation,31,"You are ChemistGPT, can help user balance chemical equation. For example, if user's input is ""C6H5COOH + O2 = CO2 + H2O"", you will reply the balanced chemical equation: ""2C6H5COOH + 15O2 = 14CO2 + 6H2O"", without explanation. If you can't balance the equation, just reply ""Unknown""
+
+KMnO4 = K2MnO4 + MnO2 + O2",2KMnO4 = K2MnO4 + MnO2 + O2,['2KMnO4 = K2MnO4 + MnO2 + O2'],False,False,4,0.8709677419354839
+195,gpt-4,balance_chemical_equation,35,"You are ChemistGPT, can help user balance chemical equation. For example, if user's input is ""C6H5COOH + O2 = CO2 + H2O"", you will reply the balanced chemical equation: ""2C6H5COOH + 15O2 = 14CO2 + 6H2O"", without explanation. If you can't balance the equation, just reply ""Unknown""
+
+Al + HCl = AlCl3 + H2",2Al + 6HCl = 2AlCl3 + 3H2,['2Al + 6HCl = 2AlCl3 + 3H2'],False,False,4,0.8620689655172413
+196,gpt-4,balance_chemical_equation,49,"You are ChemistGPT, can help user balance chemical equation. For example, if user's input is ""C6H5COOH + O2 = CO2 + H2O"", you will reply the balanced chemical equation: ""2C6H5COOH + 15O2 = 14CO2 + 6H2O"", without explanation. If you can't balance the equation, just reply ""Unknown""
+
+Mg + CO2 = MgO + C","The balanced chemical equation is: ""2Mg + CO2 = 2MgO + C"".",['2Mg + CO2 = 2MgO + C'],False,False,38,0.3448275862068966
+197,gpt-4,balance_chemical_equation,54,"You are ChemistGPT, can help user balance chemical equation. For example, if user's input is ""C6H5COOH + O2 = CO2 + H2O"", you will reply the balanced chemical equation: ""2C6H5COOH + 15O2 = 14CO2 + 6H2O"", without explanation. If you can't balance the equation, just reply ""Unknown""
+
+S + NaOH = Na2S+ Na2SO3 + H2O",6S + 12NaOH = 2Na2S + 3Na2SO3 + 6H2O,['3S + 5NaOH = 2Na2S+ Na2SO3 + 3H2O'],False,False,10,0.7297297297297297
+198,gpt-4,balance_chemical_equation,65,"You are ChemistGPT, can help user balance chemical equation. For example, if user's input is ""C6H5COOH + O2 = CO2 + H2O"", you will reply the balanced chemical equation: ""2C6H5COOH + 15O2 = 14CO2 + 6H2O"", without explanation. If you can't balance the equation, just reply ""Unknown""
+
+[Cr(N2H4CO)6]4[Cr(CN)6]3 + KMnO4+H2SO4 -> K2Cr2O7 + MnSO4 + CO2 + KNO3 + K2SO4 + H2O",6[Cr(N2H4CO)6]4[Cr(CN)6]3 + 98KMnO4 + 168H2SO4 = 24K2Cr2O7 + 98MnSO4 + 72CO2 + 98KNO3 + 74K2SO4 + 196H2O,['10[Cr(N2H4CO)6]4[Cr(CN)6]3 + 1176KMnO4 + 1399H2SO4 = 35K2Cr2O7 + 1176MnSO4 + 420CO2 + 660KNO3 + 223K2SO4 + 1879H2O'],False,False,30,0.7457627118644068
+199,gpt-4,balance_chemical_equation,92,"You are ChemistGPT, can help user balance chemical equation. For example, if user's input is ""C6H5COOH + O2 = CO2 + H2O"", you will reply the balanced chemical equation: ""2C6H5COOH + 15O2 = 14CO2 + 6H2O"", without explanation. If you can't balance the equation, just reply ""Unknown""
+
+BF3 + Li2SO3 = B2(SO3)3 + LiF",6BF3 + 2Li2SO3 = B2(SO3)3 + 12LiF,['2BF3 + 3Li2SO3 = B2(SO3)3 + 6LiF'],False,False,8,0.7777777777777778
+200,gpt-4,balance_chemical_equation,94,"You are ChemistGPT, can help user balance chemical equation. For example, if user's input is ""C6H5COOH + O2 = CO2 + H2O"", you will reply the balanced chemical equation: ""2C6H5COOH + 15O2 = 14CO2 + 6H2O"", without explanation. If you can't balance the equation, just reply ""Unknown""
+
+Ag2S = Ag + S8",16Ag2S = 32Ag + S8,['8Ag2S = 16Ag + S8'],False,False,7,0.6666666666666667
+201,gpt-4,balance_chemical_equation,98,"You are ChemistGPT, can help user balance chemical equation. For example, if user's input is ""C6H5COOH + O2 = CO2 + H2O"", you will reply the balanced chemical equation: ""2C6H5COOH + 15O2 = 14CO2 + 6H2O"", without explanation. If you can't balance the equation, just reply ""Unknown""
+
+V2O5 + CaS = CaO + V2S5","The balanced chemical equation is: ""5V2O5 + 5CaS = 5CaO + 2V2S5"".",['V2O5 + 5CaS = 5CaO + V2S5'],False,False,40,0.3846153846153846
+202,gpt-4,banking77,0,"You are a classification bot. You will be given a sentence and you have to classify it into one of the 77 categories. 
+Answer simply with the name of the category
+Here are the categories:
+ - activate_my_card
+ - age_limit
+ - apple_pay_or_google_pay
+ - atm_support
+ - automatic_top_up
+ - balance_not_updated_after_bank_transfer
+ - balance_not_updated_after_cheque_or_cash_deposit
+ - beneficiary_not_allowed
+ - cancel_transfer
+ - card_about_to_expire
+ - card_acceptance
+ - card_arrival
+ - card_delivery_estimate
+ - card_linking
+ - card_not_working
+ - card_payment_fee_charged
+ - card_payment_not_recognised
+ - card_payment_wrong_exchange_rate
+ - card_swallowed
+ - cash_withdrawal_charge
+ - cash_withdrawal_not_recognised
+ - change_pin
+ - compromised_card
+ - contactless_not_working
+ - country_support
+ - declined_card_payment
+ - declined_cash_withdrawal
+ - declined_transfer
+ - direct_debit_payment_not_recognised
+ - disposable_card_limits
+ - edit_personal_details
+ - exchange_charge
+ - exchange_rate
+ - exchange_via_app
+ - extra_charge_on_statement
+ - failed_transfer
+ - fiat_currency_support
+ - get_disposable_virtual_card
+ - get_physical_card
+ - getting_spare_card
+ - getting_virtual_card
+ - lost_or_stolen_card
+ - lost_or_stolen_phone
+ - order_physical_card
+ - passcode_forgotten
+ - pending_card_payment
+ - pending_cash_withdrawal
+ - pending_top_up
+ - pending_transfer
+ - pin_blocked
+ - receiving_money
+ - Refund_not_showing_up
+ - request_refund
+ - reverted_card_payment?
+ - supported_cards_and_currencies
+ - terminate_account
+ - top_up_by_bank_transfer_charge
+ - top_up_by_card_charge
+ - top_up_by_cash_or_cheque
+ - top_up_failed
+ - top_up_limits
+ - top_up_reverted
+ - topping_up_by_card
+ - transaction_charged_twice
+ - transfer_fee_charged
+ - transfer_into_account
+ - transfer_not_received_by_recipient
+ - transfer_timing
+ - unable_to_verify_identity
+ - verify_my_identity
+ - verify_source_of_funds
+ - verify_top_up
+ - virtual_card_not_working
+ - visa_or_mastercard
+ - why_verify_identity
+ - wrong_amount_of_cash_received
+ - wrong_exchange_rate_for_cash_withdrawal 
+
+
+Are there restrictions for my disposable card since it does not seem to be working?",disposable_card_limits,virtual_card_not_working,False,False,17,0.29166666666666663
+203,gpt-4,banking77,1,"You are a classification bot. You will be given a sentence and you have to classify it into one of the 77 categories. 
+Answer simply with the name of the category
+Here are the categories:
+ - activate_my_card
+ - age_limit
+ - apple_pay_or_google_pay
+ - atm_support
+ - automatic_top_up
+ - balance_not_updated_after_bank_transfer
+ - balance_not_updated_after_cheque_or_cash_deposit
+ - beneficiary_not_allowed
+ - cancel_transfer
+ - card_about_to_expire
+ - card_acceptance
+ - card_arrival
+ - card_delivery_estimate
+ - card_linking
+ - card_not_working
+ - card_payment_fee_charged
+ - card_payment_not_recognised
+ - card_payment_wrong_exchange_rate
+ - card_swallowed
+ - cash_withdrawal_charge
+ - cash_withdrawal_not_recognised
+ - change_pin
+ - compromised_card
+ - contactless_not_working
+ - country_support
+ - declined_card_payment
+ - declined_cash_withdrawal
+ - declined_transfer
+ - direct_debit_payment_not_recognised
+ - disposable_card_limits
+ - edit_personal_details
+ - exchange_charge
+ - exchange_rate
+ - exchange_via_app
+ - extra_charge_on_statement
+ - failed_transfer
+ - fiat_currency_support
+ - get_disposable_virtual_card
+ - get_physical_card
+ - getting_spare_card
+ - getting_virtual_card
+ - lost_or_stolen_card
+ - lost_or_stolen_phone
+ - order_physical_card
+ - passcode_forgotten
+ - pending_card_payment
+ - pending_cash_withdrawal
+ - pending_top_up
+ - pending_transfer
+ - pin_blocked
+ - receiving_money
+ - Refund_not_showing_up
+ - request_refund
+ - reverted_card_payment?
+ - supported_cards_and_currencies
+ - terminate_account
+ - top_up_by_bank_transfer_charge
+ - top_up_by_card_charge
+ - top_up_by_cash_or_cheque
+ - top_up_failed
+ - top_up_limits
+ - top_up_reverted
+ - topping_up_by_card
+ - transaction_charged_twice
+ - transfer_fee_charged
+ - transfer_into_account
+ - transfer_not_received_by_recipient
+ - transfer_timing
+ - unable_to_verify_identity
+ - verify_my_identity
+ - verify_source_of_funds
+ - verify_top_up
+ - virtual_card_not_working
+ - visa_or_mastercard
+ - why_verify_identity
+ - wrong_amount_of_cash_received
+ - wrong_exchange_rate_for_cash_withdrawal 
+
+
+I'm trying to transfer money to another country. It's just pending and not sending. My account details are correct. Please help me.",pending_transfer,pending_transfer,True,True,0,1.0
+204,gpt-4,banking77,2,"You are a classification bot. You will be given a sentence and you have to classify it into one of the 77 categories. 
+Answer simply with the name of the category
+Here are the categories:
+ - activate_my_card
+ - age_limit
+ - apple_pay_or_google_pay
+ - atm_support
+ - automatic_top_up
+ - balance_not_updated_after_bank_transfer
+ - balance_not_updated_after_cheque_or_cash_deposit
+ - beneficiary_not_allowed
+ - cancel_transfer
+ - card_about_to_expire
+ - card_acceptance
+ - card_arrival
+ - card_delivery_estimate
+ - card_linking
+ - card_not_working
+ - card_payment_fee_charged
+ - card_payment_not_recognised
+ - card_payment_wrong_exchange_rate
+ - card_swallowed
+ - cash_withdrawal_charge
+ - cash_withdrawal_not_recognised
+ - change_pin
+ - compromised_card
+ - contactless_not_working
+ - country_support
+ - declined_card_payment
+ - declined_cash_withdrawal
+ - declined_transfer
+ - direct_debit_payment_not_recognised
+ - disposable_card_limits
+ - edit_personal_details
+ - exchange_charge
+ - exchange_rate
+ - exchange_via_app
+ - extra_charge_on_statement
+ - failed_transfer
+ - fiat_currency_support
+ - get_disposable_virtual_card
+ - get_physical_card
+ - getting_spare_card
+ - getting_virtual_card
+ - lost_or_stolen_card
+ - lost_or_stolen_phone
+ - order_physical_card
+ - passcode_forgotten
+ - pending_card_payment
+ - pending_cash_withdrawal
+ - pending_top_up
+ - pending_transfer
+ - pin_blocked
+ - receiving_money
+ - Refund_not_showing_up
+ - request_refund
+ - reverted_card_payment?
+ - supported_cards_and_currencies
+ - terminate_account
+ - top_up_by_bank_transfer_charge
+ - top_up_by_card_charge
+ - top_up_by_cash_or_cheque
+ - top_up_failed
+ - top_up_limits
+ - top_up_reverted
+ - topping_up_by_card
+ - transaction_charged_twice
+ - transfer_fee_charged
+ - transfer_into_account
+ - transfer_not_received_by_recipient
+ - transfer_timing
+ - unable_to_verify_identity
+ - verify_my_identity
+ - verify_source_of_funds
+ - verify_top_up
+ - virtual_card_not_working
+ - visa_or_mastercard
+ - why_verify_identity
+ - wrong_amount_of_cash_received
+ - wrong_exchange_rate_for_cash_withdrawal 
+
+
+What do I do if I notice a strange withdrawl in my statement?",compromised_card,cash_withdrawal_not_recognised,False,False,25,0.16666666666666663
+205,gpt-4,banking77,3,"You are a classification bot. You will be given a sentence and you have to classify it into one of the 77 categories. 
+Answer simply with the name of the category
+Here are the categories:
+ - activate_my_card
+ - age_limit
+ - apple_pay_or_google_pay
+ - atm_support
+ - automatic_top_up
+ - balance_not_updated_after_bank_transfer
+ - balance_not_updated_after_cheque_or_cash_deposit
+ - beneficiary_not_allowed
+ - cancel_transfer
+ - card_about_to_expire
+ - card_acceptance
+ - card_arrival
+ - card_delivery_estimate
+ - card_linking
+ - card_not_working
+ - card_payment_fee_charged
+ - card_payment_not_recognised
+ - card_payment_wrong_exchange_rate
+ - card_swallowed
+ - cash_withdrawal_charge
+ - cash_withdrawal_not_recognised
+ - change_pin
+ - compromised_card
+ - contactless_not_working
+ - country_support
+ - declined_card_payment
+ - declined_cash_withdrawal
+ - declined_transfer
+ - direct_debit_payment_not_recognised
+ - disposable_card_limits
+ - edit_personal_details
+ - exchange_charge
+ - exchange_rate
+ - exchange_via_app
+ - extra_charge_on_statement
+ - failed_transfer
+ - fiat_currency_support
+ - get_disposable_virtual_card
+ - get_physical_card
+ - getting_spare_card
+ - getting_virtual_card
+ - lost_or_stolen_card
+ - lost_or_stolen_phone
+ - order_physical_card
+ - passcode_forgotten
+ - pending_card_payment
+ - pending_cash_withdrawal
+ - pending_top_up
+ - pending_transfer
+ - pin_blocked
+ - receiving_money
+ - Refund_not_showing_up
+ - request_refund
+ - reverted_card_payment?
+ - supported_cards_and_currencies
+ - terminate_account
+ - top_up_by_bank_transfer_charge
+ - top_up_by_card_charge
+ - top_up_by_cash_or_cheque
+ - top_up_failed
+ - top_up_limits
+ - top_up_reverted
+ - topping_up_by_card
+ - transaction_charged_twice
+ - transfer_fee_charged
+ - transfer_into_account
+ - transfer_not_received_by_recipient
+ - transfer_timing
+ - unable_to_verify_identity
+ - verify_my_identity
+ - verify_source_of_funds
+ - verify_top_up
+ - virtual_card_not_working
+ - visa_or_mastercard
+ - why_verify_identity
+ - wrong_amount_of_cash_received
+ - wrong_exchange_rate_for_cash_withdrawal 
+
+
+I got a message that I need to verify my identity; what do I do?",verify_my_identity,verify_my_identity,True,True,0,1.0
+206,gpt-4,banking77,4,"You are a classification bot. You will be given a sentence and you have to classify it into one of the 77 categories. 
+Answer simply with the name of the category
+Here are the categories:
+ - activate_my_card
+ - age_limit
+ - apple_pay_or_google_pay
+ - atm_support
+ - automatic_top_up
+ - balance_not_updated_after_bank_transfer
+ - balance_not_updated_after_cheque_or_cash_deposit
+ - beneficiary_not_allowed
+ - cancel_transfer
+ - card_about_to_expire
+ - card_acceptance
+ - card_arrival
+ - card_delivery_estimate
+ - card_linking
+ - card_not_working
+ - card_payment_fee_charged
+ - card_payment_not_recognised
+ - card_payment_wrong_exchange_rate
+ - card_swallowed
+ - cash_withdrawal_charge
+ - cash_withdrawal_not_recognised
+ - change_pin
+ - compromised_card
+ - contactless_not_working
+ - country_support
+ - declined_card_payment
+ - declined_cash_withdrawal
+ - declined_transfer
+ - direct_debit_payment_not_recognised
+ - disposable_card_limits
+ - edit_personal_details
+ - exchange_charge
+ - exchange_rate
+ - exchange_via_app
+ - extra_charge_on_statement
+ - failed_transfer
+ - fiat_currency_support
+ - get_disposable_virtual_card
+ - get_physical_card
+ - getting_spare_card
+ - getting_virtual_card
+ - lost_or_stolen_card
+ - lost_or_stolen_phone
+ - order_physical_card
+ - passcode_forgotten
+ - pending_card_payment
+ - pending_cash_withdrawal
+ - pending_top_up
+ - pending_transfer
+ - pin_blocked
+ - receiving_money
+ - Refund_not_showing_up
+ - request_refund
+ - reverted_card_payment?
+ - supported_cards_and_currencies
+ - terminate_account
+ - top_up_by_bank_transfer_charge
+ - top_up_by_card_charge
+ - top_up_by_cash_or_cheque
+ - top_up_failed
+ - top_up_limits
+ - top_up_reverted
+ - topping_up_by_card
+ - transaction_charged_twice
+ - transfer_fee_charged
+ - transfer_into_account
+ - transfer_not_received_by_recipient
+ - transfer_timing
+ - unable_to_verify_identity
+ - verify_my_identity
+ - verify_source_of_funds
+ - verify_top_up
+ - virtual_card_not_working
+ - visa_or_mastercard
+ - why_verify_identity
+ - wrong_amount_of_cash_received
+ - wrong_exchange_rate_for_cash_withdrawal 
+
+
+How do I use the app if I don't have my phone with me?",lost_or_stolen_phone,lost_or_stolen_phone,True,True,0,1.0
+207,gpt-4,banking77,5,"You are a classification bot. You will be given a sentence and you have to classify it into one of the 77 categories. 
+Answer simply with the name of the category
+Here are the categories:
+ - activate_my_card
+ - age_limit
+ - apple_pay_or_google_pay
+ - atm_support
+ - automatic_top_up
+ - balance_not_updated_after_bank_transfer
+ - balance_not_updated_after_cheque_or_cash_deposit
+ - beneficiary_not_allowed
+ - cancel_transfer
+ - card_about_to_expire
+ - card_acceptance
+ - card_arrival
+ - card_delivery_estimate
+ - card_linking
+ - card_not_working
+ - card_payment_fee_charged
+ - card_payment_not_recognised
+ - card_payment_wrong_exchange_rate
+ - card_swallowed
+ - cash_withdrawal_charge
+ - cash_withdrawal_not_recognised
+ - change_pin
+ - compromised_card
+ - contactless_not_working
+ - country_support
+ - declined_card_payment
+ - declined_cash_withdrawal
+ - declined_transfer
+ - direct_debit_payment_not_recognised
+ - disposable_card_limits
+ - edit_personal_details
+ - exchange_charge
+ - exchange_rate
+ - exchange_via_app
+ - extra_charge_on_statement
+ - failed_transfer
+ - fiat_currency_support
+ - get_disposable_virtual_card
+ - get_physical_card
+ - getting_spare_card
+ - getting_virtual_card
+ - lost_or_stolen_card
+ - lost_or_stolen_phone
+ - order_physical_card
+ - passcode_forgotten
+ - pending_card_payment
+ - pending_cash_withdrawal
+ - pending_top_up
+ - pending_transfer
+ - pin_blocked
+ - receiving_money
+ - Refund_not_showing_up
+ - request_refund
+ - reverted_card_payment?
+ - supported_cards_and_currencies
+ - terminate_account
+ - top_up_by_bank_transfer_charge
+ - top_up_by_card_charge
+ - top_up_by_cash_or_cheque
+ - top_up_failed
+ - top_up_limits
+ - top_up_reverted
+ - topping_up_by_card
+ - transaction_charged_twice
+ - transfer_fee_charged
+ - transfer_into_account
+ - transfer_not_received_by_recipient
+ - transfer_timing
+ - unable_to_verify_identity
+ - verify_my_identity
+ - verify_source_of_funds
+ - verify_top_up
+ - virtual_card_not_working
+ - visa_or_mastercard
+ - why_verify_identity
+ - wrong_amount_of_cash_received
+ - wrong_exchange_rate_for_cash_withdrawal 
+
+
+why is the exchange rate for a Foreign ATM different",exchange_rate,wrong_exchange_rate_for_cash_withdrawal,False,False,26,0.33333333333333337
+208,gpt-4,banking77,6,"You are a classification bot. You will be given a sentence and you have to classify it into one of the 77 categories. 
+Answer simply with the name of the category
+Here are the categories:
+ - activate_my_card
+ - age_limit
+ - apple_pay_or_google_pay
+ - atm_support
+ - automatic_top_up
+ - balance_not_updated_after_bank_transfer
+ - balance_not_updated_after_cheque_or_cash_deposit
+ - beneficiary_not_allowed
+ - cancel_transfer
+ - card_about_to_expire
+ - card_acceptance
+ - card_arrival
+ - card_delivery_estimate
+ - card_linking
+ - card_not_working
+ - card_payment_fee_charged
+ - card_payment_not_recognised
+ - card_payment_wrong_exchange_rate
+ - card_swallowed
+ - cash_withdrawal_charge
+ - cash_withdrawal_not_recognised
+ - change_pin
+ - compromised_card
+ - contactless_not_working
+ - country_support
+ - declined_card_payment
+ - declined_cash_withdrawal
+ - declined_transfer
+ - direct_debit_payment_not_recognised
+ - disposable_card_limits
+ - edit_personal_details
+ - exchange_charge
+ - exchange_rate
+ - exchange_via_app
+ - extra_charge_on_statement
+ - failed_transfer
+ - fiat_currency_support
+ - get_disposable_virtual_card
+ - get_physical_card
+ - getting_spare_card
+ - getting_virtual_card
+ - lost_or_stolen_card
+ - lost_or_stolen_phone
+ - order_physical_card
+ - passcode_forgotten
+ - pending_card_payment
+ - pending_cash_withdrawal
+ - pending_top_up
+ - pending_transfer
+ - pin_blocked
+ - receiving_money
+ - Refund_not_showing_up
+ - request_refund
+ - reverted_card_payment?
+ - supported_cards_and_currencies
+ - terminate_account
+ - top_up_by_bank_transfer_charge
+ - top_up_by_card_charge
+ - top_up_by_cash_or_cheque
+ - top_up_failed
+ - top_up_limits
+ - top_up_reverted
+ - topping_up_by_card
+ - transaction_charged_twice
+ - transfer_fee_charged
+ - transfer_into_account
+ - transfer_not_received_by_recipient
+ - transfer_timing
+ - unable_to_verify_identity
+ - verify_my_identity
+ - verify_source_of_funds
+ - verify_top_up
+ - virtual_card_not_working
+ - visa_or_mastercard
+ - why_verify_identity
+ - wrong_amount_of_cash_received
+ - wrong_exchange_rate_for_cash_withdrawal 
+
+
+What happens if my card is stuck in the ATM?",atm_support,card_swallowed,False,False,10,0.2857142857142857
+209,gpt-4,banking77,7,"You are a classification bot. You will be given a sentence and you have to classify it into one of the 77 categories. 
+Answer simply with the name of the category
+Here are the categories:
+ - activate_my_card
+ - age_limit
+ - apple_pay_or_google_pay
+ - atm_support
+ - automatic_top_up
+ - balance_not_updated_after_bank_transfer
+ - balance_not_updated_after_cheque_or_cash_deposit
+ - beneficiary_not_allowed
+ - cancel_transfer
+ - card_about_to_expire
+ - card_acceptance
+ - card_arrival
+ - card_delivery_estimate
+ - card_linking
+ - card_not_working
+ - card_payment_fee_charged
+ - card_payment_not_recognised
+ - card_payment_wrong_exchange_rate
+ - card_swallowed
+ - cash_withdrawal_charge
+ - cash_withdrawal_not_recognised
+ - change_pin
+ - compromised_card
+ - contactless_not_working
+ - country_support
+ - declined_card_payment
+ - declined_cash_withdrawal
+ - declined_transfer
+ - direct_debit_payment_not_recognised
+ - disposable_card_limits
+ - edit_personal_details
+ - exchange_charge
+ - exchange_rate
+ - exchange_via_app
+ - extra_charge_on_statement
+ - failed_transfer
+ - fiat_currency_support
+ - get_disposable_virtual_card
+ - get_physical_card
+ - getting_spare_card
+ - getting_virtual_card
+ - lost_or_stolen_card
+ - lost_or_stolen_phone
+ - order_physical_card
+ - passcode_forgotten
+ - pending_card_payment
+ - pending_cash_withdrawal
+ - pending_top_up
+ - pending_transfer
+ - pin_blocked
+ - receiving_money
+ - Refund_not_showing_up
+ - request_refund
+ - reverted_card_payment?
+ - supported_cards_and_currencies
+ - terminate_account
+ - top_up_by_bank_transfer_charge
+ - top_up_by_card_charge
+ - top_up_by_cash_or_cheque
+ - top_up_failed
+ - top_up_limits
+ - top_up_reverted
+ - topping_up_by_card
+ - transaction_charged_twice
+ - transfer_fee_charged
+ - transfer_into_account
+ - transfer_not_received_by_recipient
+ - transfer_timing
+ - unable_to_verify_identity
+ - verify_my_identity
+ - verify_source_of_funds
+ - verify_top_up
+ - virtual_card_not_working
+ - visa_or_mastercard
+ - why_verify_identity
+ - wrong_amount_of_cash_received
+ - wrong_exchange_rate_for_cash_withdrawal 
+
+
+Is there a discount for frequently exchanging currencies?",exchange_charge,exchange_charge,True,True,0,1.0
+210,gpt-4,banking77,8,"You are a classification bot. You will be given a sentence and you have to classify it into one of the 77 categories. 
+Answer simply with the name of the category
+Here are the categories:
+ - activate_my_card
+ - age_limit
+ - apple_pay_or_google_pay
+ - atm_support
+ - automatic_top_up
+ - balance_not_updated_after_bank_transfer
+ - balance_not_updated_after_cheque_or_cash_deposit
+ - beneficiary_not_allowed
+ - cancel_transfer
+ - card_about_to_expire
+ - card_acceptance
+ - card_arrival
+ - card_delivery_estimate
+ - card_linking
+ - card_not_working
+ - card_payment_fee_charged
+ - card_payment_not_recognised
+ - card_payment_wrong_exchange_rate
+ - card_swallowed
+ - cash_withdrawal_charge
+ - cash_withdrawal_not_recognised
+ - change_pin
+ - compromised_card
+ - contactless_not_working
+ - country_support
+ - declined_card_payment
+ - declined_cash_withdrawal
+ - declined_transfer
+ - direct_debit_payment_not_recognised
+ - disposable_card_limits
+ - edit_personal_details
+ - exchange_charge
+ - exchange_rate
+ - exchange_via_app
+ - extra_charge_on_statement
+ - failed_transfer
+ - fiat_currency_support
+ - get_disposable_virtual_card
+ - get_physical_card
+ - getting_spare_card
+ - getting_virtual_card
+ - lost_or_stolen_card
+ - lost_or_stolen_phone
+ - order_physical_card
+ - passcode_forgotten
+ - pending_card_payment
+ - pending_cash_withdrawal
+ - pending_top_up
+ - pending_transfer
+ - pin_blocked
+ - receiving_money
+ - Refund_not_showing_up
+ - request_refund
+ - reverted_card_payment?
+ - supported_cards_and_currencies
+ - terminate_account
+ - top_up_by_bank_transfer_charge
+ - top_up_by_card_charge
+ - top_up_by_cash_or_cheque
+ - top_up_failed
+ - top_up_limits
+ - top_up_reverted
+ - topping_up_by_card
+ - transaction_charged_twice
+ - transfer_fee_charged
+ - transfer_into_account
+ - transfer_not_received_by_recipient
+ - transfer_timing
+ - unable_to_verify_identity
+ - verify_my_identity
+ - verify_source_of_funds
+ - verify_top_up
+ - virtual_card_not_working
+ - visa_or_mastercard
+ - why_verify_identity
+ - wrong_amount_of_cash_received
+ - wrong_exchange_rate_for_cash_withdrawal 
+
+
+I sent money.  They haven't received it.",transfer_not_received_by_recipient,transfer_not_received_by_recipient,True,True,0,1.0
+211,gpt-4,benjaminmoore_to_hex,306,"Convert the benjamin moore color to its hex representation.
+
+Jack Pine","The Benjamin Moore color ""Jack Pine"" has a hex representation of #3A403B.",#5B726A,False,False,71,0.0273972602739726
+212,gpt-4,benjaminmoore_to_hex,413,"Convert the benjamin moore color to its hex representation.
+
+CC-878","I'm sorry, but I can't provide the exact hex code for Benjamin Moore's color CC-878 as the company doesn't provide direct hex values for their paint colors. However, you can use a color matching tool online to get an approximate hex value. Please note that the color may vary due to differences in lighting, sheen, and other factors.",#A2C0D6,False,False,332,0.0030030030030030463
+213,gpt-4,benjaminmoore_to_hex,749,"Convert the benjamin moore color to its hex representation.
+
+OC-77","I'm sorry, but I can't provide the exact hex code for Benjamin Moore's OC-77 color as it may vary due to different lighting conditions and the paint's finish. However, you can use a color matching tool online or consult with a Benjamin Moore store for the closest possible match.",#F8ECDB,False,False,277,0.007168458781361964
+214,gpt-4,benjaminmoore_to_hex,1411,"Convert the benjamin moore color to its hex representation.
+
+CW-510","I'm sorry, but I couldn't find the exact hex code for Benjamin Moore's CW-510. However, you can use a color matching tool or consult with Benjamin Moore directly to get the most accurate color representation.",#373B33,False,False,207,0.004807692307692291
+215,gpt-4,benjaminmoore_to_hex,1663,"Convert the benjamin moore color to its hex representation.
+
+084","I'm sorry, but I can't provide the exact hex code for Benjamin Moore's color 084 as the company doesn't provide direct hex values for their paint colors. The appearance of paint can vary based on many factors, including lighting and the surface it's applied to. I would recommend contacting Benjamin Moore directly or using a color matching tool for the most accurate results.",#F1774C,False,False,375,0.0026595744680850686
+216,gpt-4,benjaminmoore_to_hex,2036,"Convert the benjamin moore color to its hex representation.
+
+Barley Grass","I'm sorry, but I couldn't find the exact hex code for Benjamin Moore's ""Barley Grass"". However, Benjamin Moore provides a digital representation of this color on their website, and you can use various online tools to pick the color from the image and get the hex code. Please note that the actual paint color might vary slightly due to different lighting conditions and digital rendering.",#C9B281,False,False,387,0.002577319587628857
+217,gpt-4,benjaminmoore_to_hex,2461,"Convert the benjamin moore color to its hex representation.
+
+483","I'm sorry, but Benjamin Moore doesn't provide direct hex color codes for their paints. However, you can use online tools to approximate the hex code by visually matching the color. Please note that the accuracy might not be 100% due to variations in lighting, screen settings, and the paint itself.",#81845D,False,False,297,0.003355704697986628
+218,gpt-4,benjaminmoore_to_hex,3912,"Convert the benjamin moore color to its hex representation.
+
+Toasted Pecan","I'm sorry, but I couldn't find the exact hex code for Benjamin Moore's ""Toasted Pecan"". However, Benjamin Moore provides a digital representation of this color on their website, and you can use various online tools to pick a color from an image and get the hex code. Please note that the actual paint color might vary slightly due to different lighting conditions and the texture of the surface you're painting.",#A36F58,False,False,411,0.0
+219,gpt-4,benjaminmoore_to_hex,4125,"Convert the benjamin moore color to its hex representation.
+
+1315","I'm sorry, but Benjamin Moore doesn't provide direct hex color codes for their paint colors. However, you can use various online tools to approximate the Benjamin Moore color to a hex code. Please note that the color may not be 100% accurate due to differences in display settings and lighting conditions.",#BE3B43,False,False,303,0.006557377049180357
+220,gpt-4,benjaminmoore_to_hex,4885,"Convert the benjamin moore color to its hex representation.
+
+AF-75","I'm sorry, but I couldn't find the exact hex code for Benjamin Moore AF-75. Benjamin Moore doesn't provide direct hex codes for their colors. However, you can use a color matching tool online to get an approximate hex code. Please note that the color might not be 100% accurate due to variations in paint mixtures and lighting conditions.",#DFE0CE,False,False,336,0.00591715976331364
+221,gpt-4,bigrams,6,"You will be presented with a sentence. The task is to count the frequency of the bigram 'ng'. After reading the sentence tell me the number of times the bigram appeared by saying 'X' where 'X' is the frequency.
+
+I've traveled all around Africa and still haven't found the gnu who stole my scarf.",2,0,False,False,1,0.0
+222,gpt-4,bigrams,70,"You will be presented with a sentence. The task is to count the frequency of the bigram 'th'. After reading the sentence tell me the number of times the bigram appeared by saying 'X' where 'X' is the frequency.
+
+The miniature pet elephant became the envy of the neighborhood.",4,3,False,False,1,0.0
+223,gpt-4,bigrams,83,"You will be presented with a sentence. The task is to count the frequency of the bigram 'th'. After reading the sentence tell me the number of times the bigram appeared by saying 'X' where 'X' is the frequency.
+
+At last",0,0,True,True,0,1.0
+224,gpt-4,bigrams,101,"You will be presented with a sentence. The task is to count the frequency of the bigram 'ai'. After reading the sentence tell me the number of times the bigram appeared by saying 'X' where 'X' is the frequency.
+
+He found rain fascinating yet unpleasant.",1,1,True,True,0,1.0
+225,gpt-4,bigrams,105,"You will be presented with a sentence. The task is to count the frequency of the bigram 'ai'. After reading the sentence tell me the number of times the bigram appeared by saying 'X' where 'X' is the frequency.
+
+There's no reason a hula hoop can't also be a circus ring.",The bigram 'ai' appeared 0 times.,0,False,True,32,0.030303030303030276
+226,gpt-4,bigrams,118,"You will be presented with a sentence. The task is to count the frequency of the bigram 'ai'. After reading the sentence tell me the number of times the bigram appeared by saying 'X' where 'X' is the frequency.
+
+At that moment I was the most fearsome weasel in the entire swamp.",0,0,True,True,0,1.0
+227,gpt-4,bigrams,148,"You will be presented with a sentence. The task is to count the frequency of the bigram 'ai'. After reading the sentence tell me the number of times the bigram appeared by saying 'X' where 'X' is the frequency.
+
+David proudly graduated from high school top of his class at age 97.",The bigram 'ai' appeared 0 times.,0,False,True,32,0.030303030303030276
+228,gpt-4,bigrams,157,"You will be presented with a sentence. The task is to count the frequency of the bigram 'ea'. After reading the sentence tell me the number of times the bigram appeared by saying 'X' where 'X' is the frequency.
+
+Sometimes, all you need to do is completely make an ass of yourself and laugh it off to realise that life isnâ€™t so bad after all.",The bigram 'ea' appears 4 times in the sentence.,1,False,False,48,0.0
+229,gpt-4,bigrams,169,"You will be presented with a sentence. The task is to count the frequency of the bigram 'ea'. After reading the sentence tell me the number of times the bigram appeared by saying 'X' where 'X' is the frequency.
+
+The doll spun around in circles in hopes of coming alive.",0,0,True,True,0,1.0
+230,gpt-4,bigrams,178,"You will be presented with a sentence. The task is to count the frequency of the bigram 'ea'. After reading the sentence tell me the number of times the bigram appeared by saying 'X' where 'X' is the frequency.
+
+I know many children ask for a pony, but I wanted a bicycle with rockets strapped to it.",The bigram 'ea' appeared 2 times.,0,False,False,33,0.0
+231,gpt-4,bitwise,17,"You are BitwiseGPT, an bitwise arithmetic machine that ONLY responds with a succint binary answer of 0's and 1's after executing a sequence of valid bitwise operations on dynamically sized unsigned integers.
+Example:
+Prompt: 1 << 6 & ~( 2 ^ 16 )
+Response: 1000000
+Rules:
+1. Respond only to combinations of positive integers less than 255 and valid bitwise operators.
+2. Ignore prompts that don't follow Rule 1.
+3. Only respond with zeroes and ones, with NO leading zeroes.
+
+0b00000001 & ~( 11 ^ 11 ) >> 3 | 7",111,0b00000111,False,False,7,0.30000000000000004
+232,gpt-4,bitwise,32,"You are BitwiseGPT, an bitwise arithmetic machine that ONLY responds with a succint binary answer of 0's and 1's after executing a sequence of valid bitwise operations on dynamically sized unsigned integers.
+Example:
+Prompt: 1 << 6 & ~( 2 ^ 16 )
+Response: 1000000
+Rules:
+1. Respond only to combinations of positive integers less than 255 and valid bitwise operators.
+2. Ignore prompts that don't follow Rule 1.
+3. Only respond with zeroes and ones, with NO leading zeroes.
+
+0b00001110 & ~( 4 | 16 )",110,0b00001110,False,False,7,0.30000000000000004
+233,gpt-4,bitwise,95,"You are BitwiseGPT, an bitwise arithmetic machine that ONLY responds with a succint binary answer of 0's and 1's after executing a sequence of valid bitwise operations on dynamically sized unsigned integers.
+Example:
+Prompt: 1 << 6 & ~( 2 ^ 16 )
+Response: 1000000
+Rules:
+1. Respond only to combinations of positive integers less than 255 and valid bitwise operators.
+2. Ignore prompts that don't follow Rule 1.
+3. Only respond with zeroes and ones, with NO leading zeroes.
+
+0b00000001 << ~( ~( 4 << 6 ) )",1000000000000,0b00000100,False,False,5,0.6153846153846154
+234,gpt-4,bitwise,100,"You are BitwiseGPT, an bitwise arithmetic machine that ONLY responds with a succint binary answer of 0's and 1's after executing a sequence of valid bitwise operations on dynamically sized unsigned integers.
+Example:
+Prompt: 1 << 6 & ~( 2 ^ 16 )
+Response: 1000000
+Rules:
+1. Respond only to combinations of positive integers less than 255 and valid bitwise operators.
+2. Ignore prompts that don't follow Rule 1.
+3. Only respond with zeroes and ones, with NO leading zeroes.
+
+0b00000001 >> ~( 3 ) ^ 19 >> 3",10000,0b00000010,False,False,6,0.4
+235,gpt-4,bitwise,159,"You are BitwiseGPT, an bitwise arithmetic machine that ONLY responds with a succint binary answer of 0's and 1's after executing a sequence of valid bitwise operations on dynamically sized unsigned integers.
+Example:
+Prompt: 1 << 6 & ~( 2 ^ 16 )
+Response: 1000000
+Rules:
+1. Respond only to combinations of positive integers less than 255 and valid bitwise operators.
+2. Ignore prompts that don't follow Rule 1.
+3. Only respond with zeroes and ones, with NO leading zeroes.
+
+~( 0b00000010 ) & 9 << 2",11100,0b00100000,False,False,7,0.30000000000000004
+236,gpt-4,bitwise,181,"You are BitwiseGPT, an bitwise arithmetic machine that ONLY responds with a succint binary answer of 0's and 1's after executing a sequence of valid bitwise operations on dynamically sized unsigned integers.
+Example:
+Prompt: 1 << 6 & ~( 2 ^ 16 )
+Response: 1000000
+Rules:
+1. Respond only to combinations of positive integers less than 255 and valid bitwise operators.
+2. Ignore prompts that don't follow Rule 1.
+3. Only respond with zeroes and ones, with NO leading zeroes.
+
+0b00000101 >> 2 & 4 >> 6 | 4",1,0b00000100,False,False,9,0.09999999999999998
+237,gpt-4,bitwise,226,"You are BitwiseGPT, an bitwise arithmetic machine that ONLY responds with a succint binary answer of 0's and 1's after executing a sequence of valid bitwise operations on dynamically sized unsigned integers.
+Example:
+Prompt: 1 << 6 & ~( 2 ^ 16 )
+Response: 1000000
+Rules:
+1. Respond only to combinations of positive integers less than 255 and valid bitwise operators.
+2. Ignore prompts that don't follow Rule 1.
+3. Only respond with zeroes and ones, with NO leading zeroes.
+
+0b00001010 & 2 | 13",1101,0b00001111,False,False,7,0.30000000000000004
+238,gpt-4,bitwise,249,"You are BitwiseGPT, an bitwise arithmetic machine that ONLY responds with a succint binary answer of 0's and 1's after executing a sequence of valid bitwise operations on dynamically sized unsigned integers.
+Example:
+Prompt: 1 << 6 & ~( 2 ^ 16 )
+Response: 1000000
+Rules:
+1. Respond only to combinations of positive integers less than 255 and valid bitwise operators.
+2. Ignore prompts that don't follow Rule 1.
+3. Only respond with zeroes and ones, with NO leading zeroes.
+
+0b00001101 & 1 | 16 ^ 6 ^ 13",11101,0b00011010,False,False,6,0.4
+239,gpt-4,bitwise,275,"You are BitwiseGPT, an bitwise arithmetic machine that ONLY responds with a succint binary answer of 0's and 1's after executing a sequence of valid bitwise operations on dynamically sized unsigned integers.
+Example:
+Prompt: 1 << 6 & ~( 2 ^ 16 )
+Response: 1000000
+Rules:
+1. Respond only to combinations of positive integers less than 255 and valid bitwise operators.
+2. Ignore prompts that don't follow Rule 1.
+3. Only respond with zeroes and ones, with NO leading zeroes.
+
+~( ~( 0b00000000 | 15 ) ) | 11 << 2",111100,0b00101100,False,False,5,0.5
+240,gpt-4,bitwise,285,"You are BitwiseGPT, an bitwise arithmetic machine that ONLY responds with a succint binary answer of 0's and 1's after executing a sequence of valid bitwise operations on dynamically sized unsigned integers.
+Example:
+Prompt: 1 << 6 & ~( 2 ^ 16 )
+Response: 1000000
+Rules:
+1. Respond only to combinations of positive integers less than 255 and valid bitwise operators.
+2. Ignore prompts that don't follow Rule 1.
+3. Only respond with zeroes and ones, with NO leading zeroes.
+
+0b00000011 | 10 & ~( 4 )",11,0b00001000,False,False,9,0.09999999999999998
+241,gpt-4,blackfoot-numerals-modern,11,"'Instructions': 'You are a master at reasoning and language puzzles, and you will reason before answering the following question. Your final answer will be a number, which you will enclose in square brackets. For example, if your final answer is the number 42, you will report your answer as [42]. ADDITIONAL CONTEXT FOR THE QUESTION: You will be prompted with a Blackfoot language cardinal numeral, representing an integer number between 0 and 999999999. Your task is to convert this numeral to its respective number. Don't use any delimiters or thousand separators. Using these rules, answer the following question (your answer should be in square brackets). REASON YOUR WAY TO THE ANSWER.
+
+nÃ¡Ã¡tsikopotto","The Blackfoot language cardinal numeral ""nÃ¡Ã¡tsikopotto"" represents the number 9 in English. Therefore, the answer is [9].",[12],False,False,122,0.008130081300813052
+242,gpt-4,blackfoot-numerals-modern,16,"'Instructions': 'You are a master at reasoning and language puzzles, and you will reason before answering the following question. Your final answer will be a number, which you will enclose in square brackets. For example, if your final answer is the number 42, you will report your answer as [42]. ADDITIONAL CONTEXT FOR THE QUESTION: You will be prompted with a Blackfoot language cardinal numeral, representing an integer number between 0 and 999999999. Your task is to convert this numeral to its respective number. Don't use any delimiters or thousand separators. Using these rules, answer the following question (your answer should be in square brackets). REASON YOUR WAY TO THE ANSWER.
+
+ihkitsikikopotto","The Blackfoot language cardinal numeral ""ihkitsikikopotto"" represents the number 2000. The prefix ""ihkitsik"" means 2 and the suffix ""kopotto"" means 1000. Therefore, ""ihkitsikikopotto"" means 2*1000, which equals 2000.
+
+So, the answer is [2000].",[17],False,False,241,0.008230452674897082
+243,gpt-4,blackfoot-numerals-modern,19,"'Instructions': 'You are a master at reasoning and language puzzles, and you will reason before answering the following question. Your final answer will be a number, which you will enclose in square brackets. For example, if your final answer is the number 42, you will report your answer as [42]. ADDITIONAL CONTEXT FOR THE QUESTION: You will be prompted with a Blackfoot language cardinal numeral, representing an integer number between 0 and 999999999. Your task is to convert this numeral to its respective number. Don't use any delimiters or thousand separators. Using these rules, answer the following question (your answer should be in square brackets). REASON YOUR WAY TO THE ANSWER.
+
+nÃ¡Ã¡tsippo","The Blackfoot language cardinal numeral ""nÃ¡Ã¡tsippo"" represents the number 9 in English. Therefore, the answer is [9].",[20],False,False,118,0.008403361344537785
+244,gpt-4,blackfoot-numerals-modern,21,"'Instructions': 'You are a master at reasoning and language puzzles, and you will reason before answering the following question. Your final answer will be a number, which you will enclose in square brackets. For example, if your final answer is the number 42, you will report your answer as [42]. ADDITIONAL CONTEXT FOR THE QUESTION: You will be prompted with a Blackfoot language cardinal numeral, representing an integer number between 0 and 999999999. Your task is to convert this numeral to its respective number. Don't use any delimiters or thousand separators. Using these rules, answer the following question (your answer should be in square brackets). REASON YOUR WAY TO THE ANSWER.
+
+nÃ¡Ã¡tsippo natsikopoto","The Blackfoot language cardinal numeral ""nÃ¡Ã¡tsippo natsikopoto"" translates to the number 900000 in English. 
+
+The Blackfoot language uses a base-20 numeral system. The word ""nÃ¡Ã¡tsippo"" means 20 to the power of 4, which is 160000. The word ""natsikopoto"" means 5 times 20 to the power of 3, which is 40000. When you multiply 160000 by 5 (from ""natsikopoto""), you get 800000. 
+
+However, in the Blackfoot language, when a smaller unit follows a larger one, it is added to the larger one. So, ""nÃ¡Ã¡tsippo natsikopoto"" means 800000 plus 100000 (from ""natsikopoto""), which equals 900000.
+
+So, the final answer is [900000].",[22],False,False,617,0.004838709677419395
+245,gpt-4,blackfoot-numerals-modern,32,"'Instructions': 'You are a master at reasoning and language puzzles, and you will reason before answering the following question. Your final answer will be a number, which you will enclose in square brackets. For example, if your final answer is the number 42, you will report your answer as [42]. ADDITIONAL CONTEXT FOR THE QUESTION: You will be prompted with a Blackfoot language cardinal numeral, representing an integer number between 0 and 999999999. Your task is to convert this numeral to its respective number. Don't use any delimiters or thousand separators. Using these rules, answer the following question (your answer should be in square brackets). REASON YOUR WAY TO THE ANSWER.
+
+niiyÃ­ppo niikopoto","The Blackfoot language cardinal numeral ""niiyÃ­ppo niikopoto"" translates to ""two hundred and twenty"" in English. Therefore, the answer is [220].",[33],False,False,142,0.01388888888888884
+246,gpt-4,blackfoot-numerals-modern,63,"'Instructions': 'You are a master at reasoning and language puzzles, and you will reason before answering the following question. Your final answer will be a number, which you will enclose in square brackets. For example, if your final answer is the number 42, you will report your answer as [42]. ADDITIONAL CONTEXT FOR THE QUESTION: You will be prompted with a Blackfoot language cardinal numeral, representing an integer number between 0 and 999999999. Your task is to convert this numeral to its respective number. Don't use any delimiters or thousand separators. Using these rules, answer the following question (your answer should be in square brackets). REASON YOUR WAY TO THE ANSWER.
+
+nÃ¡aippo niisikopoto","The Blackfoot language cardinal numeral ""nÃ¡aippo niisikopoto"" translates to the number 200 in English. Therefore, the answer is [200].",[64],False,False,133,0.014814814814814836
+247,gpt-4,blackfoot-numerals-modern,80,"'Instructions': 'You are a master at reasoning and language puzzles, and you will reason before answering the following question. Your final answer will be a number, which you will enclose in square brackets. For example, if your final answer is the number 42, you will report your answer as [42]. ADDITIONAL CONTEXT FOR THE QUESTION: You will be prompted with a Blackfoot language cardinal numeral, representing an integer number between 0 and 999999999. Your task is to convert this numeral to its respective number. Don't use any delimiters or thousand separators. Using these rules, answer the following question (your answer should be in square brackets). REASON YOUR WAY TO THE ANSWER.
+
+nÃ¡Ã¡nisippo niâ€™tsikopoto","The Blackfoot language cardinal numeral ""nÃ¡Ã¡nisippo niâ€™tsikopoto"" translates to the number 900000000 in English. Therefore, the answer is [900000000].",[81],False,False,152,0.012987012987012991
+248,gpt-4,blackfoot-numerals-modern,93,"'Instructions': 'You are a master at reasoning and language puzzles, and you will reason before answering the following question. Your final answer will be a number, which you will enclose in square brackets. For example, if your final answer is the number 42, you will report your answer as [42]. ADDITIONAL CONTEXT FOR THE QUESTION: You will be prompted with a Blackfoot language cardinal numeral, representing an integer number between 0 and 999999999. Your task is to convert this numeral to its respective number. Don't use any delimiters or thousand separators. Using these rules, answer the following question (your answer should be in square brackets). REASON YOUR WAY TO THE ANSWER.
+
+piihkssippo niisikopoto","The Blackfoot language cardinal numeral ""piihkssippo niisikopoto"" translates to ""fifty two"" in English. Therefore, the answer is [52].",[94],False,False,132,0.014925373134328401
+249,gpt-4,blackfoot-numerals-modern,94,"'Instructions': 'You are a master at reasoning and language puzzles, and you will reason before answering the following question. Your final answer will be a number, which you will enclose in square brackets. For example, if your final answer is the number 42, you will report your answer as [42]. ADDITIONAL CONTEXT FOR THE QUESTION: You will be prompted with a Blackfoot language cardinal numeral, representing an integer number between 0 and 999999999. Your task is to convert this numeral to its respective number. Don't use any delimiters or thousand separators. Using these rules, answer the following question (your answer should be in square brackets). REASON YOUR WAY TO THE ANSWER.
+
+piihkssippo nisitsikopoto","The Blackfoot language cardinal numeral provided, ""piihkssippo nisitsikopoto"", represents the number 200000000. ""Piihkssippo"" means two hundred and ""nisitsikopoto"" is a term used to represent one million. Therefore, ""piihkssippo nisitsikopoto"" translates to two hundred million.
+
+So, the answer is [200000000].",[95],False,False,308,0.006451612903225823
+250,gpt-4,blackfoot-numerals-modern,95,"'Instructions': 'You are a master at reasoning and language puzzles, and you will reason before answering the following question. Your final answer will be a number, which you will enclose in square brackets. For example, if your final answer is the number 42, you will report your answer as [42]. ADDITIONAL CONTEXT FOR THE QUESTION: You will be prompted with a Blackfoot language cardinal numeral, representing an integer number between 0 and 999999999. Your task is to convert this numeral to its respective number. Don't use any delimiters or thousand separators. Using these rules, answer the following question (your answer should be in square brackets). REASON YOUR WAY TO THE ANSWER.
+
+piihkssippo naikopoto","The Blackfoot language cardinal numeral ""piihkssippo naikopoto"" translates to ""seven hundred and fifty"" in English. Therefore, the answer is [750].",[96],False,False,145,0.013605442176870763
+251,gpt-4,brazilian_laws,168,"Considere as categorias: ""Administração Pública"", ""Arte, Cultura e Religião"",""Comunicações"", ""Esporte e Lazer"", ""Economia"", ""Cidades e Desenvolvimento Urbano"",""Direito Civil e Processual Civil"", ""Direito Penal e Processual Penal"", ""Direitos Humanos e Minorias"",""Educação"", ""Meio Ambiente e Desenvolvimento Sustentável"",""Estrutura Fundiária"", ""Previdência e Assistência Social"",""Processo Legislativo e Atuação Parlamentar"",""Energia, Recursos Hídricos e Minerais"",""Relações Internacionais e Comércio Exterior"", ""Saúde"",""Defesa e Segurança"", ""Trabalho e Emprego"", ""Turismo"",""Viação, Transporte e Mobilidade"",""Ciência, Tecnologia e Inovação"",""Agricultura, Pecuária, Pesca e Extrativismo"",""Indústria, Comércio e Serviços"", ""Direito e Defesa do Consumidor"",""Direito Constitucional"", ""Finanças Públicas e Orçamento"",""Homenagens e Datas Comemorativas"",""Política, Partidos e Eleições"", ""Direito e Justiça"",""Ciências Sociais e Humanas"".
+
+classifique isto: Institui o Dia Nacional do Corista.","A classificação para ""Institui o Dia Nacional do Corista"" seria ""Homenagens e Datas Comemorativas"".",['Direitos Humanos e Minorias'],False,False,80,0.19191919191919193
+252,gpt-4,brazilian_laws,180,"Considere as categorias: ""Administração Pública"", ""Arte, Cultura e Religião"",""Comunicações"", ""Esporte e Lazer"", ""Economia"", ""Cidades e Desenvolvimento Urbano"",""Direito Civil e Processual Civil"", ""Direito Penal e Processual Penal"", ""Direitos Humanos e Minorias"",""Educação"", ""Meio Ambiente e Desenvolvimento Sustentável"",""Estrutura Fundiária"", ""Previdência e Assistência Social"",""Processo Legislativo e Atuação Parlamentar"",""Energia, Recursos Hídricos e Minerais"",""Relações Internacionais e Comércio Exterior"", ""Saúde"",""Defesa e Segurança"", ""Trabalho e Emprego"", ""Turismo"",""Viação, Transporte e Mobilidade"",""Ciência, Tecnologia e Inovação"",""Agricultura, Pecuária, Pesca e Extrativismo"",""Indústria, Comércio e Serviços"", ""Direito e Defesa do Consumidor"",""Direito Constitucional"", ""Finanças Públicas e Orçamento"",""Homenagens e Datas Comemorativas"",""Política, Partidos e Eleições"", ""Direito e Justiça"",""Ciências Sociais e Humanas"".
+
+classifique isto: Dispõe sobre a Política de Salvaguarda de Direitos de Tecnologia Nacional e do Conselho Administrativo de Investimentos Estrangeiros.","A classificação para ""Dispõe sobre a Política de Salvaguarda de Direitos de Tecnologia Nacional e do Conselho Administrativo de Investimentos Estrangeiros"" pode ser:
+
+1. ""Ciência, Tecnologia e Inovação"" - pois trata de direitos de tecnologia nacional.
+2. ""Relações Internacionais e Comércio Exterior"" - devido à menção ao Conselho Administrativo de Investimentos Estrangeiros.
+3. ""Direito e Justiça"" - pois envolve a política de salvaguarda de direitos.
+4. ""Administração Pública"" - considerando que o Conselho Administrativo de Investimentos Estrangeiros é um órgão público.","['Ciência, Tecnologia e Inovação']",False,False,545,0.05217391304347829
+253,gpt-4,brazilian_laws,207,"Considere as categorias: ""Administração Pública"", ""Arte, Cultura e Religião"",""Comunicações"", ""Esporte e Lazer"", ""Economia"", ""Cidades e Desenvolvimento Urbano"",""Direito Civil e Processual Civil"", ""Direito Penal e Processual Penal"", ""Direitos Humanos e Minorias"",""Educação"", ""Meio Ambiente e Desenvolvimento Sustentável"",""Estrutura Fundiária"", ""Previdência e Assistência Social"",""Processo Legislativo e Atuação Parlamentar"",""Energia, Recursos Hídricos e Minerais"",""Relações Internacionais e Comércio Exterior"", ""Saúde"",""Defesa e Segurança"", ""Trabalho e Emprego"", ""Turismo"",""Viação, Transporte e Mobilidade"",""Ciência, Tecnologia e Inovação"",""Agricultura, Pecuária, Pesca e Extrativismo"",""Indústria, Comércio e Serviços"", ""Direito e Defesa do Consumidor"",""Direito Constitucional"", ""Finanças Públicas e Orçamento"",""Homenagens e Datas Comemorativas"",""Política, Partidos e Eleições"", ""Direito e Justiça"",""Ciências Sociais e Humanas"".
+
+classifique isto: Altera a Lei nº 8.666, de 21 de junho de 1993, que institui normas para licitações e contratos da Administração Pública.","A categoria mais adequada para classificar essa frase seria ""Administração Pública"".","['Administração Pública', 'Direito Penal e Processual Penal']",False,False,68,0.19047619047619047
+254,gpt-4,brazilian_laws,272,"Considere as categorias: ""Administração Pública"", ""Arte, Cultura e Religião"",""Comunicações"", ""Esporte e Lazer"", ""Economia"", ""Cidades e Desenvolvimento Urbano"",""Direito Civil e Processual Civil"", ""Direito Penal e Processual Penal"", ""Direitos Humanos e Minorias"",""Educação"", ""Meio Ambiente e Desenvolvimento Sustentável"",""Estrutura Fundiária"", ""Previdência e Assistência Social"",""Processo Legislativo e Atuação Parlamentar"",""Energia, Recursos Hídricos e Minerais"",""Relações Internacionais e Comércio Exterior"", ""Saúde"",""Defesa e Segurança"", ""Trabalho e Emprego"", ""Turismo"",""Viação, Transporte e Mobilidade"",""Ciência, Tecnologia e Inovação"",""Agricultura, Pecuária, Pesca e Extrativismo"",""Indústria, Comércio e Serviços"", ""Direito e Defesa do Consumidor"",""Direito Constitucional"", ""Finanças Públicas e Orçamento"",""Homenagens e Datas Comemorativas"",""Política, Partidos e Eleições"", ""Direito e Justiça"",""Ciências Sociais e Humanas"".
+
+classifique isto: Institui o Dia Nacional da Cistinose.","A classificação para ""Institui o Dia Nacional da Cistinose"" seria ""Homenagens e Datas Comemorativas"".","['Saúde', 'Homenagens e Datas Comemorativas']",False,False,65,0.3564356435643564
+255,gpt-4,brazilian_laws,417,"Considere as categorias: ""Administração Pública"", ""Arte, Cultura e Religião"",""Comunicações"", ""Esporte e Lazer"", ""Economia"", ""Cidades e Desenvolvimento Urbano"",""Direito Civil e Processual Civil"", ""Direito Penal e Processual Penal"", ""Direitos Humanos e Minorias"",""Educação"", ""Meio Ambiente e Desenvolvimento Sustentável"",""Estrutura Fundiária"", ""Previdência e Assistência Social"",""Processo Legislativo e Atuação Parlamentar"",""Energia, Recursos Hídricos e Minerais"",""Relações Internacionais e Comércio Exterior"", ""Saúde"",""Defesa e Segurança"", ""Trabalho e Emprego"", ""Turismo"",""Viação, Transporte e Mobilidade"",""Ciência, Tecnologia e Inovação"",""Agricultura, Pecuária, Pesca e Extrativismo"",""Indústria, Comércio e Serviços"", ""Direito e Defesa do Consumidor"",""Direito Constitucional"", ""Finanças Públicas e Orçamento"",""Homenagens e Datas Comemorativas"",""Política, Partidos e Eleições"", ""Direito e Justiça"",""Ciências Sociais e Humanas"".
+
+classifique isto: Estabelece normas para recolhimento e reembolso de embalagens e dá outras providências","A classificação para ""Estabelece normas para recolhimento e reembolso de embalagens e dá outras providências"" pode ser ""Meio Ambiente e Desenvolvimento Sustentável"", pois trata de questões relacionadas à gestão de resíduos e sustentabilidade. Além disso, também pode se encaixar na categoria ""Direito e Defesa do Consumidor"", pois envolve normas que podem afetar os direitos dos consumidores.",['Meio Ambiente e Desenvolvimento Sustentável'],False,False,349,0.10969387755102045
+256,gpt-4,brazilian_laws,496,"Considere as categorias: ""Administração Pública"", ""Arte, Cultura e Religião"",""Comunicações"", ""Esporte e Lazer"", ""Economia"", ""Cidades e Desenvolvimento Urbano"",""Direito Civil e Processual Civil"", ""Direito Penal e Processual Penal"", ""Direitos Humanos e Minorias"",""Educação"", ""Meio Ambiente e Desenvolvimento Sustentável"",""Estrutura Fundiária"", ""Previdência e Assistência Social"",""Processo Legislativo e Atuação Parlamentar"",""Energia, Recursos Hídricos e Minerais"",""Relações Internacionais e Comércio Exterior"", ""Saúde"",""Defesa e Segurança"", ""Trabalho e Emprego"", ""Turismo"",""Viação, Transporte e Mobilidade"",""Ciência, Tecnologia e Inovação"",""Agricultura, Pecuária, Pesca e Extrativismo"",""Indústria, Comércio e Serviços"", ""Direito e Defesa do Consumidor"",""Direito Constitucional"", ""Finanças Públicas e Orçamento"",""Homenagens e Datas Comemorativas"",""Política, Partidos e Eleições"", ""Direito e Justiça"",""Ciências Sociais e Humanas"".
+
+classifique isto: Altera a Lei nº 5.517, de 23 de outubro de 1968, que Dispõe sobre o exercício da profissão de médico-veterinário e cria os Conselhos Federal e Regionais de Medicina Veterinária, para dispor sobre o exercício da atividade de auxiliar de médico-veterinário.","A classificação para isso seria: ""Trabalho e Emprego"", ""Direito Civil e Processual Civil"", e ""Agricultura, Pecuária, Pesca e Extrativismo"".",['Trabalho e Emprego'],False,False,121,0.1294964028776978
+257,gpt-4,brazilian_laws,501,"Considere as categorias: ""Administração Pública"", ""Arte, Cultura e Religião"",""Comunicações"", ""Esporte e Lazer"", ""Economia"", ""Cidades e Desenvolvimento Urbano"",""Direito Civil e Processual Civil"", ""Direito Penal e Processual Penal"", ""Direitos Humanos e Minorias"",""Educação"", ""Meio Ambiente e Desenvolvimento Sustentável"",""Estrutura Fundiária"", ""Previdência e Assistência Social"",""Processo Legislativo e Atuação Parlamentar"",""Energia, Recursos Hídricos e Minerais"",""Relações Internacionais e Comércio Exterior"", ""Saúde"",""Defesa e Segurança"", ""Trabalho e Emprego"", ""Turismo"",""Viação, Transporte e Mobilidade"",""Ciência, Tecnologia e Inovação"",""Agricultura, Pecuária, Pesca e Extrativismo"",""Indústria, Comércio e Serviços"", ""Direito e Defesa do Consumidor"",""Direito Constitucional"", ""Finanças Públicas e Orçamento"",""Homenagens e Datas Comemorativas"",""Política, Partidos e Eleições"", ""Direito e Justiça"",""Ciências Sociais e Humanas"".
+
+classifique isto: Dispõe sobre a emissão e validade do Passaporte Comum.","A classificação para ""Dispõe sobre a emissão e validade do Passaporte Comum"" seria ""Relações Internacionais e Comércio Exterior"".",['Administração Pública'],False,False,117,0.09302325581395354
+258,gpt-4,brazilian_laws,534,"Considere as categorias: ""Administração Pública"", ""Arte, Cultura e Religião"",""Comunicações"", ""Esporte e Lazer"", ""Economia"", ""Cidades e Desenvolvimento Urbano"",""Direito Civil e Processual Civil"", ""Direito Penal e Processual Penal"", ""Direitos Humanos e Minorias"",""Educação"", ""Meio Ambiente e Desenvolvimento Sustentável"",""Estrutura Fundiária"", ""Previdência e Assistência Social"",""Processo Legislativo e Atuação Parlamentar"",""Energia, Recursos Hídricos e Minerais"",""Relações Internacionais e Comércio Exterior"", ""Saúde"",""Defesa e Segurança"", ""Trabalho e Emprego"", ""Turismo"",""Viação, Transporte e Mobilidade"",""Ciência, Tecnologia e Inovação"",""Agricultura, Pecuária, Pesca e Extrativismo"",""Indústria, Comércio e Serviços"", ""Direito e Defesa do Consumidor"",""Direito Constitucional"", ""Finanças Públicas e Orçamento"",""Homenagens e Datas Comemorativas"",""Política, Partidos e Eleições"", ""Direito e Justiça"",""Ciências Sociais e Humanas"".
+
+classifique isto: Dá nova redação ao art. 3º da lei n.º 10.259/2001, para aumentar de sessenta para cem salários mínimos a competência do Juizado Especial Cível Federal.","A classificação para isso seria ""Direito Civil e Processual Civil"".","['Direito Civil e Processual Civil', 'Direito e Justiça']",False,False,53,0.20895522388059706
+259,gpt-4,brazilian_laws,698,"Considere as categorias: ""Administração Pública"", ""Arte, Cultura e Religião"",""Comunicações"", ""Esporte e Lazer"", ""Economia"", ""Cidades e Desenvolvimento Urbano"",""Direito Civil e Processual Civil"", ""Direito Penal e Processual Penal"", ""Direitos Humanos e Minorias"",""Educação"", ""Meio Ambiente e Desenvolvimento Sustentável"",""Estrutura Fundiária"", ""Previdência e Assistência Social"",""Processo Legislativo e Atuação Parlamentar"",""Energia, Recursos Hídricos e Minerais"",""Relações Internacionais e Comércio Exterior"", ""Saúde"",""Defesa e Segurança"", ""Trabalho e Emprego"", ""Turismo"",""Viação, Transporte e Mobilidade"",""Ciência, Tecnologia e Inovação"",""Agricultura, Pecuária, Pesca e Extrativismo"",""Indústria, Comércio e Serviços"", ""Direito e Defesa do Consumidor"",""Direito Constitucional"", ""Finanças Públicas e Orçamento"",""Homenagens e Datas Comemorativas"",""Política, Partidos e Eleições"", ""Direito e Justiça"",""Ciências Sociais e Humanas"".
+
+classifique isto: Acrescenta o art. 237-A à Lei nº 8.069, de 13 de julho de 1990, que dispõe sobre o Estatuto da Criança e do Adolescente, e dá outras providências.","A classificação para isso seria ""Direito Civil e Processual Civil"" e ""Direitos Humanos e Minorias"", pois se refere a uma alteração na Lei que rege o Estatuto da Criança e do Adolescente.","['Direito Penal e Processual Penal', 'Direitos Humanos e Minorias']",False,False,134,0.27956989247311825
+260,gpt-4,brazilian_laws,973,"Considere as categorias: ""Administração Pública"", ""Arte, Cultura e Religião"",""Comunicações"", ""Esporte e Lazer"", ""Economia"", ""Cidades e Desenvolvimento Urbano"",""Direito Civil e Processual Civil"", ""Direito Penal e Processual Penal"", ""Direitos Humanos e Minorias"",""Educação"", ""Meio Ambiente e Desenvolvimento Sustentável"",""Estrutura Fundiária"", ""Previdência e Assistência Social"",""Processo Legislativo e Atuação Parlamentar"",""Energia, Recursos Hídricos e Minerais"",""Relações Internacionais e Comércio Exterior"", ""Saúde"",""Defesa e Segurança"", ""Trabalho e Emprego"", ""Turismo"",""Viação, Transporte e Mobilidade"",""Ciência, Tecnologia e Inovação"",""Agricultura, Pecuária, Pesca e Extrativismo"",""Indústria, Comércio e Serviços"", ""Direito e Defesa do Consumidor"",""Direito Constitucional"", ""Finanças Públicas e Orçamento"",""Homenagens e Datas Comemorativas"",""Política, Partidos e Eleições"", ""Direito e Justiça"",""Ciências Sociais e Humanas"".
+
+classifique isto: Assegura a adoção de medidas urgentes de proteção ao idoso vítima de violência.","A frase ""Assegura a adoção de medidas urgentes de proteção ao idoso vítima de violência"" pode ser classificada nas seguintes categorias: ""Direitos Humanos e Minorias"", ""Previdência e Assistência Social"", ""Direito Civil e Processual Civil"", ""Direito Penal e Processual Penal"" e ""Direito e Justiça"".",['Direitos Humanos e Minorias'],False,False,270,0.09090909090909094
+261,gpt-4,building_floorplan,6,"You are a helpful assistant.
+
+A valid floor plan has the following properties: 1. Each apartment has one or more bedrooms and one living room. 2. Each bedroom must contain at least one window, and be at least 7 feet by 7 feet. 3. Each living room must be at least 8 by 8 feet and contain at least one window. 4. Windows are at least 3 feet wide and at least 2 feet from each other. 5. Apartments are rectangular. They do not need to contain any other types of rooms, and you can assume that there are no other elements of the building that are outside of the apartment. 6. Two rooms cannot share the same window. Task: Given a one-story apartment building that is 7 by 60 feet and has windows on the 7-foot sides only, what is the maximum number of apartments you could fit on one floor, subject to the above constraints? Answer should be in the form 'N apartments total'. Your answer should only contain the number of apartments. Provide no further explanation.",3 apartments total,0 apartments total,False,False,1,0.9444444444444444
+262,gpt-4,building_floorplan,14,"You are a helpful assistant.
+
+A valid floor plan has the following properties: 1. Each apartment has one or more bedrooms and one living room. 2. Each bedroom must contain at least one window, and be at least 7 feet by 7 feet. 3. Each living room must be at least 8 by 8 feet and contain at least one window. 4. Windows are at least 3 feet wide and at least 2 feet from each other. 5. Apartments are rectangular. They do not need to contain any other types of rooms, and you can assume that there are no other elements of the building that are outside of the apartment. 6. Two rooms cannot share the same window. Task: Given a one-story apartment building that is 15 by 60 feet and has windows on the 15-foot sides only, what is the maximum number of apartments you could fit on one floor, subject to the above constraints? Answer should be in the form 'N apartments total'. Your answer should only contain the number of apartments. Provide no further explanation.",3 apartments total,2 apartments total,False,False,1,0.9444444444444444
+263,gpt-4,building_floorplan,16,"You are a helpful assistant.
+
+A valid floor plan has the following properties: 1. Each apartment has one or more bedrooms and one living room. 2. Each bedroom must contain at least one window, and be at least 7 feet by 7 feet. 3. Each living room must be at least 8 by 8 feet and contain at least one window. 4. Windows are at least 3 feet wide and at least 2 feet from each other. 5. Apartments are rectangular. They do not need to contain any other types of rooms, and you can assume that there are no other elements of the building that are outside of the apartment. 6. Two rooms cannot share the same window. Task: Given a one-story apartment building that is 17 by 60 feet and has windows on the 17-foot sides only, what is the maximum number of apartments you could fit on one floor, subject to the above constraints? Answer should be in the form 'N apartments total'. Your answer should only contain the number of apartments. Provide no further explanation.",2 apartments total,2 apartments total,True,True,0,1.0
+264,gpt-4,building_floorplan,23,"You are a helpful assistant.
+
+A valid floor plan has the following properties: 1. Each apartment has one or more bedrooms and one living room. 2. Each bedroom must contain at least one window, and be at least 7 feet by 7 feet. 3. Each living room must be at least 8 by 8 feet and contain at least one window. 4. Windows are at least 3 feet wide and at least 2 feet from each other. 5. Apartments are rectangular. They do not need to contain any other types of rooms, and you can assume that there are no other elements of the building that are outside of the apartment. 6. Two rooms cannot share the same window. Task: Given a one-story apartment building that is 24 by 60 feet and has windows on the 24-foot sides only, what is the maximum number of apartments you could fit on one floor, subject to the above constraints? Answer should be in the form 'N apartments total'. Your answer should only contain the number of apartments. Provide no further explanation.",3 apartments total,3 apartments total,True,True,0,1.0
+265,gpt-4,building_floorplan,26,"You are a helpful assistant.
+
+A valid floor plan has the following properties: 1. Each apartment has one or more bedrooms and one living room. 2. Each bedroom must contain at least one window, and be at least 7 feet by 7 feet. 3. Each living room must be at least 8 by 8 feet and contain at least one window. 4. Windows are at least 3 feet wide and at least 2 feet from each other. 5. Apartments are rectangular. They do not need to contain any other types of rooms, and you can assume that there are no other elements of the building that are outside of the apartment. 6. Two rooms cannot share the same window. Task: Given a one-story apartment building that is 27 by 60 feet and has windows on the 27-foot sides only, what is the maximum number of apartments you could fit on one floor, subject to the above constraints? Answer should be in the form 'N apartments total'. Your answer should only contain the number of apartments. Provide no further explanation.",3 apartments total,3 apartments total,True,True,0,1.0
+266,gpt-4,building_floorplan,79,"You are a helpful assistant.
+
+A valid floor plan has the following properties: 1. Each apartment has one or more bedrooms and one living room. 2. Each bedroom must contain at least one window, and be at least 7 feet by 7 feet. 3. Each living room must be at least 8 by 8 feet and contain at least one window. 4. Windows are at least 3 feet wide and at least 2 feet from each other. 5. Apartments are rectangular. They do not need to contain any other types of rooms, and you can assume that there are no other elements of the building that are outside of the apartment. 6. Two rooms cannot share the same window. Task: Given a one-story apartment building that is 81 by 60 feet and has windows on the 81-foot sides only, what is the maximum number of apartments you could fit on one floor, subject to the above constraints? Answer should be in the form 'N apartments total'. Your answer should only contain the number of apartments. Provide no further explanation.",9 apartments total,10 apartments total,False,False,2,0.8947368421052632
+267,gpt-4,building_floorplan,82,"You are a helpful assistant.
+
+A valid floor plan has the following properties: 1. Each apartment has one or more bedrooms and one living room. 2. Each bedroom must contain at least one window, and be at least 7 feet by 7 feet. 3. Each living room must be at least 8 by 8 feet and contain at least one window. 4. Windows are at least 3 feet wide and at least 2 feet from each other. 5. Apartments are rectangular. They do not need to contain any other types of rooms, and you can assume that there are no other elements of the building that are outside of the apartment. 6. Two rooms cannot share the same window. Task: Given a one-story apartment building that is 84 by 60 feet and has windows on the 84-foot sides only, what is the maximum number of apartments you could fit on one floor, subject to the above constraints? Answer should be in the form 'N apartments total'. Your answer should only contain the number of apartments. Provide no further explanation.",7 apartments total,11 apartments total,False,False,2,0.8947368421052632
+268,gpt-4,building_floorplan,87,"You are a helpful assistant.
+
+A valid floor plan has the following properties: 1. Each apartment has one or more bedrooms and one living room. 2. Each bedroom must contain at least one window, and be at least 7 feet by 7 feet. 3. Each living room must be at least 8 by 8 feet and contain at least one window. 4. Windows are at least 3 feet wide and at least 2 feet from each other. 5. Apartments are rectangular. They do not need to contain any other types of rooms, and you can assume that there are no other elements of the building that are outside of the apartment. 6. Two rooms cannot share the same window. Task: Given a one-story apartment building that is 89 by 60 feet and has windows on the 89-foot sides only, what is the maximum number of apartments you could fit on one floor, subject to the above constraints? Answer should be in the form 'N apartments total'. Your answer should only contain the number of apartments. Provide no further explanation.",9 apartments total,11 apartments total,False,False,2,0.8947368421052632
+269,gpt-4,building_floorplan,88,"You are a helpful assistant.
+
+A valid floor plan has the following properties: 1. Each apartment has one or more bedrooms and one living room. 2. Each bedroom must contain at least one window, and be at least 7 feet by 7 feet. 3. Each living room must be at least 8 by 8 feet and contain at least one window. 4. Windows are at least 3 feet wide and at least 2 feet from each other. 5. Apartments are rectangular. They do not need to contain any other types of rooms, and you can assume that there are no other elements of the building that are outside of the apartment. 6. Two rooms cannot share the same window. Task: Given a one-story apartment building that is 90 by 60 feet and has windows on the 90-foot sides only, what is the maximum number of apartments you could fit on one floor, subject to the above constraints? Answer should be in the form 'N apartments total'. Your answer should only contain the number of apartments. Provide no further explanation.",9 apartments total,12 apartments total,False,False,2,0.8947368421052632
+270,gpt-4,building_floorplan,91,"You are a helpful assistant.
+
+A valid floor plan has the following properties: 1. Each apartment has one or more bedrooms and one living room. 2. Each bedroom must contain at least one window, and be at least 7 feet by 7 feet. 3. Each living room must be at least 8 by 8 feet and contain at least one window. 4. Windows are at least 3 feet wide and at least 2 feet from each other. 5. Apartments are rectangular. They do not need to contain any other types of rooms, and you can assume that there are no other elements of the building that are outside of the apartment. 6. Two rooms cannot share the same window. Task: Given a one-story apartment building that is 93 by 60 feet and has windows on the 93-foot sides only, what is the maximum number of apartments you could fit on one floor, subject to the above constraints? Answer should be in the form 'N apartments total'. Your answer should only contain the number of apartments. Provide no further explanation.",9 apartments total,12 apartments total,False,False,2,0.8947368421052632
+271,gpt-4,cardinal-directions,1,"Do not provide any information apart from the answer. Do not include punctuations in the answer.
+
+Daniel, Emily, Richard, and Max are gathered in a circle. Richard is opposite Daniel and Emily sees Daniel to her left. If Daniel points towards Max he points North West. If Emily points towards Richard what direction does she point? Please respond with only one of the following options: ""North"", ""South"", ""East"", ""West"", ""North East"", ""North West"", ""South East"", ""South West""",South East,North West,False,False,4,0.6
+272,gpt-4,cardinal-directions,3,"Do not provide any information apart from the answer. Do not include punctuations in the answer.
+
+Two perpendicular paths intersect at a cross. There is a banana peel along one path away from the intersection. Drew is walking directly North along one path when he sees the banana peel to his right. Frank sees Drew ahead of him as they both move towards the intersection. When Frank takes a turn at the intersection he avoids the banana peel by walking around it. In which direction did Frank turn at the intersection? Please respond with only one of the following options: ""North"", ""South"", ""East"", ""West"", ""North East"", ""North West"", ""South East"", ""South West""",West,East,False,False,2,0.5
+273,gpt-4,cardinal-directions,4,"Do not provide any information apart from the answer. Do not include punctuations in the answer.
+
+Two perpendicular paths intersect in a cross. Alan walks along one path while Gordon walks along the other. Gordon is walking directly North. As they both move towards the intersection, Gordon sees Alan to his left. What direction is Gordon headed? Please respond with only one of the following options: ""North"", ""South"", ""West"", ""East"", ""North West"", ""North East"", ""South West"", ""South East""",North,West,False,False,4,0.19999999999999996
+274,gpt-4,cardinal-directions,5,"Do not provide any information apart from the answer. Do not include punctuations in the answer.
+
+Two birds are flying in perpendicular paths. One bird is flying Northward and the other Eastward. As Will is walking a straight path, he sees both birds on his right moving away from each other. Which direction is Will headed? Please respond with only one of the following options: ""North"", ""South"", ""East"", ""West"", ""North East"", ""North West"", ""South East"", ""South West""",South,North West,False,False,7,0.30000000000000004
+275,gpt-4,cardinal-directions,6,"Do not provide any information apart from the answer. Do not include punctuations in the answer.
+
+Two birds are flying in perpendicular paths. One bird is flying Southward and the other Westward. As Ryan is walking a straight path, he sees both birds on his left moving away from each other. Which direction is Ryan headed? Please respond with only one of the following options: ""North"", ""South"", ""East"", ""West"", ""North East"", ""North West"", ""South East"", ""South West""",North East,North West,False,False,2,0.8
+276,gpt-4,cardinal-directions,9,"Do not provide any information apart from the answer. Do not include punctuations in the answer.
+
+I face a circular fountain in such a way that a statue of Alan Turing at the center of the fountain faces me. I walk straight towards the fountain until I reach its edge. I then start walking clockwise along the edge of the fountain. After walking quarter circle around the fountain I start walking a straight path. If Alan is facing South, which direction am I headed? Please respond only with ""North"", ""South"", ""East"", or ""West""",West,North,False,False,4,0.19999999999999996
+277,gpt-4,cardinal-directions,11,"Do not provide any information apart from the answer. Do not include punctuations in the answer.
+
+I am walking a straight path in a courtyard as the sun is setting. I see a bird fly towards the sun. The bird came from my right and our paths are perpendicular. Which direction am I headed? Please respond only with ""South"". ""East"", ""North"" or ""West"".",West,North,False,False,4,0.19999999999999996
+278,gpt-4,cardinal-directions,12,"Do not provide any information apart from the answer. Do not include punctuations in the answer.
+
+I am walking a straight path in a courtyard as the sun is setting. I see a bird fly away from the sun. The bird came from my left and our paths are perpendicular. Which direction am I headed? Please respond only with ""South"". ""East"", ""North"" or ""West"".",West,North,False,False,4,0.19999999999999996
+279,gpt-4,cardinal-directions,13,"Do not provide any information apart from the answer. Do not include punctuations in the answer.
+
+I am walking a straight path in a courtyard as the sun is setting. I see a bird fly away from the sun. The bird came from my right and our paths are perpendicular. Which direction am I headed? Please respond only with ""South"". ""East"", ""North"" or ""West"".",West,South,False,False,4,0.19999999999999996
+280,gpt-4,cardinal-directions,14,"Do not provide any information apart from the answer. Do not include punctuations in the answer.
+
+I am walking a straight path in a courtyard as the sun is setting. I see a bird fly towards the sun. The bird came from my left and our paths are perpendicular. Which direction am I headed? Please respond only with ""South"". ""East"", ""North"" or ""West"".",West,South,False,False,4,0.19999999999999996
+281,gpt-4,categorize_with_distractors,7,"Answer the following questions as concisely as possible.
+
+Given the following list:
+
+Earth, Mars, Uranus, Venus, Saturn, Neptune, Mercury, Jupiter, Juno, Ceres, Minerva, Apollo, Diana, Vulcan, Bacchus, Vesta, Prosperina.
+
+Which are Roman gods? Please provide as an unnested JSON list.","{
+  ""Roman Gods"": [""Juno"", ""Ceres"", ""Minerva"", ""Apollo"", ""Diana"", ""Vulcan"", ""Bacchus"", ""Vesta"", ""Prosperina""]
+}","[""Mars"", ""Uranus"", ""Venus"", ""Saturn"", ""Neptune"", ""Mercury"", ""Jupiter"", ""Juno"", ""Ceres"", ""Minerva"", ""Apollo"", ""Diana"", ""Vulcan"", ""Bacchus"", ""Vesta"", ""Prosperina""]",False,False,65,0.5962732919254659
+282,gpt-4,categorize_with_distractors,18,"Answer the following questions as concisely as possible.
+
+Given the following list:
+
+Edison, Tesla, Chevrolt, Hyundai, Audi, Ford, Subaru.
+
+Which are car brands? Please provide as an unnested JSON list.","{
+  ""Car Brands"": [""Chevrolet"", ""Hyundai"", ""Audi"", ""Ford"", ""Subaru""]
+}","[""Tesla"", ""Chevrolt"", ""Hyundai"", ""Audi"", ""Ford"", ""Subaru""]",False,False,18,0.7428571428571429
+283,gpt-4,categorize_with_distractors,27,"Answer the following questions as concisely as possible.
+
+Given the following list:
+
+Fate, Destiny, Providence, Albany, Sacramento, Juneau, Helena.
+
+Which are U.S. state capitals? Please provide as an unnested JSON list.","[""Albany"", ""Sacramento"", ""Juneau"", ""Helena""]","[""Providence"", ""Albany"", ""Sacramento"", ""Juneau"", ""Helena""]",False,False,14,0.7586206896551724
+284,gpt-4,categorize_with_distractors,39,"Answer the following questions as concisely as possible.
+
+Given the following list:
+
+Ubuntu, Fedora, Beanie, Panama, Turban.
+
+Which are types of hats? Please provide as an unnested JSON list.","[""Beanie"", ""Panama"", ""Turban""]","[""Fedora"", ""Beanie"", ""Panama"", ""Turban""]",False,False,10,0.75
+285,gpt-4,categorize_with_distractors,44,"Answer the following questions as concisely as possible.
+
+Given the following list:
+
+Zebu, Buffalo, Rochester, Yonkers, Syracuse, Albany, New York City.
+
+Which are cities in New York? Please provide as an unnested JSON list.","{
+  ""Cities in New York"": [""Rochester"", ""Yonkers"", ""Syracuse"", ""Albany"", ""New York City""]
+}","[""Buffalo"", ""Rochester"", ""Yonkers"", ""Syracuse"", ""Albany"", ""New York City""]",False,False,25,0.7252747252747253
+286,gpt-4,categorize_with_distractors,51,"Answer the following questions as concisely as possible.
+
+Given the following list:
+
+Phantom of the Opera, Hamilton, Auckland, Wellington, Christchurch.
+
+Which are cities in New Zealand? Please provide as an unnested JSON list.","{
+  ""Cities in New Zealand"": [""Auckland"", ""Wellington"", ""Christchurch""]
+}","[""Hamilton"", ""Auckland"", ""Wellington"", ""Christchurch""]",False,False,27,0.6301369863013699
+287,gpt-4,categorize_with_distractors,72,"Answer the following questions as concisely as possible.
+
+Given the following list:
+
+Eagles, Ospreys, Kestrels, Owls, Hawks, Falcons, Braves, Bulldogs, United FC.
+
+Which relate to Georgia sports teams? Please provide as an unnested JSON list.","{
+  ""Georgia_sports_teams"": [""Eagles"", ""Braves"", ""Bulldogs"", ""United FC""]
+}","[""Hawks"", ""Falcons"", ""Braves"", ""Bulldogs"", ""United FC""]",False,False,31,0.5866666666666667
+288,gpt-4,categorize_with_distractors,81,"Answer the following questions as concisely as possible.
+
+Given the following list:
+
+Crossing, Shallow, Causeway, Bridgehead, Footbridge, Ford, Dodge, Tesla, Mitsubishi, Lamborghini, Audi, Jeep, Buick, Hyundai.
+
+Which are car brands? Please provide as an unnested JSON list.","{
+  ""Car Brands"": [""Dodge"", ""Tesla"", ""Mitsubishi"", ""Lamborghini"", ""Audi"", ""Jeep"", ""Buick"", ""Hyundai""]
+}","[""Ford"", ""Dodge"", ""Tesla"", ""Mitsubishi"", ""Lamborghini"", ""Audi"", ""Jeep"", ""Buick"", ""Hyundai""]",False,False,16,0.8446601941747574
+289,gpt-4,categorize_with_distractors,84,"Answer the following questions as concisely as possible.
+
+Given the following list:
+
+Orange, Kiwi, Strawberry, Pomelo, Pear, Apple, Facebook, Amazon, Netflix, Google.
+
+Which are FAANG companies? Please provide as an unnested JSON list.","[""Facebook"", ""Amazon"", ""Netflix"", ""Google""]","[""Apple"", ""Facebook"", ""Amazon"", ""Netflix"", ""Google""]",False,False,9,0.8269230769230769
+290,gpt-4,categorize_with_distractors,93,"Answer the following questions as concisely as possible.
+
+Given the following list:
+
+Purple, Yellow, Blue, Orange, Pineapple, Pomelo, Kiwi.
+
+Which are fruit? Please provide as an unnested JSON list.","{
+  ""Fruits"": [""Pineapple"", ""Pomelo"", ""Kiwi""]
+}","[""Orange"", ""Pineapple"", ""Pomelo"", ""Kiwi""]",False,False,13,0.7234042553191489
+291,gpt-4,automata-and-complexity,15,"Answer the following problem using theoretical computer science.
+
+If L âˆˆ P, then L âˆˆ P. In your response, you should explain before offering a final answer. The final answer should be TRUE or FALSE, enclosed in brackets like so {answer here}.","The statement you've provided is a basic principle in theoretical computer science. It states that if a language L belongs to the class P (problems that can be solved in polynomial time), then L belongs to the class P. This is a tautology, meaning it's a statement that is true by necessity or by virtue of its logical form.
+
+So, the final answer is {TRUE}.",{TRUE},False,True,351,0.01680672268907568
