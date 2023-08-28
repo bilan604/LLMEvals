@@ -7,10 +7,10 @@ import pandas as pd
 from parsing import parse_input
 
 
-def load_evals(cwd = "C:/Users/bill/github/LLMEvals"):
+def load_evals(cwd = "D:/Projects/LLMEvals"):
     os.chdir(cwd)
 
-    data_dir = cwd + "/evals/data"
+    data_dir = cwd + "/evals/registry/data"
     os.chdir(data_dir)
 
     folders = []
@@ -39,7 +39,7 @@ def load_evals(cwd = "C:/Users/bill/github/LLMEvals"):
 
 # 1.) Load the evals into a standardized prompt so that different LLM's can have
 # the same format of input.
-evaluations = load_evals("C:/Users/bill/github/LLMEvals")
+evaluations = load_evals("D:/Projects/LLMEvals")
 
 def normalize_evals(evaluations):
     evals = {}
@@ -57,6 +57,7 @@ def normalize_evals(evaluations):
                     pass
         evals[eval] = {"prompts": prompts, "ideals": ideals}
     return evals
+
 
 evaluations = normalize_evals(evaluations)        
 print("Normalized:", len(evaluations))
