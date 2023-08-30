@@ -164,12 +164,25 @@ if __name__ == "__main__":
     # Default empty lists passed in for models_to_do or empty_evals_to_do means doing all of them
     """
     models_to_do = [
-        'gpt-4'
+        "llama-1-13b",
+        "llama-2-13b",
+        "llama-2-70b-chat",
+        "vicuna-1-13b",
+        "vicuna-1.5-13b",
+        "vicuna-1-33b",  
+        "claude-2",
+        "claude-instant",
+        "luminous-supreme-control",
+        "cohere-chat",
+        "falcon-40b",
+        "mpt-30b", 
+        "inflection-1" 
     ]
 
     evals_to_do = [
+        '2d_movement'
     ]
-
+    
     VIS = load_responses()
     main(models_to_do, evals_to_do, VIS)
     """

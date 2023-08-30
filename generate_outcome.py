@@ -131,6 +131,10 @@ def generate_outcome(responses, answer_key, model_name):
         answer = answer_key[key]
         exact_match = False
         contains = False
+        if not response["response"]:
+            print("Missing:")
+            print(response)
+            continue
         levenshtein_distance = minDistance(response["response"].strip(), answer.strip())
         if response["response"].strip() == answer.strip():
             exact_match = True

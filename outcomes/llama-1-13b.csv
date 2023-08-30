@@ -47,3 +47,272 @@ public:
     return n;
 	}
 };","(0, -4)",False,False,913,0.006528835690968404
+1,llama-1-13b,2d_movement,14,"Please note: In the following EXERCISE, it is important that you only respond with a single line in the format (x, y). Imagine you are standing in a 2D coordinate grid at (0, 0) where coordinates are represented like (x, y). You are currently facing the positive y direction.
+
+EXERCISE: If you take 1 step backward, then take 2 steps forward, then take 5 steps backward, then turn 90 degrees left, what coordinate are you at?","In the following code, I am confused why the code does not work. I think it should return (15, 20) which is the result of (15, 20) if we do the following steps.
+
+\begin{code}
+// Exercise 3.2
+//
+// EXERCISE: Implement the following method.
+//  public static Point<T> NextStep(T start)
+//   where T : IComparable
+//  {
+//    Point<T> result = default(Point<T>);
+//
+//    // Take 1 step backword
+//    if(start.CompareTo(Point<T>.Forward) == 1){
+//      result = Point<T>.OneStepBackward(start);
+//    }
+//
+//    // Take 2 steps forward
+//    if(start.CompareTo(Point<T>.Forward) == 2){
+//      result = Point<T>.TwoStepsForward(start);
+//    }
+//
+//    // Take 5 steps backward
+//    if(start.CompareTo(Point<T>.Forward) == 5){
+//      result = Point<T>.FiveStepsBackward(start);
+//    }
+//
+//    // Take 90 degrees left
+//    if(start.CompareTo(Point<T>.Forward) == 90){
+//      result = Point<T>.FlipHorizontal(start);
+//    }
+//
+//    return result;
+//  }
+
+package assignment3;
+
+import java.util.Comparator;
+
+public class A3Exercise3 {","(0, -4)",False,False,1031,0.004826254826254872
+2,llama-1-13b,2d_movement,26,"Please note: In the following EXERCISE, it is important that you only respond with a single line in the format (x, y). Imagine you are standing in a 2D coordinate grid at (0, 0) where coordinates are represented like (x, y). You are currently facing the positive y direction.
+
+EXERCISE: If you turn 90 degrees right, then turn 90 degrees left, then take 1 step forward, then take 3 steps backward, what coordinate are you at?","----------------
+\end{code}
+
+I'm trying to make that single line a command that I can call in a single line later. How do I take the output of that exercise, and then execute on it?
+
+Comment: I think the main issue here is not the formatting, but the fact that you don't have a command to execute on the output of the `EXERCISE` command.
+
+Comment: @MatthewWatson Yes, that is the issue. I'm making a command to execute on the output.
+
+Answer: You can use the built-in [`EXECUTE`](https://www.lispworks.com/documentation/HyperSpec/Body/f_execute.htm) command to execute the result of a previous command:
+
+\begin{code}
+(execute (exercise 1 2 3 4 5 6 7 8 9 10))
+\end{code}","(0, -2)",False,False,664,0.007473841554558991
+3,llama-1-13b,2d_movement,33,"Please note: In the following EXERCISE, it is important that you only respond with a single line in the format (x, y). Imagine you are standing in a 2D coordinate grid at (0, 0) where coordinates are represented like (x, y). You are currently facing the positive y direction.
+
+EXERCISE: If you take 2 steps forward, then turn 90 degrees right, then take 5 steps backward, then turn 90 degrees right, then take 3 steps forward, then take 2 steps backward, what coordinate are you at?","Answer:
+
+\begin{blockquote}
+
+(0, 0)
+\end{blockquote}
+
+Comment: why? what do you think you're doing / why is this the answer?
+
+Comment: If you move forward, take a 90 right turn, and then move backward, you're still at the same point. If you move forward 2 steps, then turn right, you're at point (0,2). If you move back 5 steps, then turn right, you're at point (-2,0). If you take 3 steps forward, you're at point (3,0), and if you take 2 steps back, you're at point (0,-2).
+
+Comment: @duskwuff Please see the hint.
+
+Comment: Yes, I noticed that...but I don't see what it has to do with anything.
+
+Comment: @duskwuff Hint: Please recall that it is a 2D coordinate grid. Not 1D.
+
+Comment: I know, but that doesn't change anything.
+
+Answer: \begin{code}
+EXERCISE: If you take 2 steps forward, then turn 90 degrees right, then take 5 steps backward, then turn 90 degrees right, then take 3 steps forward, then take 2 steps backward, what coordinate are you at?
+
+answer: (0, 0)
+\end{code}
+
+The above is the result of the following:
+
+\begin{code}
+ 1. 0,0 -> 0,0
+ 2. 0,0 -> 0,0","(-5, 1)",False,False,1066,0.005597014925373123
+4,llama-1-13b,2d_movement,55,"Please note: In the following EXERCISE, it is important that you only respond with a single line in the format (x, y). Imagine you are standing in a 2D coordinate grid at (0, 0) where coordinates are represented like (x, y). You are currently facing the positive y direction.
+
+EXERCISE: If you take 5 steps backward, then turn 90 degrees left, then take 2 steps forward, then take 5 steps backward, then take 5 steps forward, then turn 90 degrees left, then turn 90 degrees left, then take 3 steps backward, what coordinate are you at?","(Hint: the order of operations does not matter!)
+
+Answer: \begin{code}
+(90, 5)
+\end{code}
+
+Because the first step was to turn 90 degrees, which means you have already taken 2 steps backward. So the second step is just 5 steps forward. Then there is a turn 90 degrees left. Then there is 5 steps backward. Then you go 5 steps forward. Then you turn 90 degrees left. Then turn 90 degrees left again. Then take 3 steps backward.
+
+Answer: The solution is `(90, 5)` since you have taken 5 steps backward, then turned 90 degrees left, then take 2 steps forward.
+
+Then you have taken 5 steps backward, then turned 90 degrees left.
+
+Then you have taken 5 steps forward.
+
+Finally, you have turned 90 degrees left again, then turned 90 degrees left again, then take 3 steps backward.
+
+Answer: The following is the coordinate of the answer:
+
+\begin{code}
+90,5
+\end{code}
+
+Here is explanation:
+
+\begin{code}
+5 steps backward
+\end{code}
+
+Then:
+
+\begin{code}
+2 steps forward
+\end{code}
+
+Then:
+
+\begin{code}
+5 steps backward
+\end{code}
+
+Then:
+
+\begin{code}
+5 steps forward
+\end{code}
+
+Then:
+
+\begin","(-5, -5)",False,False,1077,0.005540166204986097
+5,llama-1-13b,2d_movement,76,"Please note: In the following EXERCISE, it is important that you only respond with a single line in the format (x, y). Imagine you are standing in a 2D coordinate grid at (0, 0) where coordinates are represented like (x, y). You are currently facing the positive y direction.
+
+EXERCISE: If you take 4 steps forward, then turn 90 degrees right, then turn 90 degrees left, then take 1 step forward, then turn 90 degrees left, then turn 90 degrees right, then take 2 steps backward, then turn 90 degrees left, then take 4 steps forward, then turn 90 degrees left, what coordinate are you at?","// EXERCISE: If you take 4 steps forward, then turn 90 degrees right, then turn 90 degrees left, then take 1 step forward, then turn 90 degrees left, then turn 90 degrees right, then take 2 steps backward, then turn 90 degrees left, then take 4 steps forward, then turn 90 degrees left, what coordinate are you at?
+
+import java.util.*;
+
+public class E1 {
+	public static void main(String[] args) {
+		System.out.println(calculateStep(4, 90, 90, 1, 90, 90, 2, 90, 1));
+	}
+
+	public static int calculateStep(int steps, double turnRight, double turnLeft, double moveForward, double turnLeft, double turnRight, double moveBackward, double turnLeft) {
+		int stepsCount = 0;
+		int lastCoordinatesX = 0;
+		int lastCoordinatesY = 0;
+
+		for (int i = 0; i < steps; i++) {
+			double x = lastCoordinatesX + (i * turnRight);
+			double y = lastCoordinatesY + (i * turnLeft);
+			System.out.println(""step "" + i + "" is at "" + (x, y));
+			if (Math.abs(x - lastCoordinatesX) >","(-4, 3)",False,False,949,0.00524109014675056
+6,llama-1-13b,2d_movement,78,"Please note: In the following EXERCISE, it is important that you only respond with a single line in the format (x, y). Imagine you are standing in a 2D coordinate grid at (0, 0) where coordinates are represented like (x, y). You are currently facing the positive y direction.
+
+EXERCISE: If you take 5 steps forward, then take 2 steps forward, then take 5 steps backward, then turn 90 degrees right, then take 2 steps forward, then take 3 steps forward, then turn 90 degrees left, then turn 90 degrees right, then take 1 step backward, then turn 90 degrees left, what coordinate are you at?","The steps should look like the following:
+
+(0, 0) (5, 0) (2, 4) (0, 2) (5, 2) (90, 0) (2, 7) (0, 7) (5, 7) (90, 180) (2, 9) (0, 9) (5, 9) (90, 270) (2, 11) (0, 11) (5, 11) (90, 360) (2, 13) (0, 13) (5, 13)
+
+Answer: \strong{NOTE:} You have to take the steps in the order they are given. i.e. If you take the 7th step, then you have to take the 6th step, then the 5th step, etc.
+
+\begin{blockquote}
+
+(0, 0) (5, 0) (2, 4) (0, 2) (5, 2) (90, 0) (2, 7) (0, 7) (5, 7) (90, 180) (2, 9) (0, 9) (5, 9) (90, 270) (2, 11) (0, 11) (5, 11) (90, 360) (","(4, 2)",False,False,532,0.01115241635687736
+7,llama-1-13b,2d_movement,80,"Please note: In the following EXERCISE, it is important that you only respond with a single line in the format (x, y). Imagine you are standing in a 2D coordinate grid at (0, 0) where coordinates are represented like (x, y). You are currently facing the positive y direction.
+
+EXERCISE: If you turn 90 degrees right, then turn 90 degrees right, then turn 90 degrees left, then take 3 steps backward, then take 4 steps forward, then take 5 steps backward, then turn 90 degrees left, then turn 90 degrees right, then take 5 steps forward, then turn 90 degrees right, what coordinate are you at?","INPUT: [x, y]
+------------------------
+
+EXAMPLE:
+
+[1, 1]
+[2, 2]
+[3, 3]
+[5, 4]
+[0, 5]
+[3, 6]
+[2, 7]
+[1, 8]
+
+OUTPUT: 4
+
+------------------------
+
+My solution:
+
+\begin{code}
+def point_movement(x, y):
+
+ steps_forward = 1
+ steps_backward = 1
+
+ direction = 0
+ # if x < y:
+ #  direction = 1
+ # else:
+ #  direction = -1
+ # print(direction)
+
+ while steps_forward < 9 and steps_backward < 9:
+  if direction == 0:
+   steps_backward = steps_forward = 1
+   if steps_forward == 8:
+    direction = 1
+   elif steps_forward == 9:
+    direction = -1
+   else:
+    steps_backward = 1
+    steps_forward = 1
+   print(steps_forward, steps_backward)
+
+  if direction == 1:
+   steps_backward = steps_forward = 1
+   if steps_forward == 8:
+    direction = 2
+   elif steps_forward == 9:
+    direction = 3
+   else:
+    steps_","(1, 0)",False,False,790,0.0062893081761006275
+8,llama-1-13b,2d_movement,90,"Please note: In the following EXERCISE, it is important that you only respond with a single line in the format (x, y). Imagine you are standing in a 2D coordinate grid at (0, 0) where coordinates are represented like (x, y). You are currently facing the positive y direction.
+
+EXERCISE: If you take 2 steps forward, then take 5 steps forward, then take 4 steps backward, then take 3 steps forward, then turn 90 degrees right, then turn 90 degrees left, then take 1 step backward, then turn 90 degrees right, then turn 90 degrees right, then turn 90 degrees right, then take 5 steps forward, then take 2 steps backward, what coordinate are you at?","Comment: Welcome to CS50 Puzzles! There are [some tips for posting a good question](https://cs50.harvard.edu/x/2020/cs50/puzzles/faq). Please [edit](https://cs50.harvard.edu/x/2020/cs50/puzzles/faq#how-do-i-edit-my-solution) your question to include an outline of what you've tried so far, where you got stuck, and what you don't understand.
+
+Answer: Here is a (silly) way to solve it in a few lines:
+
+\begin{code}
+(+ 2 5) (+ 4 4) (- 1 1) (- 90 90) (- 90 90) (- 90 90) (+ 5 5) (- 2 2)
+\end{code}
+
+First: we are told to take 2 steps forward, 5 steps forward, then 4 steps backwards.
+
+This translates into `+ 2 5` (the `+` for forward, and the two positive integers represent the distance).
+
+Then, we are told to make a 90 degree turn, and we are told to do this three times.
+
+This translates into `(- 90 90) (- 90 90) (- 90","(-3, 5)",False,False,816,0.007299270072992692
+9,llama-1-13b,2d_movement,94,"Please note: In the following EXERCISE, it is important that you only respond with a single line in the format (x, y). Imagine you are standing in a 2D coordinate grid at (0, 0) where coordinates are represented like (x, y). You are currently facing the positive y direction.
+
+EXERCISE: If you take 4 steps backward, then turn 90 degrees right, then take 2 steps forward, then take 5 steps backward, then take 4 steps forward, then take 1 step forward, then turn 90 degrees right, then turn 90 degrees left, then take 5 steps backward, then turn 90 degrees right, then turn 90 degrees right, then turn 90 degrees right, what coordinate are you at?","EXAMPLE: Here is the solution to the above example.
+
+(2, 3)
+
+EXERCISE: Please submit your solution to the following EXERCISE:
+
+EXAMPLE: (2, 3)
+""""""
+
+
+print(""Please note: In the following EXERCISE, it is important that you only respond with a single line in the format (x, y). Imagine you are standing in a 2D coordinate grid at (0, 0) where coordinates are represented like (x, y). You are currently facing the positive y direction."")
+
+print(""EXERCISE: If you take 4 steps backward, then turn 90 degrees right, then take 2 steps forward, then take 5 steps backward, then take 4 steps forward, then take 1 step forward, then turn 90 degrees right, then turn 90 degrees left, then take 5 steps backward, then turn 90 degrees right, then turn 90 degrees right, then turn 90 degrees right, what coordinate are you at?"")
+
+print(""EXAMPLE:"")
+print(""(2, 3)"")
+
+print(""EXERCISE: Please submit your solution to the following EXERCISE:"")
+print(""EXAMPLE:"")
+print(""(2, 3)"")
+
+# The following code is an example of a single line input
+# Note this can be done differently but this is just an","(-3, -4)",False,False,1067,0.005591798695246952

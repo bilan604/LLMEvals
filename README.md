@@ -40,7 +40,7 @@ main.py:
 <tr>
 <td>2</td>
 <td>llama-1-13b</td>
-<td>0.0065288356909684</td>
+<td>0.0065539996650109</td>
 <td>1.0</td>
 <td>1</td>
 </tr>
@@ -61,7 +61,7 @@ main.py:
 <tr>
 <td>5</td>
 <td>vicuna-1-13b</td>
-<td>-1.0</td>
+<td>0.2106456043956043</td>
 <td>0.0</td>
 <td>0</td>
 </tr>
@@ -103,14 +103,14 @@ main.py:
 <tr>
 <td>11</td>
 <td>luminous-supreme-control</td>
-<td>-1.0</td>
+<td>0.0963108897574917</td>
 <td>0.0</td>
 <td>0</td>
 </tr>
 <tr>
 <td>12</td>
 <td>cohere-chat</td>
-<td>-1.0</td>
+<td>0.5892857142857143</td>
 <td>0.0</td>
 <td>0</td>
 </tr>
@@ -1313,7 +1313,7 @@ main.py:
 <table>
 <tr>
 <td>2d_movement</td>
-<td>0.006528835690968404</td>
+<td>0.006553999665010968</td>
 </tr>
 </table>
 
@@ -2205,6 +2205,10 @@ main.py:
 ## vicuna-1-13b:
 
 <table>
+<tr>
+<td>2d_movement</td>
+<td>0.21064560439560437</td>
+</tr>
 </table>
 
 
@@ -2241,12 +2245,20 @@ main.py:
 ## luminous-supreme-control:
 
 <table>
+<tr>
+<td>2d_movement</td>
+<td>0.0963108897574917</td>
+</tr>
 </table>
 
 
 ## cohere-chat:
 
 <table>
+<tr>
+<td>2d_movement</td>
+<td>0.5892857142857143</td>
+</tr>
 </table>
 
 

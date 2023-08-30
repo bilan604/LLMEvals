@@ -1,1 +1,16 @@
 ,model,evaluation,prompt_id,prompt,response,ideal,exact_match,contains,levenshtein_distance,score
+0,cohere-chat,2d_movement,1,"Please note: In the following EXERCISE, it is important that you only respond with a single line in the format (x, y). Imagine you are standing in a 2D coordinate grid at (0, 0) where coordinates are represented like (x, y). You are currently facing the positive y direction.
+
+EXERCISE: If you take 3 steps backward, then take 1 step backward, what coordinate are you at?"," (-3, -1)","(0, -4)",False,False,3,0.625
+1,cohere-chat,2d_movement,14,"Please note: In the following EXERCISE, it is important that you only respond with a single line in the format (x, y). Imagine you are standing in a 2D coordinate grid at (0, 0) where coordinates are represented like (x, y). You are currently facing the positive y direction.
+
+EXERCISE: If you take 1 step backward, then take 2 steps forward, then take 5 steps backward, then turn 90 degrees left, what coordinate are you at?"," (-5, 0)","(0, -4)",False,False,4,0.4285714285714286
+2,cohere-chat,2d_movement,26,"Please note: In the following EXERCISE, it is important that you only respond with a single line in the format (x, y). Imagine you are standing in a 2D coordinate grid at (0, 0) where coordinates are represented like (x, y). You are currently facing the positive y direction.
+
+EXERCISE: If you turn 90 degrees right, then turn 90 degrees left, then take 1 step forward, then take 3 steps backward, what coordinate are you at?"," (-3, 0)","(0, -2)",False,False,4,0.4285714285714286
+3,cohere-chat,2d_movement,33,"Please note: In the following EXERCISE, it is important that you only respond with a single line in the format (x, y). Imagine you are standing in a 2D coordinate grid at (0, 0) where coordinates are represented like (x, y). You are currently facing the positive y direction.
+
+EXERCISE: If you take 2 steps forward, then turn 90 degrees right, then take 5 steps backward, then turn 90 degrees right, then take 3 steps forward, then take 2 steps backward, what coordinate are you at?"," (-3, 4)","(-5, 1)",False,False,2,0.7142857142857143
+4,cohere-chat,2d_movement,55,"Please note: In the following EXERCISE, it is important that you only respond with a single line in the format (x, y). Imagine you are standing in a 2D coordinate grid at (0, 0) where coordinates are represented like (x, y). You are currently facing the positive y direction.
+
+EXERCISE: If you take 5 steps backward, then turn 90 degrees left, then take 2 steps forward, then take 5 steps backward, then take 5 steps forward, then turn 90 degrees left, then turn 90 degrees left, then take 3 steps backward, what coordinate are you at?"," (-3, 5)","(-5, -5)",False,False,2,0.75
