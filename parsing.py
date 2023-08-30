@@ -70,7 +70,7 @@ def make_table_from_df(df):
     return make_table(df.to_dict())
 
 def update_readme(model_dataframes):
-    df_results = pd.read_csv("results.csv")
+    df_results = pd.read_csv("results.csv").sort_values(by='score')
     table = make_table(df_results)
 
     lines = []
@@ -78,6 +78,14 @@ def update_readme(model_dataframes):
         lines = f.readlines()
     readme = "\n".join(lines)
 
+    table = \
+f"""<tr>
+<td>number</td>
+<td>model</td>
+<td>average score</td>
+<td>total score/td>
+<td>total questions</td>
+</tr>\n""" + table
     readme = re.sub("{results_table}", table, readme)
 
     results_tables_by_model_by_eval = ""

@@ -7,7 +7,6 @@ from prompter import handle_prompt_map
 from prompter import prompt as do_prompt
 from generate_outcome import *
 
-poe_models = []
 
 # Models to Run
 models = [
@@ -160,6 +159,7 @@ def main(models_todo: list[str], evals_todo: list[str], VIS):
             
 
 if __name__ == "__main__":
+    models_to_do = None
     # 4.) Running this script does a list of evals for a list of models
     # Default empty lists passed in for models_to_do or empty_evals_to_do means doing all of them
     """
@@ -186,6 +186,10 @@ if __name__ == "__main__":
     VIS = load_responses()
     main(models_to_do, evals_to_do, VIS)
     """
+    if models_to_do == None:
+        print("-----------------------------")
+        print("NOTE: Not running any models\n")
+
     ##########
     # 5.) Generating outcomes
     # get tests to get evals dict to get answer key dict
