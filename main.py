@@ -86,8 +86,7 @@ def run_test(model, evaluation, prompt, test_idx):
     # evaluation is the name of the folder
     # prompt is the string prompt
     # test_idx is index of the prompt from evaluation folder
-    print("AT RUN TEST")
-    
+    print(f"run_test(): Running prompt number {test_idx} for eval {evaluation}")
     try:
         response = do_prompt(model, prompt)
         print(f"run_test():\n{response=}\n")
@@ -146,8 +145,17 @@ def main(models_todo: list[str], evals_todo: list[str], VIS):
                     print("skipping vis:", vis_key)
                     continue
 
-                if int(relevance[eval]) < 6:
+                if eval not in relevance:
+                    print(f"relevance for {eval} not set")
                     continue
+
+                ########
+                # for now, conduct the high relevance evals
+                # due to api costs
+                if int(relevance[eval]) < 7:
+                    print(f"relevance for {eval} not set")
+                    continue
+                
                 run_test(model, eval, eval_data[2], eval_data[3])
             
 
@@ -156,6 +164,7 @@ if __name__ == "__main__":
     # Default empty lists passed in for models_to_do or empty_evals_to_do means doing all of them
     """
     models_to_do = [
+        'gpt-4'
     ]
 
     evals_to_do = [

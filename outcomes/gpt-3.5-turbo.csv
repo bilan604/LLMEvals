@@ -23415,3 +23415,93 @@ sag",bag,"['ag', 'ak']",False,False,10,0.16666666666666663
 2155,gpt-3.5-turbo,shared_border,1,"You are a helpful agent. Answer the provided question with an alphabetically-sorted JSON list, starting with [ and ending with ], and no other text.
 
 Which countries share a land border with both Algeria and Chad","[""Libya"", ""Niger"", ""Sudan""]","['[""Libya"", ""Niger""]', '[""Libya"",""Niger""]']",False,False,20,0.5348837209302326
+2156,gpt-3.5-turbo,actors-sequence,0,"This is an exchange between Merlin, Arthur and Lancelot. Merlin outputs short tests. First output is: '1+2', second is: '3+4', ...  Arthur outputs the sum of last two digits that he had seen. Lancelot outputs an increasing integers number, starting from 0. The sequence in which the actors act: MAMALAMA. Output that exchange using the following syntax (including the trailing comma): Actor:<output>,...
+
+","Merlin: 1+2,
+Arthur: 3,
+Merlin: 3+4,
+Arthur: 7,
+Lancelot: 0,
+Merlin: 5+6,
+Arthur: 11,
+Lancelot: 1,
+Arthur: 12,
+Merlin: 7+8,
+Arthur: 15,
+Lancelot: 2,
+Arthur: 17,
+Merlin: 9+10,
+Arthur: 19,
+Lancelot: 3,
+Arthur: 21,
+Merlin: 11+12,
+Arthur: 23,
+Lancelot: 4,
+Arthur: 27,
+Merlin: 13+14,
+Arthur: 29,
+Lancelot: 5,
+Arthur: 33,
+Merlin: 15+16,
+Arthur: 35,
+Lancelot: 6,
+Arthur: 39,
+Merlin: 17+18,
+Arthur: 41,
+Lancelot: 7,
+Arthur: 45,
+Merlin: 19+20,
+Arthur: 47,
+Lancelot: 8,
+Arthur: 51,
+Merlin: 21+22,
+Arthur: 53,
+Lancelot: 9,
+Arthur: 57,
+Merlin: 23+24,
+Arthur: 59,
+Lancelot: 10,
+Arthur: 63,
+Merlin: 25+26,
+Arthur: 65,
+Lancelot: 11,
+Arthur: 69,
+Merlin: 27+28,
+Arthur: 71,
+Lancelot: 12,
+Arthur: 75,
+Merlin: 29+30,
+Arthur: 77,
+Lancelot: 13,
+Arthur: 81,
+Merlin: 31+32,
+Arthur: 83,
+Lancelot: 14,
+Arthur: 87,
+Merlin: 33+34,
+Arthur: 89,
+Lancelot: 15,
+Arthur: 93,
+Merlin: 35+36,
+Arthur: 95,
+Lancelot: 16,
+Arthur: 99,","Merlin:1+2,Arthur:3,Merlin:3+4,Arthur:7,Lancelot:0,Arthur:7,Merlin:5+6,Arthur:11,",False,False,813,0.09060402684563762
+2157,gpt-3.5-turbo,mendelian_inheritance,10,"One type of beetle has 3 possible wing colors, blue, green and turquoise. Randomly caught individuals of a polymorphic population were crossed with each other.
+It is a monohybrid inheritance with three alleles, B, G & T. Dominance: B > G > T
+You get the parent phenotype, and the distribution of phenotypes in the F1 - generation. State the genotypes of the parents and offspring as accurately as possible. No further explanation necessary. If a given distribution is impossible, state 'impossible'.
+Example task:
+Blue x Blue -> 4/4 Blue
+Example solution:
+BB x B_ -> 4/4 B_
+Example Task:
+Blue x Blue -> 3/4 Blue 1/4 Green
+Example Solution:
+BG x BG -> 1/4 BB, 1/2 BG, 1/4 GG
+
+Blue x Blue -> 3/4 Blue 1/4 Turquoise","BT x BT -> 1/4 BB, 1/2 BT, 1/4 TT","['BT x BT -> 1/4 BB, 1/2 BT, 1/4 TT']",False,False,4,0.8918918918918919
+2158,gpt-3.5-turbo,polish_rhymes_generation,12,"You will be given a word in polish. Provide example of perfect rhyme to that word in polish. Perfect rhyming word should not only sound similar but also have the same number of syllables. Respond only with the rhyming word and nothing else. If you don't know the answer, you must say '-'.
+
+sag",bag,"['ag', 'ak']",False,False,10,0.16666666666666663
+2159,gpt-3.5-turbo,shared_border,1,"You are a helpful agent. Answer the provided question with an alphabetically-sorted JSON list, starting with [ and ending with ], and no other text.
+
+Which countries share a land border with both Algeria and Chad","[""Libya"", ""Niger"", ""Sudan""]","['[""Libya"", ""Niger""]', '[""Libya"",""Niger""]']",False,False,20,0.5348837209302326

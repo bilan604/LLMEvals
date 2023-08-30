@@ -1,7 +1,5 @@
 # LLMEvals Repository
 
-# LLMEvals  
-
 ## Directory Description:
 
 sample_evals.py: generates a sample of the evals of approximately 2100 evals problems of the 450,000 problems present.

@@ -1,6 +1,9 @@
+import time
+
 import openai
 import cohere
 import replicate
+
 from bardapi import Bard
 from load import get_env
 from parsing import *
@@ -133,7 +136,6 @@ def get_llama_2_13b_chat_output(client, prompt: str):
     print(response)
     return response
 
-#######
 def prompt_bard(prompt):
     resp = bard.objects['bard'].get_answer(prompt)
     response = resp["content"]
@@ -199,6 +201,27 @@ def prompt_claude_instant(prompt):
 def prompt_palm_2(prompt):
     pass
 
+import json
+import requests
+
+def prompt_autoauto(prompt):
+    pars = {
+        "id": "bilan604",
+        "operation": "prompt_autoauto",
+        "request_data": json.dumps({
+            "query": prompt
+        })
+    }
+
+    try:
+        resp = requests.post("http://bilan604.pythonanywhere.com/api/", params=pars)
+        time.sleep(16)
+        return resp.text
+    except Exception as e:
+        print("Error on AutoAuto:", e)
+        return ""
+    
+
 #############################
 handle_prompt_map = {
     "gpt-3.5-turbo": prompt_gpt_3_5,  #
@@ -220,7 +243,9 @@ handle_prompt_map = {
     "falcon-40b": prompt_falcon_40b,
     "mpt-30b": prompt_mpt_30b,
     "inflection-1": prompt_inflection_1,
-    "palm-2": prompt_palm_2  # Fill in the actual function name
+    "palm-2": prompt_palm_2,  # Fill in the actual function name
+
+    "autoauto": prompt_autoauto
 }
 
 

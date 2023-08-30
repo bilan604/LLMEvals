@@ -6,7 +6,7 @@
 4,aba_mrpc_true_false,0.011035565191420982
 5,abstract2title,0.3330780973321928
 6,accounting_audit,0.4
-7,actors-sequence,0.155456577996788
+7,actors-sequence,0.15005219873419215
 8,adultery-state-laws,0.011588836940570946
 9,afrikaans-lexicon,1.0
 10,aime_evaluation,0.001694289142810479
@@ -122,7 +122,7 @@
 120,math_polish,0.3794498834498834
 121,matrix_mult_rows,0.4
 122,medication_dose,0.4437625313283208
-123,mendelian_inheritance,0.7339665565086744
+123,mendelian_inheritance,0.7471270011239425
 124,missing_operators,0.6314241486068111
 125,monthly_metric_comparison,0.2528863748204051
 126,moral_exceptQA,0.9
@@ -150,7 +150,7 @@
 148,polish-lexicon,0.5
 149,polish-proverbs,0.8017857142857142
 150,polish-syllable-count,0.1
-151,polish_rhymes_generation,0.15746031746031744
+151,polish_rhymes_generation,0.15829725829725827
 152,population_span_extraction,0.22979870784321496
 153,portuguese-sarcasm,0.3
 154,portuguese-syllable-count,0.30488095238095236
@@ -180,7 +180,7 @@
 178,seating_arrangements,0.25925532162457265
 179,security_guide,0.2819065516682986
 180,seo_keywords,0.1732929074369403
-181,shared_border,0.4675378819943577
+181,shared_border,0.47315003523901394
 182,shopping_discount_comparison,0.9166666666666666
 183,simple-charting,0.013891330362209043
 184,simple_physics_engine,0.03771584264286988
