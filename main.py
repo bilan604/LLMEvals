@@ -162,21 +162,10 @@ if __name__ == "__main__":
     models_to_do = None
     # 4.) Running this script does a list of evals for a list of models
     # Default empty lists passed in for models_to_do or empty_evals_to_do means doing all of them
-    """
+
     models_to_do = [
-        "llama-1-13b",
-        "llama-2-13b",
-        "llama-2-70b-chat",
-        "vicuna-1-13b",
-        "vicuna-1.5-13b",
-        "vicuna-1-33b",  
-        "claude-2",
-        "claude-instant",
         "luminous-supreme-control",
-        "cohere-chat",
-        "falcon-40b",
-        "mpt-30b", 
-        "inflection-1" 
+        "cohere-chat"
     ]
 
     evals_to_do = [
@@ -185,7 +174,7 @@ if __name__ == "__main__":
     
     VIS = load_responses()
     main(models_to_do, evals_to_do, VIS)
-    """
+
     if models_to_do == None:
         print("-----------------------------")
         print("NOTE: Not running any models\n")

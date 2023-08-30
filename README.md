@@ -152,7 +152,7 @@ main.py:
 <tr>
 <td>12</td>
 <td>cohere-chat</td>
-<td>0.5892857142857143</td>
+<td>0.6125</td>
 <td>0.0</td>
 <td>0</td>
 </tr>
@@ -2264,7 +2264,7 @@ main.py:
 <table>
 <tr>
 <td>2d_movement</td>
-<td>0.5892857142857143</td>
+<td>0.6125</td>
 </tr>
 </table>
 
