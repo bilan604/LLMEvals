@@ -164,8 +164,9 @@ if __name__ == "__main__":
     # Default empty lists passed in for models_to_do or empty_evals_to_do means doing all of them
 
     models_to_do = [
-        "luminous-supreme-control",
-        "cohere-chat"
+        "vicuna-1-13b",
+        "vicuna-1.5-13b",
+        "vicuna-1-33b"
     ]
 
     evals_to_do = [

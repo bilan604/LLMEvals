@@ -182,8 +182,8 @@ def generate_outcome(responses, answer_key, model_name):
         if model == model_name:
             data_3["model"].append(model_name)
             data_3["score"].append(str(final_score))
-            data_3["total_score"].append(ts)
-            data_3["total_questions"].append(tq)
+            data_3["total_score"].append(total_score)
+            data_3["total_questions"].append(total_questions)
             updated_model = True
         else:
             data_3["model"].append(model)
